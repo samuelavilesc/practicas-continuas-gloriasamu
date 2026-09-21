@@ -109,4 +109,15 @@ class TaskServiceTest {
         assertThat(resultado).hasSize(1);
         assertThat(resultado.get(0).status()).isEqualTo(TaskStatus.PENDING);
     }
+
+    @Test
+    void filtraLasTareasPorPrioridadMinima() {
+        Task urgente = new Task("Tarea urgente", "desc", TaskStatus.PENDING, 5, LocalDate.now());
+        when(repository.findByPriorityGreaterThanEqual(4)).thenReturn(List.of(urgente));
+
+        List<TaskResponse> resultado = service.findByMinPriority(4);
+
+        assertThat(resultado).hasSize(1);
+        assertThat(resultado.get(0).priority()).isEqualTo(5);
+    }
 }

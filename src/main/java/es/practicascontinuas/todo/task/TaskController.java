@@ -29,6 +29,11 @@ public class TaskController {
         return service.findAll(status);
     }
 
+    @GetMapping("/priority")
+    public List<TaskResponse> findByMinPriority(@RequestParam int min) {
+        return service.findByMinPriority(min);
+    }
+
     @GetMapping("/{id}")
     public TaskResponse findById(@PathVariable Long id) {
         return service.findById(id);
