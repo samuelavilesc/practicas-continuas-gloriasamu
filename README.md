@@ -1,0 +1,48 @@
+# To-Do API
+
+API REST de gestion de tareas, creada para el Boletin 1 de Practicas Continuas.
+
+## Requisitos
+
+- Java 21
+- Maven 3.9+
+
+## Arranque
+
+```bash
+mvn clean package
+java -jar target/todo-api-0.0.1-SNAPSHOT.jar
+```
+
+La API queda disponible en `http://localhost:8080/api/tasks`.
+
+## Endpoints
+
+| Metodo | Ruta | Descripcion |
+|---|---|---|
+| GET | /api/tasks | Lista todas las tareas |
+| GET | /api/tasks?status=PENDING | Filtra por estado (PENDING, IN_PROGRESS, COMPLETED) |
+| GET | /api/tasks/{id} | Obtiene una tarea por id |
+| POST | /api/tasks | Crea una tarea |
+| PUT | /api/tasks/{id} | Actualiza una tarea |
+| DELETE | /api/tasks/{id} | Elimina una tarea |
+
+## Ejemplo
+
+```bash
+curl -X POST http://localhost:8080/api/tasks \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Preparar el boletin","description":"Documentar los commits","status":"PENDING","priority":3,"dueDate":"2026-09-28"}'
+
+curl http://localhost:8080/api/tasks
+```
+
+## Desarrollo
+
+Despues de clonar el repositorio, activa el hook de formateo versionado:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Comprueba el formato con `mvn spotless:check` y corrigelo con `mvn spotless:apply`.
