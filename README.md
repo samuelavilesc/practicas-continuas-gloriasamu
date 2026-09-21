@@ -14,7 +14,7 @@ mvn clean package
 java -jar target/todo-api-0.0.1-SNAPSHOT.jar
 ```
 
-La API queda disponible en `http://localhost:8080/api/tasks`.
+La API queda disponible en `http://localhost:8080/api/tasks` y responde siempre en JSON.
 
 ## Endpoints
 
