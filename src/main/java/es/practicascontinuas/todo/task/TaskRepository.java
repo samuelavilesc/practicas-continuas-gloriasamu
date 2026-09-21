@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
-    Optional<Task> findByTitleIgnoreCase(String title);
+  Optional<Task> findByTitleIgnoreCase(String title);
 
-    List<Task> findByStatus(TaskStatus status);
+  List<Task> findByStatus(TaskStatus status);
 
-    List<Task> findByPriorityGreaterThanEqual(int minPriority);
+  List<Task> findByPriorityGreaterThanEqual(int minPriority);
 }

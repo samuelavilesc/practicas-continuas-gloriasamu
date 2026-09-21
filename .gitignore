@@ -4,3 +4,4 @@ target/
 .env
 .tools/
 apache-maven-*-bin.zip
+task.json
