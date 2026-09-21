@@ -66,4 +66,18 @@ public class Task {
     this.priority = request.priority();
     this.dueDate = request.dueDate();
   }
+
+  @Override
+  public String toString() {
+    return "Task{id="
+        + id
+        + ", title='"
+        + title
+        + "'"
+        + ", status="
+        + status
+        + ", priority="
+        + priority
+        + "}";
+  }
 }
