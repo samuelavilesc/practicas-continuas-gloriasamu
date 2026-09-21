@@ -9,4 +9,6 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
     Optional<Task> findByTitleIgnoreCase(String title);
 
     List<Task> findByStatus(TaskStatus status);
+
+    List<Task> findByPriorityGreaterThanEqual(int minPriority);
 }

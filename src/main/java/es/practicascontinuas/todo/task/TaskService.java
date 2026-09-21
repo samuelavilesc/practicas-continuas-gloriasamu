@@ -17,6 +17,12 @@ public class TaskService {
         return tasks.stream().map(TaskResponse::from).toList();
     }
 
+    public List<TaskResponse> findByMinPriority(int minPriority) {
+        return repository.findByPriorityGreaterThanEqual(minPriority).stream()
+                .map(TaskResponse::from)
+                .toList();
+    }
+
     public TaskResponse findById(Long id) {
         return TaskResponse.from(getOrThrow(id));
     }
