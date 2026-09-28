@@ -24,6 +24,9 @@ La API queda disponible en `http://localhost:8080/api/tasks` (puerto 8080 por de
 |---|---|---|
 | GET | /api/tasks | Lista todas las tareas |
 | GET | /api/tasks?status=PENDING | Filtra por estado (PENDING, IN_PROGRESS, COMPLETED) |
+| GET | /api/tasks/page?page=0&size=10&sort=id | Lista paginada y ordenada de tareas |
+| GET | /api/tasks/priority?min=N | Filtra tareas con prioridad mayor o igual a N |
+| GET | /api/tasks/search?q=texto | Busca tareas cuyo titulo o descripcion contienen el texto (sin distinguir mayusculas/minusculas) |
 | GET | /api/tasks/{id} | Obtiene una tarea por id |
 | POST | /api/tasks | Crea una tarea |
 | PUT | /api/tasks/{id} | Actualiza una tarea |
