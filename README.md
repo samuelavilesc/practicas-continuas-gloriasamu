@@ -1,6 +1,8 @@
 # To-Do API
 
-API REST de gestion de tareas, creada para el Boletin 1 de Practicas Continuas.
+API REST de gestion de tareas, creada para el Boletin 1 de Practicas Continuas y ampliada en pareja en el Boletin 2 (GitHub y Pull Requests).
+
+**Autores:** [Samuel Avilés Conesa](https://github.com/samuelavilesc) · [Gloria Sánchez](https://github.com/glooriasanchezzz)
 
 ## Requisitos
 
@@ -46,3 +48,5 @@ git config core.hooksPath .githooks
 ```
 
 Comprueba el formato con `mvn spotless:check` y corrigelo con `mvn spotless:apply`.
+
+Para el flujo de contribución (ramas, Pull Requests, revisión), consulta [CONTRIBUTING.md](CONTRIBUTING.md).
