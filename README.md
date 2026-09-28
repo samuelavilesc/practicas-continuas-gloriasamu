@@ -6,7 +6,7 @@ API REST de gestion de tareas, creada para el Boletin 1 de Practicas Continuas y
 
 ## Requisitos
 
-- Java 21
+- Java 21 (LTS)
 - Maven 3.9+
 
 ## Arranque
