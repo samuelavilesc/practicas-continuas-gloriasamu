@@ -145,6 +145,9 @@ class TaskServiceTest {
 
     assertThat(resultado).hasSize(1);
     assertThat(resultado.get(0).title()).isEqualTo("Repasar Maven");
+  }
+
+  @Test
   void devuelveTareasPaginadas() {
     Task tarea = new Task("Tarea paginada", "desc", TaskStatus.PENDING, 2, LocalDate.now());
     Pageable pageable = PageRequest.of(0, 10);
@@ -155,5 +158,16 @@ class TaskServiceTest {
     assertThat(resultado.getContent()).hasSize(1);
     assertThat(resultado.getTotalElements()).isEqualTo(1);
     assertThat(resultado.getContent().get(0).title()).isEqualTo("Tarea paginada");
+  }
+
+  @Test
+  void devuelveListaVaciaCuandoLaBusquedaNoTieneCoincidencias() {
+    when(repository.findByTitleContainingIgnoreCaseOrDescriptionContainingIgnoreCase(
+            "inexistente", "inexistente"))
+        .thenReturn(List.of());
+
+    List<TaskResponse> resultado = service.search("inexistente");
+
+    assertThat(resultado).isEmpty();
   }
 }
