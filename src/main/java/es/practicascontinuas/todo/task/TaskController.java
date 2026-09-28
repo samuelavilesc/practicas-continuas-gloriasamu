@@ -2,6 +2,9 @@ package es.practicascontinuas.todo.task;
 
 import jakarta.validation.Valid;
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +30,12 @@ public class TaskController {
   @GetMapping
   public List<TaskResponse> findAll(@RequestParam(required = false) TaskStatus status) {
     return service.findAll(status);
+  }
+
+  @GetMapping("/pagina")
+  public Page<TaskResponse> findAllPaged(
+      @PageableDefault(size = 10, sort = "id") Pageable pageable) {
+    return service.findAllPaged(pageable);
   }
 
   @GetMapping("/priority")
