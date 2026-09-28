@@ -32,7 +32,7 @@ public class TaskController {
     return service.findAll(status);
   }
 
-  @GetMapping("/pagina")
+  @GetMapping("/page")
   public Page<TaskResponse> findAllPaged(
       @PageableDefault(size = 10, sort = "id") Pageable pageable) {
     return service.findAllPaged(pageable);
