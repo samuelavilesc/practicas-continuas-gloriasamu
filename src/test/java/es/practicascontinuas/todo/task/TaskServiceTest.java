@@ -15,6 +15,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 @ExtendWith(MockitoExtension.class)
 class TaskServiceTest {
@@ -126,5 +130,18 @@ class TaskServiceTest {
 
     assertThat(resultado).hasSize(1);
     assertThat(resultado.get(0).priority()).isEqualTo(5);
+  }
+
+  @Test
+  void devuelveTareasPaginadas() {
+    Task tarea = new Task("Tarea paginada", "desc", TaskStatus.PENDING, 2, LocalDate.now());
+    Pageable pageable = PageRequest.of(0, 10);
+    when(repository.findAll(pageable)).thenReturn(new PageImpl<>(List.of(tarea), pageable, 1));
+
+    Page<TaskResponse> resultado = service.findAllPaged(pageable);
+
+    assertThat(resultado.getContent()).hasSize(1);
+    assertThat(resultado.getTotalElements()).isEqualTo(1);
+    assertThat(resultado.getContent().get(0).title()).isEqualTo("Tarea paginada");
   }
 }
