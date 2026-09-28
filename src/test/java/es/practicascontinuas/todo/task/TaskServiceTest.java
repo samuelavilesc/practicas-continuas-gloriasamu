@@ -127,4 +127,19 @@ class TaskServiceTest {
     assertThat(resultado).hasSize(1);
     assertThat(resultado.get(0).priority()).isEqualTo(5);
   }
+
+  @Test
+  void buscaTareasPorTituloODescripcion() {
+    Task coincidencia =
+        new Task(
+            "Repasar Maven", "ciclo de vida del build", TaskStatus.PENDING, 2, LocalDate.now());
+    when(repository.findByTitleContainingIgnoreCaseOrDescriptionContainingIgnoreCase(
+            "maven", "maven"))
+        .thenReturn(List.of(coincidencia));
+
+    List<TaskResponse> resultado = service.search("maven");
+
+    assertThat(resultado).hasSize(1);
+    assertThat(resultado.get(0).title()).isEqualTo("Repasar Maven");
+  }
 }
