@@ -2,9 +2,39 @@
 
 Este proyecto sigue el flujo **GitHub Flow**: `main` siempre debe estar en estado desplegable.
 
+## Poner en marcha el entorno
+
+1. **Requisitos**: Java 21 (LTS) o superior, Maven 3.9+, Git.
+2. **Clona el repositorio y entra en él**:
+
+   ```bash
+   git clone https://github.com/samuelavilesc/practicas-continuas-gloriasamu.git
+   cd practicas-continuas-gloriasamu
+   ```
+
+3. **Activa el hook de formateo versionado** (ejecuta Spotless automáticamente antes de cada commit):
+
+   ```bash
+   git config core.hooksPath .githooks
+   ```
+
+4. **Compila y ejecuta los tests**:
+
+   ```bash
+   mvn clean package
+   ```
+
+5. **Arranca la API** (queda disponible en `http://localhost:8080/api/tasks`):
+
+   ```bash
+   java -jar target/todo-api-0.0.1-SNAPSHOT.jar
+   ```
+
+6. Antes de subir cualquier cambio, comprueba el formato con `mvn spotless:check` (o `mvn spotless:apply` para corregirlo automáticamente).
+
 ## Flujo de trabajo
 
-1. **Abre un Issue** describiendo el cambio (usa la plantilla de `feat` o `bug`).
+1. **Abre un Issue** describiendo el cambio (usa la plantilla de `enhancement` o `bug`).
 2. **Crea una rama** desde `main` con el prefijo correspondiente:
 
    | Prefijo | Se usa para |
