@@ -29,6 +29,14 @@ public class TaskService {
         .toList();
   }
 
+  public List<TaskResponse> search(String q) {
+    return repository
+        .findByTitleContainingIgnoreCaseOrDescriptionContainingIgnoreCase(q, q)
+        .stream()
+        .map(TaskResponse::from)
+        .toList();
+  }
+
   public TaskResponse findById(Long id) {
     return TaskResponse.from(getOrThrow(id));
   }
