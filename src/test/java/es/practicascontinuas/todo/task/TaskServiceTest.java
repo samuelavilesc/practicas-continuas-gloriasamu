@@ -170,4 +170,17 @@ class TaskServiceTest {
 
     assertThat(resultado).isEmpty();
   }
+
+  @Test
+  void devuelveLasTareasVencidas() {
+    Task vencida =
+        new Task("Tarea vencida", "desc", TaskStatus.PENDING, 1, LocalDate.now().minusDays(1));
+    when(repository.findByDueDateBeforeAndStatusNot(any(LocalDate.class), any(TaskStatus.class)))
+        .thenReturn(List.of(vencida));
+
+    List<TaskResponse> resultado = service.findOverdue();
+
+    assertThat(resultado).hasSize(1);
+    assertThat(resultado.get(0).title()).isEqualTo("Tarea vencida");
+  }
 }
