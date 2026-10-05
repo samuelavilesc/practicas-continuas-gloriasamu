@@ -69,4 +69,9 @@ public class TaskController {
   public void delete(@PathVariable Long id) {
     service.delete(id);
   }
+
+  @GetMapping("/overdue")
+  public List<TaskResponse> findOverdue() {
+    return service.findOverdue();
+  }
 }

@@ -1,5 +1,6 @@
 package es.practicascontinuas.todo.task;
 
+import java.time.LocalDate;
 import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -84,5 +85,13 @@ public class TaskService {
 
   private Task getOrThrow(Long id) {
     return repository.findById(id).orElseThrow(() -> new TaskNotFoundException(id));
+  }
+
+  public List<TaskResponse> findOverdue() {
+    return repository
+        .findByDueDateBeforeAndStatusNot(LocalDate.now(), TaskStatus.COMPLETED)
+        .stream()
+        .map(TaskResponse::from)
+        .toList();
   }
 }
