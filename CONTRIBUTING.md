@@ -4,7 +4,7 @@ Este proyecto sigue el flujo **GitHub Flow**: `main` siempre debe estar en estad
 
 ## Poner en marcha el entorno
 
-1. **Requisitos**: Java 21 (LTS) o superior, Maven 3.9+, Git.
+1. **Requisitos**: Java 21 (LTS) o superior, Maven 3.9+, Git y Docker.
 2. **Clona el repositorio y entra en él**:
 
    ```bash
@@ -24,10 +24,11 @@ Este proyecto sigue el flujo **GitHub Flow**: `main` siempre debe estar en estad
    mvn clean package
    ```
 
-5. **Arranca la API** (queda disponible en `http://localhost:8080/api/tasks`):
+5. **Arranca la API con su base de datos** (queda disponible en `http://localhost:8080/api/tasks`). Consulta el [README](README.md) para más detalles o para usar el Dev Container:
 
    ```bash
-   java -jar target/todo-api-0.0.1-SNAPSHOT.jar
+   cp .env.example .env
+   docker compose up --build -d
    ```
 
 6. Antes de subir cualquier cambio, comprueba el formato con `mvn spotless:check` (o `mvn spotless:apply` para corregirlo automáticamente).
