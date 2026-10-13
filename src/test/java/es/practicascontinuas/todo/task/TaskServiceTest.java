@@ -59,7 +59,7 @@ class TaskServiceTest {
     TaskResponse response = service.create(validRequest);
 
     assertThat(response.title()).isEqualTo("Preparar el boletin");
-    assertThat(response.status()).isEqualTo(TaskStatus.COMPLETED);
+    assertThat(response.status()).isEqualTo(TaskStatus.PENDING);
   }
 
   @Test
