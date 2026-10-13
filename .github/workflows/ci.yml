@@ -4,7 +4,9 @@ on:
   # push a cualquier rama (no solo a main), para tener feedback antes de abrir el PR
   push:
     branches: [ "**" ]
+    paths-ignore: [ "README.md" ]   # un cambio solo en el README no necesita CI
   pull_request:
+    paths-ignore: [ "README.md" ]
   # permite lanzarlo a mano desde la pestaña Actions
   workflow_dispatch:
 
