@@ -48,6 +48,8 @@ jobs:
           name: Resultados JUnit
           path: target/surefire-reports/*.xml
           reporter: java-junit
+          # por defecto deja el informe solo en el resumen del job; así crea el check run
+          use-actions-summary: "false"
 
   package:
     needs: test
