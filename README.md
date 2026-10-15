@@ -1,5 +1,7 @@
 # To-Do API
 
+[![CI](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/workflows/ci.yml)
+
 API REST de gestion de tareas, creada para el Boletin 1 de Practicas Continuas, ampliada en pareja en el Boletin 2 (GitHub y Pull Requests) y contenerizada con Docker en el Boletin 3.
 
 **Autores:** [Samuel Avilés Conesa](https://github.com/samuelavilesc) · [Gloria Sánchez](https://github.com/glooriasanchezzz)

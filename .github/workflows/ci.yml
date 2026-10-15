@@ -5,8 +5,9 @@ on:
   push:
     branches: [ "**" ]
     paths-ignore: [ "README.md" ]   # un cambio solo en el README no necesita CI
+  # en los PR no se filtra: los checks lint, test y package son obligatorios en main
+  # y, si el CI no se ejecutara, un PR que solo cambia el README no se podría fusionar
   pull_request:
-    paths-ignore: [ "README.md" ]
   # permite lanzarlo a mano desde la pestaña Actions
   workflow_dispatch:
 
