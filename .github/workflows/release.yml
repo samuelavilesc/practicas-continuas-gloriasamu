@@ -4,6 +4,8 @@ on:
   push:
     branches: [ main ]
     tags: [ "v*.*.*" ]
+  # permite lanzarlo a mano desde la pestaña Actions (por ejemplo, para probarlo desde una rama)
+  workflow_dispatch:
 
 # mínimo privilegio: leer el código y escribir en GHCR
 permissions:
