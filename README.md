@@ -1,6 +1,7 @@
 # To-Do API
 
 [![CI](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/workflows/ci.yml)
+[![Release](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/workflows/release.yml)
 
 API REST de gestion de tareas, creada para el Boletin 1 de Practicas Continuas, ampliada en pareja en el Boletin 2 (GitHub y Pull Requests) y contenerizada con Docker en el Boletin 3.
 
@@ -44,6 +45,37 @@ La API queda disponible en `http://localhost:8080/api/tasks` (puerto 8080 por de
 | `docker compose down -v` | Borra también el volumen: **se pierden los datos** |
 
 > Si cambias las credenciales de `.env` con el volumen ya creado, PostgreSQL seguirá con las antiguas. En desarrollo, ejecuta `docker compose down -v` y vuelve a levantar el stack.
+
+## Imagen publicada en GitHub Container Registry
+
+Cada merge a `main` y cada tag `vX.Y.Z` publican la imagen en `ghcr.io/samuelavilesc/practicas-continuas-gloriasamu` (workflow `Release`).
+
+| Tag | Qué es |
+|---|---|
+| `sha-<commit>` | La imagen construida desde ese commit exacto |
+| `1.0.0` / `1.0` / `1` | Versión SemVer (solo al publicar un tag `vX.Y.Z`) |
+| `latest` | Último build de `main` |
+
+Para probarla sin compilar nada, necesitas una PostgreSQL en la misma red:
+
+```bash
+docker network create tareas-net
+
+docker run -d --name db --network tareas-net \
+  -e POSTGRES_DB=tareas -e POSTGRES_USER=app -e POSTGRES_PASSWORD=secret_local_dev \
+  postgres:16
+
+docker run -d --name api --network tareas-net -p 8080:8080 \
+  -e SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/tareas \
+  -e SPRING_DATASOURCE_USERNAME=app \
+  -e SPRING_DATASOURCE_PASSWORD=secret_local_dev \
+  ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0
+
+curl http://localhost:8080/actuator/health   # {"status":"UP"}
+
+# limpieza
+docker rm -f db api && docker network rm tareas-net
+```
 
 ## Arranque con Dev Container
 
