@@ -40,7 +40,9 @@ jobs:
 
           # el diff se recorta para no superar el contexto del modelo
           git diff --stat "$BASE_SHA" "$HEAD_SHA" > cambios.txt
-          git diff "$BASE_SHA" "$HEAD_SHA" | head -c 60000 >> cambios.txt
+          # sin tubería: si head cortara la salida de git diff, pipefail haría fallar el paso
+          git diff "$BASE_SHA" "$HEAD_SHA" > diff-completo.txt
+          head -c 60000 diff-completo.txt >> cambios.txt
 
           jq -n --arg model "$OLLAMA_MODEL" --rawfile diff cambios.txt '{
             model: $model,
