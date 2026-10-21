@@ -1,0 +1,7 @@
+{
+  "name": "docs-site",
+  "private": true,
+  "description": "Generador de la web de documentación (boletines) para GitHub Pages",
+  "scripts": { "build": "node build-site.js" },
+  "dependencies": { "marked": "12.0.2" }
+}

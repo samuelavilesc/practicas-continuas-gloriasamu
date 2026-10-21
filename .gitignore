@@ -5,3 +5,8 @@ target/
 .tools/
 apache-maven-*-bin.zip
 task.json
+
+
+# Boletín 5: web generada y dependencias del generador
+docs/site/
+docs/node_modules/
