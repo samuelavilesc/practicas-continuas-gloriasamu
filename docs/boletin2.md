@@ -140,9 +140,8 @@ Para esta parte se hizo un intercambio con otra pareja (repositorio [I-FJ-I/grup
 
 **PR:** [I-FJ-I/grupo1-PC-2026#9](https://github.com/I-FJ-I/grupo1-PC-2026/pull/9), abierto desde nuestro fork `glooriasanchezzz/grupo1-PC-2026` y usando su plantilla de PR.
 
-Antes de abrirlo se esperó a que la otra pareja fusionara su rama de paginación (`feat/paginacion`), que tocaba los mismos archivos, y se rehízo el fork desde su `main` actualizado. Así el PR partió de su código más reciente y no hubo conflictos.
 
-Lo revisó y aprobó JHLumu ("Correcto, buen trabajo!") y él mismo lo fusionó en `main`, con lo que se cierra el Issue #7.
+Lo revisó y aprobó JHLumu y él mismo lo fusionó en `main`, con lo que se cierra el Issue #7.
 
 ![PR #9 fusionado en el repositorio de la otra pareja, con la descripción de la plantilla](capturas/boletin2/image-2.png)
 *El PR #9 en el repositorio de la otra pareja, ya fusionado, con la descripción rellenada según su plantilla.*
