@@ -77,6 +77,26 @@ curl http://localhost:8080/actuator/health   # {"status":"UP"}
 docker rm -f db api && docker network rm tareas-net
 ```
 
+## Despliegue con Ansible
+
+La carpeta `deploy/` despliega una versión publicada de la imagen sobre una flota de tres servidores: `app1` y `app2` ejecutan la API y `db1`, PostgreSQL. En local, los servidores son contenedores con SSH (`deploy/servidores/docker-compose.yml`), y la API queda en `localhost:8081` (`app1`) y `localhost:8082` (`app2`).
+
+Requisitos en la máquina que lanza el despliegue: Ansible 2.16, `sshpass` y la contraseña del Vault (`deploy/group_vars/servidores/vault.yml` guarda cifradas las credenciales de GHCR y de la base de datos).
+
+```bash
+ansible-galaxy collection install -r deploy/requirements.yml
+docker compose -f deploy/servidores/docker-compose.yml up -d
+ansible -i deploy/inventory.ini servidores -m ping
+
+ansible-playbook -i deploy/inventory.ini deploy/deploy.yml \
+  --ask-vault-pass --extra-vars "version_app=1.0.0"
+
+curl http://localhost:8081/actuator/health   # app1
+curl http://localhost:8082/actuator/health   # app2
+```
+
+Se despliega siempre una versión concreta (`version_app`), nunca `latest`. Para volver atrás basta con relanzar el playbook con la versión anterior.
+
 ## Arranque con Dev Container
 
 El repositorio incluye `.devcontainer/devcontainer.json` con el entorno de desarrollo completo (JDK 21, Maven y Docker dentro del contenedor), así que no hace falta instalar nada salvo Docker y VS Code.
