@@ -1,0 +1,28 @@
+$ devcontainer up --workspace-folder .   # sin .env en el host, para probar postCreateCommand
+[2026-10-05T10:38:20.008Z] Start: Run: docker buildx build --load --build-arg BUILDKIT_INLINE_CACHE=1 --build-context dev_containers_feature_content_source=C:\Users\samue\AppData\Local\Temp\devcontainercli\container-features\0.89.0-1791196697693 --build-arg _DEV_CONTAINERS_BASE_IMAGE=mcr.microsoft.com/devcontainers/java:21 --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f C:\Users\samue\AppData\Local\Temp\devcontainercli\container-features\0.89.0-1791196697693\Dockerfile.extended -t vsc-todo-api-a4db129587c345c9b623f10469287f24f4dbab59e7a7b4d45d66d61d2a141c43-features C:\Users\samue\AppData\Local\Temp\devcontainercli\empty-folder
+[2026-10-05T10:39:06.122Z] Running the postCreateCommand from devcontainer.json...
+[INFO] BUILD SUCCESS
+{"outcome":"success","containerId":"c9b209110406855592ca9e0e0a53e56b4e7e1e501539afd6d72ae6598496282f","remoteUser":"vscode","remoteWorkspaceFolder":"/workspaces/todo-api","ociAuthDiagnostics":{"authLookupWouldBeBlocked":false,"registryRedirectWouldPreventCredentialForwarding":false,"authServerRedirect":false}}
+
+$ devcontainer exec --workspace-folder . bash -c "java -version; mvn -v; docker --version; cat .env; git config core.hooksPath"
+openjdk version "21.0.12.1" 2026-08-18 LTS
+Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)
+Docker version 29.8.2, build 7fc2dff
+Docker Compose version v2.40.3
+# Copia este fichero a .env y ajusta los valores
+POSTGRES_DB=tareas
+POSTGRES_USER=app
+POSTGRES_PASSWORD=cambia_esto
+.githooks
+
+$ devcontainer exec --workspace-folder . docker compose up --build -d
+ Container todo-api-db-1  Waiting
+ Container todo-api-db-1  Healthy
+ Container todo-api-api-1  Starting
+ Container todo-api-api-1  Started
+$ devcontainer exec --workspace-folder . docker compose ps
+NAME             IMAGE          COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+todo-api-api-1   todo-api-api   "java -jar app.jar"      api       25 seconds ago   Up 19 seconds (healthy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+todo-api-db-1    postgres:16    "docker-entrypoint.s…"   db        25 seconds ago   Up 24 seconds (healthy)   127.0.0.1:5432->5432/tcp
+$ (dentro del dev container) curl http://127.0.0.1:8080/actuator/health
+{"status":"UP"}

@@ -1,0 +1,172 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 823B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-21
+#3 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre
+#2 DONE 0.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 131B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [stage-1 1/5] FROM docker.io/library/eclipse-temurin:21-jre@sha256:cff19e6215689161eb6162c11b86b0c60ddf802164f2eaf48d570f8fb79a36c5
+#6 resolve docker.io/library/eclipse-temurin:21-jre@sha256:cff19e6215689161eb6162c11b86b0c60ddf802164f2eaf48d570f8fb79a36c5 0.1s done
+#6 DONE 0.1s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320
+#7 resolve docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320 0.1s done
+#7 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 2.16kB done
+#5 DONE 0.0s
+
+#8 [build 2/6] WORKDIR /app
+#8 CACHED
+
+#9 [build 3/6] COPY pom.xml .
+#9 CACHED
+
+#10 [build 4/6] RUN mvn -B dependency:go-offline
+#10 CACHED
+
+#11 [build 5/6] COPY src ./src
+#11 DONE 0.5s
+
+#12 [build 6/6] RUN mvn -B clean package -DskipTests
+#12 1.260 [INFO] Scanning for projects...
+#12 1.461 [INFO] 
+#12 1.461 [INFO] -------------------< es.practicascontinuas:todo-api >-------------------
+#12 1.461 [INFO] Building todo-api 0.0.1-SNAPSHOT
+#12 1.461 [INFO]   from pom.xml
+#12 1.461 [INFO] --------------------------------[ jar ]---------------------------------
+#12 1.791 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.pom
+#12 2.079 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.pom (19 kB at 64 kB/s)
+#12 2.089 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/logging/logging-parent/1.0.1.Final/logging-parent-1.0.1.Final.pom
+#12 2.123 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/logging/logging-parent/1.0.1.Final/logging-parent-1.0.1.Final.pom (6.0 kB at 175 kB/s)
+#12 2.136 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.0/classmate-1.7.0.pom
+#12 2.177 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.0/classmate-1.7.0.pom (7.0 kB at 172 kB/s)
+#12 2.182 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.pom
+#12 2.220 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.pom (16 kB at 419 kB/s)
+#12 2.222 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.14.19/byte-buddy-parent-1.14.19.pom
+#12 2.264 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.14.19/byte-buddy-parent-1.14.19.pom (62 kB at 1.5 MB/s)
+#12 2.274 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.pom
+#12 2.311 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.pom (11 kB at 285 kB/s)
+#12 2.314 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/4.0.5/jaxb-runtime-parent-4.0.5.pom
+#12 2.353 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/4.0.5/jaxb-runtime-parent-4.0.5.pom (1.2 kB at 30 kB/s)
+#12 2.355 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/4.0.5/jaxb-parent-4.0.5.pom
+#12 2.391 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/4.0.5/jaxb-parent-4.0.5.pom (35 kB at 973 kB/s)
+#12 2.394 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/4.0.5/jaxb-bom-ext-4.0.5.pom
+#12 2.427 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/4.0.5/jaxb-bom-ext-4.0.5.pom (3.5 kB at 109 kB/s)
+#12 2.432 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.pom
+#12 2.470 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.pom (3.7 kB at 101 kB/s)
+#12 2.474 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.pom
+#12 2.531 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.pom (4.0 kB at 71 kB/s)
+#12 2.533 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation-project/2.0.2/angus-activation-project-2.0.2.pom
+#12 2.586 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation-project/2.0.2/angus-activation-project-2.0.2.pom (21 kB at 402 kB/s)
+#12 2.589 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.pom
+#12 2.643 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.pom (1.8 kB at 34 kB/s)
+#12 2.646 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/4.0.5/jaxb-txw-parent-4.0.5.pom
+#12 2.704 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/4.0.5/jaxb-txw-parent-4.0.5.pom (1.2 kB at 21 kB/s)
+#12 2.708 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.pom
+#12 2.746 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.pom (1.6 kB at 42 kB/s)
+#12 2.748 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/4.1.2/istack-commons-4.1.2.pom
+#12 2.789 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/4.1.2/istack-commons-4.1.2.pom (26 kB at 642 kB/s)
+#12 2.844 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.pom
+#12 2.879 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.pom (10 kB at 299 kB/s)
+#12 2.923 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar
+#12 2.959 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar (59 kB at 1.7 MB/s)
+#12 2.960 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar
+#12 2.961 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar
+#12 2.961 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar
+#12 2.961 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar
+#12 2.962 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar
+#12 3.016 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar (69 kB at 1.2 MB/s)
+#12 3.016 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar
+#12 3.035 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar (27 kB at 371 kB/s)
+#12 3.035 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar
+#12 3.052 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar (73 kB at 814 kB/s)
+#12 3.052 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar
+#12 3.061 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar (139 kB at 1.4 MB/s)
+#12 3.062 [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar
+#12 3.069 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar (26 kB at 241 kB/s)
+#12 3.092 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar (69 kB at 534 kB/s)
+#12 3.094 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar (920 kB at 6.9 MB/s)
+#12 3.121 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar (263 kB at 1.7 MB/s)
+#12 3.333 [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar (4.2 MB at 11 MB/s)
+#12 3.348 [INFO] 
+#12 3.348 [INFO] --- clean:3.3.2:clean (default-clean) @ todo-api ---
+#12 3.394 [INFO] 
+#12 3.394 [INFO] --- resources:3.3.1:resources (default-resources) @ todo-api ---
+#12 3.446 [INFO] Copying 1 resource from src/main/resources to target/classes
+#12 3.453 [INFO] Copying 0 resource from src/main/resources to target/classes
+#12 3.453 [INFO] 
+#12 3.453 [INFO] --- compiler:3.13.0:compile (default-compile) @ todo-api ---
+#12 3.525 [INFO] Recompiling the module because of changed source code.
+#12 3.529 [INFO] Compiling 12 source files with javac [debug parameters release 21] to target/classes
+#12 4.198 [INFO] 
+#12 4.198 [INFO] --- resources:3.3.1:testResources (default-testResources) @ todo-api ---
+#12 4.203 [INFO] skip non existing resourceDirectory /app/src/test/resources
+#12 4.203 [INFO] 
+#12 4.203 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ todo-api ---
+#12 4.211 [INFO] Recompiling the module because of changed dependency.
+#12 4.212 [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+#12 4.596 [INFO] 
+#12 4.596 [INFO] --- surefire:3.2.5:test (default-test) @ todo-api ---
+#12 4.755 [INFO] Tests are skipped.
+#12 4.756 [INFO] 
+#12 4.756 [INFO] --- jar:3.4.2:jar (default-jar) @ todo-api ---
+#12 4.931 [INFO] Building jar: /app/target/todo-api-0.0.1-SNAPSHOT.jar
+#12 4.965 [INFO] 
+#12 4.965 [INFO] --- spring-boot:3.3.5:repackage (repackage) @ todo-api ---
+#12 5.303 [INFO] Replacing main artifact /app/target/todo-api-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+#12 5.303 [INFO] The original artifact has been renamed to /app/target/todo-api-0.0.1-SNAPSHOT.jar.original
+#12 5.304 [INFO] ------------------------------------------------------------------------
+#12 5.304 [INFO] BUILD SUCCESS
+#12 5.304 [INFO] ------------------------------------------------------------------------
+#12 5.305 [INFO] Total time:  4.061 s
+#12 5.305 [INFO] Finished at: 2026-10-05T10:24:59Z
+#12 5.305 [INFO] ------------------------------------------------------------------------
+#12 DONE 5.4s
+
+#13 [stage-1 2/5] WORKDIR /app
+#13 CACHED
+
+#14 [stage-1 3/5] RUN apt-get update     && apt-get install -y --no-install-recommends curl     && rm -rf /var/lib/apt/lists/*
+#14 CACHED
+
+#15 [stage-1 4/5] RUN useradd --system --uid 1001 app
+#15 CACHED
+
+#16 [stage-1 5/5] COPY --from=build /app/target/*.jar app.jar
+#16 DONE 0.1s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 1.1s done
+#17 exporting manifest sha256:fdacbe498547d31452fb690042d289c59860d0e20cc8b4f13af5ef2e5f99854b 0.0s done
+#17 exporting config sha256:f68ff00571ded025be2d56f26c8b6c54b5fd04dc83ecb40d9da718f47aabbef5 0.0s done
+#17 exporting attestation manifest sha256:e6279e680cc247148aa204958d21bd577b054a6c9c9c6174e41d6ded8afdb480 0.0s done
+#17 exporting manifest list sha256:cc7b734c22b08005f656d54cb4741a943e5b1e1fc44689ffa26a863c33eed975
+#17 exporting manifest list sha256:cc7b734c22b08005f656d54cb4741a943e5b1e1fc44689ffa26a863c33eed975 0.0s done
+#17 naming to docker.io/library/tareas-api:0.1 done
+#17 unpacking to docker.io/library/tareas-api:0.1
+#17 unpacking to docker.io/library/tareas-api:0.1 0.2s done
+#17 DONE 1.5s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/w428pw4gki8kd2kxvq9rzx0vu
+
+real	0m9.670s
+user	0m0.062s
+sys	0m0.123s

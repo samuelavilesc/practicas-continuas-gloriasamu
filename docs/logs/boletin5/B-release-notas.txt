@@ -1,0 +1,28 @@
+title:	v1.0.0
+tag:	v1.0.0
+draft:	false
+prerelease:	false
+immutable:	false
+author:	glooriasanchezzz
+created:	2026-10-21T07:27:18Z
+published:	2026-10-21T07:28:40Z
+url:	https://github.com/samuelavilesc/practicas-continuas-gloriasamu/releases/tag/v1.0.0
+--
+## What's Changed
+* feat(tasks): añade paginación al listado de tareas by @samuelavilesc in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/2
+* feat(tasks): añade busqueda de tareas por texto by @glooriasanchezzz in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/4
+* docs(readme): aclara que Java 21 es LTS by @samuelavilesc in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/5
+* docs(readme): aclara que Java 21 es la version minima by @samuelavilesc in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/6
+* docs: actualiza tabla de endpoints, plantilla enhancement y entorno en CONTRIBUTING by @glooriasanchezzz in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/7
+* feat: contenerizar la API con Docker, PostgreSQL y Compose by @samuelavilesc in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/10
+* feat: anadir endpoint GET /api/tasks/overdue by @JHLumu in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/11
+* ci: integración continua con GitHub Actions by @glooriasanchezzz in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/13
+* docs(readme): añade el badge del estado del CI by @glooriasanchezzz in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/15
+* ci(cd): publica la imagen Docker en GHCR by @glooriasanchezzz in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/17
+
+## New Contributors
+* @samuelavilesc made their first contribution in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/2
+* @glooriasanchezzz made their first contribution in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/4
+* @JHLumu made their first contribution in https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/11
+
+**Full Changelog**: https://github.com/samuelavilesc/practicas-continuas-gloriasamu/commits/v1.0.0

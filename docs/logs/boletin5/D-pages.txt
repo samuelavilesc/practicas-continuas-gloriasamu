@@ -1,0 +1,350 @@
+build	Set up job	﻿2026-10-21T10:57:19.1355577Z Current runner version: '2.338.0'
+build	Set up job	2026-10-21T10:57:19.1381376Z ##[group]Runner Image Provisioner
+build	Set up job	2026-10-21T10:57:19.1382336Z Hosted Compute Agent
+build	Set up job	2026-10-21T10:57:19.1382994Z Version: 20261012.601
+build	Set up job	2026-10-21T10:57:19.1383908Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+build	Set up job	2026-10-21T10:57:19.1384957Z Build Date: 2026-10-12T17:48:21Z
+build	Set up job	2026-10-21T10:57:19.1385677Z Worker ID: {c41aabb5-796e-4942-9083-bf38ba4c4412}
+build	Set up job	2026-10-21T10:57:19.1386413Z Region: northcentralus
+build	Set up job	2026-10-21T10:57:19.1386974Z Cloud: Azure
+build	Set up job	2026-10-21T10:57:19.1387547Z ##[endgroup]
+build	Set up job	2026-10-21T10:57:19.1389550Z ##[group]Operating System
+build	Set up job	2026-10-21T10:57:19.1390203Z Ubuntu
+build	Set up job	2026-10-21T10:57:19.1390805Z 24.04.5
+build	Set up job	2026-10-21T10:57:19.1391301Z LTS
+build	Set up job	2026-10-21T10:57:19.1391846Z ##[endgroup]
+build	Set up job	2026-10-21T10:57:19.1392397Z ##[group]Runner Image
+build	Set up job	2026-10-21T10:57:19.1393003Z Image: ubuntu-24.04
+build	Set up job	2026-10-21T10:57:19.1393816Z Version: 20261012.334.1
+build	Set up job	2026-10-21T10:57:19.1395150Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-10-21T10:57:19.1396977Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+build	Set up job	2026-10-21T10:57:19.1398813Z ##[endgroup]
+build	Set up job	2026-10-21T10:57:19.1400601Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-10-21T10:57:19.1403789Z Contents: read
+build	Set up job	2026-10-21T10:57:19.1404646Z Metadata: read
+build	Set up job	2026-10-21T10:57:19.1405420Z Pages: write
+build	Set up job	2026-10-21T10:57:19.1406279Z ##[endgroup]
+build	Set up job	2026-10-21T10:57:19.1409013Z Secret source: Actions
+build	Set up job	2026-10-21T10:57:19.1410483Z Cache mode: write
+build	Set up job	2026-10-21T10:57:19.1411528Z Prepare workflow directory
+build	Set up job	2026-10-21T10:57:19.1783116Z Prepare all required actions
+build	Set up job	2026-10-21T10:57:19.1848215Z Getting action download info
+build	Set up job	2026-10-21T10:57:19.4391142Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+build	Set up job	2026-10-21T10:57:19.5509979Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build	Set up job	2026-10-21T10:57:19.6667598Z Download action repository 'actions/configure-pages@v5' (SHA:983d7736d9b0ae728b81ab479565c72886d7745b)
+build	Set up job	2026-10-21T10:57:20.0365408Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+build	Set up job	2026-10-21T10:57:20.2680686Z Getting action download info
+build	Set up job	2026-10-21T10:57:20.3639147Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	Set up job	2026-10-21T10:57:20.5501439Z Complete job name: build
+build	Run actions/checkout@v4	﻿2026-10-21T10:57:20.6465195Z ##[group]Run actions/checkout@v4
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6467382Z with:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6469016Z   repository: samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6478817Z   token: ***
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6479860Z   ssh-strict: true
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6480911Z   ssh-user: git
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6481903Z   persist-credentials: true
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6482974Z   clean: true
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6484098Z   sparse-checkout-cone-mode: true
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6485595Z   fetch-depth: 1
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6486756Z   fetch-tags: false
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6487879Z   show-progress: true
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6490015Z   lfs: false
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6491194Z   submodules: false
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6492725Z   set-safe-directory: true
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6494764Z   allow-unsafe-pr-checkout: false
+build	Run actions/checkout@v4	2026-10-21T10:57:20.6496869Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7585991Z Syncing repository: samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7589335Z ##[group]Getting Git version info
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7591560Z Working directory is '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7594597Z [command]/usr/bin/git version
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7641892Z git version 2.55.0
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7668585Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7678239Z Temporarily overriding HOME='/home/runner/work/_temp/f7f20d11-a0be-40f1-b24b-7585118301b7' before making global git config changes
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7681749Z Adding repository directory to the temporary git global config as a safe directory
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7685685Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7728795Z Deleting the contents of '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7733142Z ##[group]Initializing the repository
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7739250Z [command]/usr/bin/git init /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7961514Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7977994Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7981802Z hint: to use in all of your new repositories, which will suppress this warning,
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7984183Z hint: call:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7985601Z hint:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7987431Z hint: 	git config --global init.defaultBranch <name>
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7989068Z hint:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7991221Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7993893Z hint: 'development'. The just-created branch can be renamed via this command:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7995466Z hint:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7996395Z hint: 	git branch -m <name>
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7997425Z hint:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.7998716Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8001685Z Initialized empty Git repository in /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/.git/
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8006282Z [command]/usr/bin/git remote add origin https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8040849Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8043479Z ##[group]Disabling automatic garbage collection
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8050698Z [command]/usr/bin/git config --local gc.auto 0
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8090088Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8092389Z ##[group]Setting up auth
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8096570Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8145841Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8464739Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8509932Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8710532Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8741337Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8934949Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8975186Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8977112Z ##[group]Fetching the repository
+build	Run actions/checkout@v4	2026-10-21T10:57:20.8984984Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +60978ac38b72f4661161e70559c3fb2cb53474ed:refs/remotes/origin/main
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6587167Z From https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6590355Z  * [new ref]         60978ac38b72f4661161e70559c3fb2cb53474ed -> origin/main
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6596194Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6598720Z ##[group]Determining the checkout info
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6601287Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6605303Z [command]/usr/bin/git sparse-checkout disable
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6661123Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6701067Z ##[group]Checking out the ref
+build	Run actions/checkout@v4	2026-10-21T10:57:21.6704720Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	Run actions/checkout@v4	2026-10-21T10:57:21.7115795Z Switched to a new branch 'main'
+build	Run actions/checkout@v4	2026-10-21T10:57:21.7122854Z branch 'main' set up to track 'origin/main'.
+build	Run actions/checkout@v4	2026-10-21T10:57:21.7129234Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-21T10:57:21.7170031Z [command]/usr/bin/git log -1 --format=%H
+build	Run actions/checkout@v4	2026-10-21T10:57:21.7191968Z 60978ac38b72f4661161e70559c3fb2cb53474ed
+build	Run actions/setup-node@v4	﻿2026-10-21T10:57:21.7481329Z ##[group]Run actions/setup-node@v4
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7482209Z with:
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7482905Z   node-version: 22
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7483711Z   cache: npm
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7484544Z   cache-dependency-path: docs/package-lock.json
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7485413Z   always-auth: false
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7486216Z   check-latest: false
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7489270Z   token: ***
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.7489960Z ##[endgroup]
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.8976569Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.8980076Z (node:2294) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.8981559Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Run actions/setup-node@v4	2026-10-21T10:57:21.8984021Z ##[group]Environment details
+build	Run actions/setup-node@v4	2026-10-21T10:57:22.2867452Z node: v22.23.3
+build	Run actions/setup-node@v4	2026-10-21T10:57:22.2868300Z npm: 10.9.9
+build	Run actions/setup-node@v4	2026-10-21T10:57:22.2869116Z yarn: 1.22.22
+build	Run actions/setup-node@v4	2026-10-21T10:57:22.2870898Z ##[endgroup]
+build	Run actions/setup-node@v4	2026-10-21T10:57:22.2887239Z [command]/opt/hostedtoolcache/node/22.23.3/x64/bin/npm config get cache
+build	Run actions/setup-node@v4	2026-10-21T10:57:22.3966002Z /home/runner/.npm
+build	Run actions/setup-node@v4	2026-10-21T10:57:22.5162046Z npm cache is not found
+build	Instalar dependencias del generador	﻿2026-10-21T10:57:22.5313033Z ##[group]Run npm ci
+build	Instalar dependencias del generador	2026-10-21T10:57:22.5314292Z ^[[36;1mnpm ci^[[0m
+build	Instalar dependencias del generador	2026-10-21T10:57:22.5498642Z shell: /usr/bin/bash -e {0}
+build	Instalar dependencias del generador	2026-10-21T10:57:22.5499463Z ##[endgroup]
+build	Instalar dependencias del generador	2026-10-21T10:57:23.1771722Z 
+build	Instalar dependencias del generador	2026-10-21T10:57:23.1778035Z added 1 package, and audited 2 packages in 570ms
+build	Instalar dependencias del generador	2026-10-21T10:57:23.1778974Z 
+build	Instalar dependencias del generador	2026-10-21T10:57:23.1779757Z found 0 vulnerabilities
+build	Generar la web	﻿2026-10-21T10:57:23.2025650Z ##[group]Run node build-site.js
+build	Generar la web	2026-10-21T10:57:23.2026348Z ^[[36;1mnode build-site.js^[[0m
+build	Generar la web	2026-10-21T10:57:23.2072938Z shell: /usr/bin/bash -e {0}
+build	Generar la web	2026-10-21T10:57:23.2073603Z ##[endgroup]
+build	Generar la web	2026-10-21T10:57:23.2742234Z   boletin1-gloria.md -> site/boletin1-gloria.html
+build	Generar la web	2026-10-21T10:57:23.2774683Z   boletin1.md -> site/boletin1.html
+build	Generar la web	2026-10-21T10:57:23.2807564Z   boletin2.md -> site/boletin2.html
+build	Generar la web	2026-10-21T10:57:23.2878784Z   boletin3.md -> site/boletin3.html
+build	Generar la web	2026-10-21T10:57:23.2927036Z   boletin4.md -> site/boletin4.html
+build	Generar la web	2026-10-21T10:57:23.2975544Z Web generada en /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/docs/site (5 documentos)
+build	Run actions/configure-pages@v5	﻿2026-10-21T10:57:23.3206213Z ##[group]Run actions/configure-pages@v5
+build	Run actions/configure-pages@v5	2026-10-21T10:57:23.3206816Z with:
+build	Run actions/configure-pages@v5	2026-10-21T10:57:23.3209380Z   token: ***
+build	Run actions/configure-pages@v5	2026-10-21T10:57:23.3209849Z   enablement: false
+build	Run actions/configure-pages@v5	2026-10-21T10:57:23.3210304Z ##[endgroup]
+build	Run actions/upload-pages-artifact@v3	﻿2026-10-21T10:57:23.7126794Z ##[group]Run actions/upload-pages-artifact@v3
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7127405Z with:
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7127819Z   path: docs/site
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7128317Z   name: github-pages
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7128768Z   retention-days: 1
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7129224Z env:
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7129651Z   GITHUB_PAGES: true
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7130089Z ##[endgroup]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7199024Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7240252Z ##[group]Run echo ::group::Archive artifact
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7240891Z ^[[36;1mecho ::group::Archive artifact^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7241367Z ^[[36;1mtar \^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7241871Z ^[[36;1m  --dereference --hard-dereference \^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7242400Z ^[[36;1m  --directory "$INPUT_PATH" \^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7242936Z ^[[36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7243455Z ^[[36;1m  --exclude=.git \^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7244099Z ^[[36;1m  --exclude=.github \^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7244713Z ^[[36;1m  .^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7245123Z ^[[36;1mecho ::endgroup::^[[0m
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7266552Z shell: /usr/bin/sh -e {0}
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7267231Z env:
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7267716Z   GITHUB_PAGES: true
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7268153Z   INPUT_PATH: docs/site
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7268607Z ##[endgroup]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7309188Z ##[group]Archive artifact
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7321575Z ./
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7322463Z ./boletin4.html
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7323203Z ./boletin1-gloria.html
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7324057Z ./boletin3.html
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7324742Z ./capturas/
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7325400Z ./capturas/boletin4/
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7326107Z ./capturas/boletin4/10.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7326805Z ./capturas/boletin4/9.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7327539Z ./capturas/boletin4/12.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7328282Z ./capturas/boletin4/2.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7330483Z ./capturas/boletin4/8.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7333722Z ./capturas/boletin4/4.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7334661Z ./capturas/boletin4/1.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7335366Z ./capturas/boletin4/6.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7336177Z ./capturas/boletin4/11.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7338801Z ./capturas/boletin4/5a.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7339968Z ./capturas/boletin4/5b.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7340677Z ./capturas/boletin4/7.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7343222Z ./capturas/boletin4/3.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7344804Z ./capturas/boletin3/
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7345470Z ./capturas/boletin3/2.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7346214Z ./capturas/boletin3/4.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7347212Z ./capturas/boletin3/5.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7347901Z ./capturas/boletin3/1.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7348582Z ./capturas/boletin3/6.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7349224Z ./capturas/boletin3/7.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7349953Z ./capturas/boletin3/3.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7350673Z ./capturas/boletin2/
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7351195Z ./capturas/boletin2/image-3.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7352103Z ./capturas/boletin2/image-2.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7354872Z ./capturas/boletin2/image.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7355741Z ./capturas/boletin2/image-1.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7357413Z ./capturas/boletin1/
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7358169Z ./capturas/boletin1/05-apply.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7358943Z ./capturas/boletin1/07-git-log.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7359691Z ./capturas/boletin1/04-check.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7360505Z ./capturas/boletin1/06-hook.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7361294Z ./capturas/boletin1/01-entorno.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7362056Z ./capturas/boletin1/02-build.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7362820Z ./capturas/boletin1/03-postman.png
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7363594Z ./index.html
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7364402Z ./boletin1.html
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7364987Z ./boletin2.html
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7367020Z ##[endgroup]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7380578Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=18]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7386199Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7394697Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7399264Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7406632Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7409772Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7493707Z ##[group]Run actions/upload-artifact@v4
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7494314Z with:
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7494724Z   name: github-pages
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7495192Z   path: /home/runner/work/_temp/artifact.tar
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7495754Z   retention-days: 1
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7496175Z   if-no-files-found: error
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7496649Z   compression-level: 6
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7497064Z   overwrite: false
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7497485Z   include-hidden-files: false
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7497954Z env:
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7498351Z   GITHUB_PAGES: true
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.7498803Z ##[endgroup]
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.9161377Z (node:2373) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.9164102Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.9220492Z With the provided path, there will be 1 file uploaded
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.9224960Z Artifact name is valid!
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:23.9235536Z Root directory input is valid!
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:24.1747697Z Beginning upload of artifact content to blob storage
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:24.3922392Z (node:2373) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:24.8181329Z Uploaded bytes 5599576
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:24.8529836Z Finished uploading artifact content to blob storage!
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:24.8531688Z SHA256 digest of uploaded artifact zip is 516cdaacac7cc76342c2600d54ba46436a81265efc9745fd3f4c99a2e1992bc5
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:24.8533270Z Finalizing artifact upload
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:25.0902282Z Artifact github-pages.zip successfully finalized. Artifact ID 12340477926
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:25.0903745Z Artifact github-pages has been successfully uploaded! Final size is 5599576 bytes. Artifact ID is 12340477926
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:25.0910903Z Artifact download URL: https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/39588341568/artifacts/12340477926
+build	Run actions/upload-pages-artifact@v3	2026-10-21T10:57:25.1023051Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=1361]
+build	Post Run actions/setup-node@v4	﻿2026-10-21T10:57:25.1138114Z Post job cleanup.
+build	Post Run actions/setup-node@v4	2026-10-21T10:57:25.2388385Z (node:2386) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Post Run actions/setup-node@v4	2026-10-21T10:57:25.2394083Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Post Run actions/setup-node@v4	2026-10-21T10:57:25.2588974Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu --files-from manifest.txt --use-compress-program zstdmt
+build	Post Run actions/setup-node@v4	2026-10-21T10:57:25.4018610Z (node:2386) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build	Post Run actions/setup-node@v4	2026-10-21T10:57:25.5437373Z Sent 172661 of 172661 (100.0%), 1.1 MBs/sec
+build	Post Run actions/setup-node@v4	2026-10-21T10:57:25.6975395Z Cache saved with the key: node-cache-Linux-x64-npm-6673df953fb8dce50a50fa02cc7ca4721b7d9066cbcb195c010a6c26a0c8dffa
+build	Post Run actions/checkout@v4	﻿2026-10-21T10:57:25.7115321Z Post job cleanup.
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.7988949Z [command]/usr/bin/git version
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8029707Z git version 2.55.0
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8063964Z Temporarily overriding HOME='/home/runner/work/_temp/c9a39a4b-04fe-43b4-8613-3537df202c5d' before making global git config changes
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8065570Z Adding repository directory to the temporary git global config as a safe directory
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8069374Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8108165Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8141943Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8375503Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8404525Z http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8415028Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8465067Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8684261Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post Run actions/checkout@v4	2026-10-21T10:57:25.8739614Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-10-21T10:57:25.9164386Z Cleaning up orphan processes
+build	Complete job	2026-10-21T10:57:25.9428217Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/configure-pages@v5, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+deploy	Set up job	﻿2026-10-21T10:57:32.3146226Z Current runner version: '2.338.0'
+deploy	Set up job	2026-10-21T10:57:32.3172426Z ##[group]Runner Image Provisioner
+deploy	Set up job	2026-10-21T10:57:32.3173425Z Hosted Compute Agent
+deploy	Set up job	2026-10-21T10:57:32.3174342Z Version: 20261015.610
+deploy	Set up job	2026-10-21T10:57:32.3175246Z Commit: 267fdb4e8bbec4ab5ea31367f3a00d5c480c7656
+deploy	Set up job	2026-10-21T10:57:32.3176039Z Build Date: 2026-10-14T17:06:54Z
+deploy	Set up job	2026-10-21T10:57:32.3176772Z Worker ID: {a8fcdf19-e6e8-4935-a812-5ec0537fd3ba}
+deploy	Set up job	2026-10-21T10:57:32.3177566Z Region: eastus
+deploy	Set up job	2026-10-21T10:57:32.3178130Z Cloud: Azure
+deploy	Set up job	2026-10-21T10:57:32.3178706Z ##[endgroup]
+deploy	Set up job	2026-10-21T10:57:32.3180600Z ##[group]Operating System
+deploy	Set up job	2026-10-21T10:57:32.3181332Z Ubuntu
+deploy	Set up job	2026-10-21T10:57:32.3181959Z 24.04.5
+deploy	Set up job	2026-10-21T10:57:32.3182500Z LTS
+deploy	Set up job	2026-10-21T10:57:32.3183059Z ##[endgroup]
+deploy	Set up job	2026-10-21T10:57:32.3183741Z ##[group]Runner Image
+deploy	Set up job	2026-10-21T10:57:32.3184706Z Image: ubuntu-24.04
+deploy	Set up job	2026-10-21T10:57:32.3185376Z Version: 20261018.339.1
+deploy	Set up job	2026-10-21T10:57:32.3186492Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261018.339/images/ubuntu/Ubuntu2404-Readme.md
+deploy	Set up job	2026-10-21T10:57:32.3188750Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261018.339
+deploy	Set up job	2026-10-21T10:57:32.3189777Z ##[endgroup]
+deploy	Set up job	2026-10-21T10:57:32.3191060Z ##[group]GITHUB_TOKEN Permissions
+deploy	Set up job	2026-10-21T10:57:32.3193275Z Contents: read
+deploy	Set up job	2026-10-21T10:57:32.3194302Z Metadata: read
+deploy	Set up job	2026-10-21T10:57:32.3195069Z Pages: write
+deploy	Set up job	2026-10-21T10:57:32.3195658Z ##[endgroup]
+deploy	Set up job	2026-10-21T10:57:32.3197850Z Secret source: Actions
+deploy	Set up job	2026-10-21T10:57:32.3198857Z Cache mode: write
+deploy	Set up job	2026-10-21T10:57:32.3200374Z Prepare workflow directory
+deploy	Set up job	2026-10-21T10:57:32.3536762Z Prepare all required actions
+deploy	Set up job	2026-10-21T10:57:32.3584676Z Getting action download info
+deploy	Set up job	2026-10-21T10:57:32.5807054Z Download action repository 'actions/deploy-pages@v4' (SHA:d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e)
+deploy	Set up job	2026-10-21T10:57:32.9416436Z Complete job name: deploy
+deploy	Publicar en GitHub Pages	﻿2026-10-21T10:57:33.0197199Z ##[group]Run actions/deploy-pages@v4
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0198136Z with:
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0201783Z   token: ***
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0202257Z   timeout: 600000
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0202715Z   error_count: 10
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0203180Z   reporting_interval: 5000
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0203710Z   artifact_name: github-pages
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0204440Z   preview: false
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.0205149Z ##[endgroup]
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.2126041Z (node:2179) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.2127997Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.3135857Z Fetching artifact metadata for "github-pages" in this workflow run
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.4016553Z Found 1 artifact(s)
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.4030550Z Creating Pages deployment with payload:
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.4031604Z {
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.4032111Z 	"artifact_id": 12340477926,
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.4032891Z 	"pages_build_version": "60978ac38b72f4661161e70559c3fb2cb53474ed",
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.4078054Z 	"oidc_token": "***"
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.4078682Z }
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:33.8605731Z Created deployment for 60978ac38b72f4661161e70559c3fb2cb53474ed, ID: 60978ac38b72f4661161e70559c3fb2cb53474ed
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:38.8623822Z Getting Pages deployment status...
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:39.0142436Z Current status: deployment_queued
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:44.0153193Z Getting Pages deployment status...
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:44.2127764Z Current status: deployment_queued
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:49.2136119Z Getting Pages deployment status...
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:49.3619776Z Current status: deployment_queued
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:54.3629429Z Getting Pages deployment status...
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:54.5089636Z Current status: deployment_queued
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:59.5099250Z Getting Pages deployment status...
+deploy	Publicar en GitHub Pages	2026-10-21T10:57:59.6452623Z Current status: deployment_queued
+deploy	Publicar en GitHub Pages	2026-10-21T10:58:04.6452690Z Getting Pages deployment status...
+deploy	Publicar en GitHub Pages	2026-10-21T10:58:04.7914885Z Current status: deployment_queued
+deploy	Publicar en GitHub Pages	2026-10-21T10:58:09.7916334Z Getting Pages deployment status...
+deploy	Publicar en GitHub Pages	2026-10-21T10:58:09.9013858Z Reported success!
+deploy	Complete job	﻿2026-10-21T10:58:09.9345539Z Evaluate and set environment url
+deploy	Complete job	2026-10-21T10:58:09.9350788Z Evaluated environment url: https://samuelavilesc.github.io/practicas-continuas-gloriasamu/
+deploy	Complete job	2026-10-21T10:58:09.9351832Z Cleaning up orphan processes
+deploy	Complete job	2026-10-21T10:58:09.9783943Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/deploy-pages@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

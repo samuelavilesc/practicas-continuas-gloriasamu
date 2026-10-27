@@ -1,0 +1,8 @@
+tag v1.2.0
+Tagger: Samuel Aviles Conesa <samuelavilesconesa@gmail.com>
+Date:   Mon Oct 26 14:04:41 2026 +0100
+
+Versión 1.2.0: primer despliegue continuo con Ansible
+
+commit 726b6e4d4a186786c064dcbcc4518b2704387008
+ * [new tag]         v1.2.0 -> v1.2.0

@@ -1,0 +1,66 @@
+$ ansible-playbook -i deploy/inventory.ini deploy/deploy.yml --vault-password-file ~/.vault_pass_tareas --extra-vars "version_app=1.0.0"
+Mon Oct 26 13:17:22 CET 2026
+
+PLAY [Preparar Docker en toda la flota] ****************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [app1]
+ok: [app2]
+ok: [db1]
+
+TASK [Instalar Docker y el SDK de Python] **************************************
+ok: [db1]
+ok: [app1]
+ok: [app2]
+
+TASK [Arrancar dockerd (los contenedores no tienen systemd)] *******************
+ok: [app1]
+ok: [app2]
+ok: [db1]
+
+PLAY [Desplegar la base de datos] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [db1]
+
+TASK [Base de datos PostgreSQL] ************************************************
+ok: [db1]
+
+PLAY [Desplegar la API de tareas] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [app1]
+ok: [app2]
+
+TASK [Login en GHCR] ***********************************************************
+ok: [app2]
+ok: [app1]
+
+TASK [Descargar la imagen de la aplicación] ************************************
+ok: [app1]
+ok: [app2]
+
+TASK [Arrancar el contenedor de la API] ****************************************
+[DEPRECATION WARNING]: The default value "ignore" for image_name_mismatch has 
+been deprecated and will change to "recreate" in community.docker 4.0.0. In the
+ current situation, this would cause the container to be recreated since the 
+current container's image name "ghcr.io/samuelavilesc/practicas-continuas-
+gloriasamu:1.1.0" does not match the desired image name 
+"ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0". This feature will
+ be removed from community.docker in version 4.0.0. Deprecation warnings can be
+ disabled by setting deprecation_warnings=False in ansible.cfg.
+changed: [app1]
+changed: [app2]
+
+TASK [Smoke test — esperar a que la API esté sana] *****************************
+FAILED - RETRYING: [app1]: Smoke test — esperar a que la API esté sana (20 retries left).
+FAILED - RETRYING: [app2]: Smoke test — esperar a que la API esté sana (20 retries left).
+ok: [app1]
+ok: [app2]
+
+PLAY RECAP *********************************************************************
+app1                       : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+app2                       : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+db1                        : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Mon Oct 26 13:17:44 CET 2026

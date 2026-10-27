@@ -1,0 +1,13 @@
+$ curl -s https://hub.docker.com/v2/repositories/samuelavilesc/tareas-api/tags
+latest sha256:6d5d35e677a4c396440f9983af844e25a134e81ae7cf8794b251566b7ab43653 163.0 MB
+0.1 sha256:6d5d35e677a4c396440f9983af844e25a134e81ae7cf8794b251566b7ab43653 163.0 MB
+
+$ docker rmi samuelavilesc/tareas-api:0.1 && docker pull samuelavilesc/tareas-api:0.1
+Status: Downloaded newer image for samuelavilesc/tareas-api:0.1
+docker.io/samuelavilesc/tareas-api:0.1
+
+$ docker run --rm --entrypoint ls samuelavilesc/tareas-api:0.1 -la /app   # solo el JAR, sin .env ni código
+total 49052
+drwxr-xr-x 1 root root     4096 Oct  5 10:28 .
+drwxr-xr-x 1 root root     4096 Oct  5 10:58 ..
+-rw-r--r-- 1 root root 50217893 Oct  5 10:28 app.jar

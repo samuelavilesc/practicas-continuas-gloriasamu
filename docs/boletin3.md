@@ -8,7 +8,7 @@
 
 Este boletín parte de la API de tareas del Boletín 2 y la empaqueta en una imagen Docker. La imagen se construye con un Dockerfile multi-stage, se ejecuta sin root y tiene un healthcheck. Además, la API pasa de H2 en memoria a PostgreSQL, levantado con Docker Compose, y las credenciales salen a un fichero `.env` que no se versiona. También se añade un *dev container* para que cualquiera tenga el mismo entorno de desarrollo.
 
-Todos los cambios del repositorio se han hecho en la rama `feat/docker` y han entrado en `main` mediante el PR #10, siguiendo el flujo del `CONTRIBUTING.md`: Issue → rama → PR → revisión cruzada → *squash and merge*. Las Partes A, H e I no modifican el repositorio y se documentan aquí con la salida real de los comandos. Las salidas completas de los comandos están en `logs/` y las capturas de pantalla, en `capturas/`.
+Todos los cambios del repositorio se han hecho en la rama `feat/docker` y han entrado en `main` mediante el PR #10, siguiendo el flujo del `CONTRIBUTING.md`: Issue → rama → PR → revisión cruzada → *squash and merge*. Las Partes A, H e I no modifican el repositorio y se documentan aquí con la salida real de los comandos. Las salidas completas de los comandos están en `logs/boletin3/` y las capturas de pantalla, en `capturas/`.
 
 En este boletín los commits los ha firmado Samuel aunque se han hecho junto a Gloria y la revisión del PR, Gloria. En el Boletín 4 se invierten los papeles.
 
@@ -82,7 +82,7 @@ Al fusionar con *squash and merge*, todos los commits del PR entran en `main` co
 
 ### Parte A — Primeros pasos con Docker
 
-Docker Desktop ya estaba instalado. Se comprueban las versiones y se ejecuta la imagen de prueba (`logs/A-hello.txt`):
+Docker Desktop ya estaba instalado. Se comprueban las versiones y se ejecuta la imagen de prueba ([`logs/boletin3/A-hello.txt`](logs/boletin3/A-hello.txt)):
 
 ```text
 $ docker --version
@@ -99,7 +99,7 @@ This message shows that your installation appears to be working correctly.
 
 ### Parte B — Endpoint de salud
 
-Con Actuator añadido (commit 1), se arranca la API en local con `java -jar` y se comprueba el endpoint (`logs/B-health.txt`):
+Con Actuator añadido (commit 1), se arranca la API en local con `java -jar` y se comprueba el endpoint ([`logs/boletin3/B-health.txt`](logs/boletin3/B-health.txt)):
 
 ```text
 $ curl http://localhost:8080/actuator/health
@@ -110,7 +110,7 @@ $ curl http://localhost:8080/actuator/health
 
 ### Parte C — Dockerfile multi-stage
 
-Se construye la imagen y se arranca un contenedor (`logs/C-build-inicial.txt`, `logs/C-run.txt`). El primer build, sin caché, tarda **1 min 4 s**.
+Se construye la imagen y se arranca un contenedor ([`logs/boletin3/C-build-inicial.txt`](logs/boletin3/C-build-inicial.txt), [`logs/boletin3/C-run.txt`](logs/boletin3/C-run.txt)). El primer build, sin caché, tarda **1 min 4 s**.
 
 ```text
 $ curl http://localhost:8080/api/tasks
@@ -124,7 +124,7 @@ app
 
 El contenedor llega a `(healthy)` gracias al `HEALTHCHECK`, y `whoami` confirma que la aplicación **no se ejecuta como root**.
 
-**Comparación de tamaños** (`logs/C-tamanos.txt`):
+**Comparación de tamaños** ([`logs/boletin3/C-tamanos.txt`](logs/boletin3/C-tamanos.txt)):
 
 ```text
 $ docker build --target build -t tareas-api:build .
@@ -145,7 +145,7 @@ La imagen de la etapa `build` ocupa más del doble (1,2 GB frente a 564 MB en di
 
 La imagen final solo añade a `eclipse-temurin:21-jre` una capa de 51,5 MB con el JAR (que ya lleva dentro sus dependencias) y unos pocos KB del usuario `app` (`docker history tareas-api:0.1`). Menos tamaño significa también menos superficie de ataque: en producción no hay compilador ni Maven que se puedan explotar.
 
-**Caché de capas** (`logs/C-cache-orden-correcto.txt` y `logs/C-cache-orden-invertido.txt`). En los dos casos se añadió un comentario a `TodoApiApplication.java` antes de reconstruir:
+**Caché de capas** ([`logs/boletin3/C-cache-orden-correcto.txt`](logs/boletin3/C-cache-orden-correcto.txt) y [`logs/boletin3/C-cache-orden-invertido.txt`](logs/boletin3/C-cache-orden-invertido.txt)). En los dos casos se añadió un comentario a `TodoApiApplication.java` antes de reconstruir:
 
 | Orden en el Dockerfile | `dependency:go-offline` | `package` | Tiempo total |
 |---|---|---|---|
@@ -158,7 +158,7 @@ Con el orden invertido, primero se hizo un build de calentamiento para que la co
 
 ### Parte D — De H2 a PostgreSQL con Compose
 
-Tras cambiar el driver (commit 3) y crear el compose (commit 4), se levanta el stack y se prueba la persistencia (`logs/D3-persistencia.txt`):
+Tras cambiar el driver (commit 3) y crear el compose (commit 4), se levanta el stack y se prueba la persistencia ([`logs/boletin3/D3-persistencia.txt`](logs/boletin3/D3-persistencia.txt)):
 
 ```text
 $ docker compose ps
@@ -202,7 +202,7 @@ Mientras `db` no está `healthy`, `depends_on: condition: service_healthy` hace 
 ### Parte E — Sacar la configuración a un fichero `.env`
 
 1. Se crea `.env.example` (versionado) y, a partir de él, el `.env` local con `cp .env.example .env`, cambiando la contraseña.
-2. `.env` ya estaba en el `.gitignore` desde el Boletín 1 y está en el `.dockerignore` desde la Parte C. Se comprueba (`logs/E-config.txt`):
+2. `.env` ya estaba en el `.gitignore` desde el Boletín 1 y está en el `.dockerignore` desde la Parte C. Se comprueba ([`logs/boletin3/E-config.txt`](logs/boletin3/E-config.txt)):
 
    ```text
    $ git check-ignore -v .env
@@ -234,7 +234,7 @@ Mientras `db` no está `healthy`, `depends_on: condition: service_healthy` hace 
 
    Las variables `${…}` se han sustituido por `tareas`, `app` y la contraseña. El healthcheck mantiene `$${…}` porque esa sustitución no la hace Compose: la hace el shell **dentro** del contenedor de PostgreSQL, que tiene esas variables en su entorno.
 
-4. Como prueba extra de `${VAR:?mensaje}`, se movió temporalmente el `.env` y se volvió a ejecutar `docker compose config` (`logs/E-sin-env.txt`):
+4. Como prueba extra de `${VAR:?mensaje}`, se movió temporalmente el `.env` y se volvió a ejecutar `docker compose config` ([`logs/boletin3/E-sin-env.txt`](logs/boletin3/E-sin-env.txt)):
 
    ```text
    WARN The "POSTGRES_DB" variable is not set. Defaulting to a blank string.
@@ -243,7 +243,7 @@ Mientras `db` no está `healthy`, `depends_on: condition: service_healthy` hace 
    ```
 
    Las variables `${VAR}` normales solo dan un aviso y quedan vacías, mientras que `:?` impide arrancar con un mensaje claro.
-5. Se levanta el stack desde cero (`logs/E-up.txt`):
+5. Se levanta el stack desde cero ([`logs/boletin3/E-up.txt`](logs/boletin3/E-up.txt)):
 
    ```text
    $ docker compose down -v
@@ -278,7 +278,7 @@ Mientras `db` no está `healthy`, `depends_on: condition: service_healthy` hace 
 2. `if [ -d .githooks ]; then git config core.hooksPath .githooks; fi`: si el repositorio tiene la carpeta de hooks versionados, la activa. Así el hook de pre-commit con Spotless (Boletín 1) funciona también dentro del contenedor.
 3. `mvn -B dependency:go-offline`: descarga en el contenedor todas las dependencias y plugins de Maven, para que la primera compilación sea rápida y se pueda trabajar sin conexión. `-B` es modo *batch* (sin interacción ni colores).
 
-**Prueba.** Se probó con la CLI oficial de la especificación (`@devcontainers/cli`), que hace lo mismo que *Reopen in Container* de VS Code (`logs/F-devcontainer.txt`):
+**Prueba.** Se probó con la CLI oficial de la especificación (`@devcontainers/cli`), que hace lo mismo que *Reopen in Container* de VS Code ([`logs/boletin3/F-devcontainer.txt`](logs/boletin3/F-devcontainer.txt)):
 
 Primer intento, con el `devcontainer.json` tal cual lo da el boletín: el contenedor se crea y `docker compose up --build` funciona dentro, pero aparecen dos problemas:
 
@@ -293,7 +293,7 @@ fatal: detected dubious ownership in repository at '/workspaces/todo-api'
 - **JDK 25 en lugar de 21:** la imagen `java:21` trae el JDK 21, pero la feature `java:1` sin la opción `version` instala la versión *latest* con sdkman (`25.0.4-tem`), que queda primera en el `PATH`. El proyecto compila con `java.version=21` y funcionaría igual, pero no es el entorno que se pretende fijar.
 - **Hooks sin activar:** en Windows (y en general con *bind mounts*), los ficheros del workspace aparecen como propiedad de `root` y el usuario del contenedor es `vscode`. Desde la versión 2.35.2, git se niega a operar en repositorios de otro usuario. La segunda orden de `postCreateCommand` falla y, como las órdenes van separadas por `;` y no por `&&`, el error pasa desapercibido.
 
-Se corrigió en el commit 8 (`"version": "21"` y `safe.directory`). Después se volvió a probar desde cero, quitando temporalmente el `.env` del host para comprobar también la primera orden (`logs/F-devcontainer.txt`):
+Se corrigió en el commit 8 (`"version": "21"` y `safe.directory`). Después se volvió a probar desde cero, quitando temporalmente el `.env` del host para comprobar también la primera orden ([`logs/boletin3/F-devcontainer.txt`](logs/boletin3/F-devcontainer.txt)):
 
 ```text
 $ devcontainer up --workspace-folder .
@@ -362,7 +362,7 @@ El PR incluye todo lo que pide el boletín: `Dockerfile`, `.dockerignore`, `dock
 
 ### Parte H — Registry de Docker (Docker Hub)
 
-Esta parte no toca el repositorio: solo se publica en Docker Hub la imagen construida en la Parte C (ya con PostgreSQL y Actuator). Resultado: **https://hub.docker.com/r/samuelavilesc/tareas-api** (`logs/H-push.txt`, `logs/H-verificacion.txt`).
+Esta parte no toca el repositorio: solo se publica en Docker Hub la imagen construida en la Parte C (ya con PostgreSQL y Actuator). Resultado: **https://hub.docker.com/r/samuelavilesc/tareas-api** ([`logs/boletin3/H-push.txt`](logs/boletin3/H-push.txt), [`logs/boletin3/H-verificacion.txt`](logs/boletin3/H-verificacion.txt)).
 
 **Pasos seguidos:**
 
@@ -506,7 +506,7 @@ docker run --rm -v "$(pwd):/src" click-tests:8.5.0
 
 El código fuente se monta con `-v "$(pwd):/src"`: el contenedor ejecuta los tests sobre el código del host, sin copiarlo en la imagen.
 
-**Primer intento, sin `less`** (`logs/I-run-sin-less.txt`):
+**Primer intento, sin `less`** ([`logs/boletin3/I-run-sin-less.txt`](logs/boletin3/I-run-sin-less.txt)):
 
 ```text
 FAILED tests/test_utils/test_echo_via_pager.py::test_echo_via_pager[test0-less]
@@ -517,7 +517,7 @@ E   AssertionError: Unexpected pager output in test case 'Plain string argument'
 
 Fallaban los 24 casos de `test_echo_via_pager` parametrizados con `"less"` como paginador (`pager_cmd` en `["cat", "cat ", " cat ", "less", " less", " less "]`). Los de `cat` pasaban. La imagen *slim* no incluye `less`, mientras que los runners `ubuntu-latest` de GitHub Actions sí. Es una **dependencia de sistema implícita**, que no aparece en ningún fichero de configuración del proyecto. Por eso tiene valor un Dockerfile que la deje escrita.
 
-**Con `less` instalado** (`logs/I-build.txt`, `logs/I-run.txt`):
+**Con `less` instalado** ([`logs/boletin3/I-build.txt`](logs/boletin3/I-build.txt), [`logs/boletin3/I-run.txt`](logs/boletin3/I-run.txt)):
 
 ```text
 $ docker run --rm -v "$(pwd):/src" click-tests:8.5.0
@@ -548,7 +548,7 @@ Después de ejecutar, `git status` en el clon de click sigue limpio: el contened
 Hemos usado **Claude Code** (modelo Claude Opus 5.5) en VS Code / terminal para:
 - leer el boletín y planificar el trabajo y la estructura de esta memoria;
 - aplicar los cambios del repositorio de la migración de H2 a PostgreSQL con el prompt de la Parte D.1;
-- ejecutar las pruebas (build, caché, tamaños, persistencia, `.env`, dev container) y guardar su salida en `logs/`;
+- ejecutar las pruebas (build, caché, tamaños, persistencia, `.env`, dev container) y guardar su salida en `logs/boletin3/`;
 - elegir el repositorio de la Parte I, analizar sus requisitos y escribir su Dockerfile;
 
 

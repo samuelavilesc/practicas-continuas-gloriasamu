@@ -1,0 +1,243 @@
+build	Set up job	﻿2026-10-13T15:12:55.8455893Z Current runner version: '2.337.0'
+build	Set up job	2026-10-13T15:12:55.8490806Z ##[group]Runner Image Provisioner
+build	Set up job	2026-10-13T15:12:55.8491910Z Hosted Compute Agent
+build	Set up job	2026-10-13T15:12:55.8492725Z Version: 20261002.596
+build	Set up job	2026-10-13T15:12:55.8493447Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+build	Set up job	2026-10-13T15:12:55.8494295Z Build Date: 2026-10-02T22:28:27Z
+build	Set up job	2026-10-13T15:12:55.8495211Z Worker ID: {25cad9fd-92b9-4e31-a166-d62ea2a1bccf}
+build	Set up job	2026-10-13T15:12:55.8496024Z Region: eastus
+build	Set up job	2026-10-13T15:12:55.8496752Z Cloud: Azure
+build	Set up job	2026-10-13T15:12:55.8497386Z ##[endgroup]
+build	Set up job	2026-10-13T15:12:55.8499680Z ##[group]Operating System
+build	Set up job	2026-10-13T15:12:55.8500561Z Ubuntu
+build	Set up job	2026-10-13T15:12:55.8501234Z 24.04.5
+build	Set up job	2026-10-13T15:12:55.8501891Z LTS
+build	Set up job	2026-10-13T15:12:55.8502513Z ##[endgroup]
+build	Set up job	2026-10-13T15:12:55.8503196Z ##[group]Runner Image
+build	Set up job	2026-10-13T15:12:55.8503978Z Image: ubuntu-24.04
+build	Set up job	2026-10-13T15:12:55.8504639Z Version: 20261004.327.1
+build	Set up job	2026-10-13T15:12:55.8505818Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-10-13T15:12:55.8508230Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+build	Set up job	2026-10-13T15:12:55.8509434Z ##[endgroup]
+build	Set up job	2026-10-13T15:12:55.8510726Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-10-13T15:12:55.8513298Z Contents: read
+build	Set up job	2026-10-13T15:12:55.8514040Z Metadata: read
+build	Set up job	2026-10-13T15:12:55.8514668Z ##[endgroup]
+build	Set up job	2026-10-13T15:12:55.8517116Z Secret source: Actions
+build	Set up job	2026-10-13T15:12:55.8518627Z Cache mode: write
+build	Set up job	2026-10-13T15:12:55.8519603Z Prepare workflow directory
+build	Set up job	2026-10-13T15:12:55.8904279Z Prepare all required actions
+build	Set up job	2026-10-13T15:12:55.8960554Z Getting action download info
+build	Set up job	2026-10-13T15:12:56.1505099Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+build	Set up job	2026-10-13T15:12:56.2670400Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+build	Set up job	2026-10-13T15:12:56.6822126Z Complete job name: build
+build	Run actions/checkout@v4	﻿2026-10-13T15:12:56.7559138Z ##[group]Run actions/checkout@v4
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7560041Z with:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7560623Z   repository: samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7564463Z   token: ***
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7564908Z   ssh-strict: true
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7565354Z   ssh-user: git
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7565807Z   persist-credentials: true
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7566300Z   clean: true
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7566756Z   sparse-checkout-cone-mode: true
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7567270Z   fetch-depth: 1
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7567911Z   fetch-tags: false
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7568358Z   show-progress: true
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7568813Z   lfs: false
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7569231Z   submodules: false
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7569691Z   set-safe-directory: true
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7570198Z   allow-unsafe-pr-checkout: false
+build	Run actions/checkout@v4	2026-10-13T15:12:56.7570888Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8652780Z Syncing repository: samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8656088Z ##[group]Getting Git version info
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8658268Z Working directory is '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8660786Z [command]/usr/bin/git version
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8748921Z git version 2.55.0
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8757964Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8775983Z Temporarily overriding HOME='/home/runner/work/_temp/737cfceb-0d53-486e-95f4-75416fc56a15' before making global git config changes
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8779146Z Adding repository directory to the temporary git global config as a safe directory
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8798132Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8864472Z Deleting the contents of '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8872252Z ##[group]Initializing the repository
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8878948Z [command]/usr/bin/git init /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8970669Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8972451Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8978664Z hint: to use in all of your new repositories, which will suppress this warning,
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8980340Z hint: call:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8981299Z hint:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8982437Z hint: 	git config --global init.defaultBranch <name>
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8983769Z hint:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8985045Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8986868Z hint: 'development'. The just-created branch can be renamed via this command:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8989547Z hint:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8990820Z hint: 	git branch -m <name>
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8992676Z hint:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8994270Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	Run actions/checkout@v4	2026-10-13T15:12:56.8997046Z Initialized empty Git repository in /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/.git/
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9002158Z [command]/usr/bin/git remote add origin https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9051342Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9053190Z ##[group]Disabling automatic garbage collection
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9055955Z [command]/usr/bin/git config --local gc.auto 0
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9095875Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9098097Z ##[group]Setting up auth
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9104330Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9149223Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9589627Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9651122Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9941456Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Run actions/checkout@v4	2026-10-13T15:12:56.9984086Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Run actions/checkout@v4	2026-10-13T15:12:57.0253627Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	Run actions/checkout@v4	2026-10-13T15:12:57.0302591Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:57.0304248Z ##[group]Fetching the repository
+build	Run actions/checkout@v4	2026-10-13T15:12:57.0314713Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +55b3c30a62336c601a0d9b3de1de9778e4876f81:refs/remotes/pull/13/merge
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2661537Z From https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2663138Z  * [new ref]         55b3c30a62336c601a0d9b3de1de9778e4876f81 -> pull/13/merge
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2666446Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2668170Z ##[group]Determining the checkout info
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2669895Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2676156Z [command]/usr/bin/git sparse-checkout disable
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2836573Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2840314Z ##[group]Checking out the ref
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2841889Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2905856Z Note: switching to 'refs/remotes/pull/13/merge'.
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2907171Z 
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2908267Z You are in 'detached HEAD' state. You can look around, make experimental
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2910409Z changes and commit them, and you can discard any commits you make in this
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2912708Z state without impacting any branches by switching back to a branch.
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2913659Z 
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2914539Z If you want to create a new branch to retain commits you create, you may
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2915849Z do so (now or later) by using -c with the switch command. Example:
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2916957Z 
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2917391Z   git switch -c <new-branch-name>
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2918431Z 
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2918986Z Or undo this operation with:
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2919862Z 
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2920316Z   git switch -
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2920824Z 
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2921496Z Turn off this advice by setting config variable advice.detachedHead to false
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2922444Z 
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2923907Z HEAD is now at 55b3c30 Merge 6e5b8cc3dacb6bd64cfc280eeadf3bba3e4df87e into eee73f0d5e8a7ec44fa06f78f31a7ee0e5384fbf
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2927940Z ##[endgroup]
+build	Run actions/checkout@v4	2026-10-13T15:12:57.2985106Z [command]/usr/bin/git log -1 --format=%H
+build	Run actions/checkout@v4	2026-10-13T15:12:57.3008304Z 55b3c30a62336c601a0d9b3de1de9778e4876f81
+build	Configurar JDK 21	﻿2026-10-13T15:12:57.3703204Z ##[group]Run actions/setup-java@v4
+build	Configurar JDK 21	2026-10-13T15:12:57.3704334Z with:
+build	Configurar JDK 21	2026-10-13T15:12:57.3705123Z   distribution: temurin
+build	Configurar JDK 21	2026-10-13T15:12:57.3706043Z   java-version: 21
+build	Configurar JDK 21	2026-10-13T15:12:57.3706897Z   cache: maven
+build	Configurar JDK 21	2026-10-13T15:12:57.3708030Z   java-package: jdk
+build	Configurar JDK 21	2026-10-13T15:12:57.3708964Z   check-latest: false
+build	Configurar JDK 21	2026-10-13T15:12:57.3709853Z   server-id: github
+build	Configurar JDK 21	2026-10-13T15:12:57.3710766Z   server-username: GITHUB_ACTOR
+build	Configurar JDK 21	2026-10-13T15:12:57.3711823Z   server-password: GITHUB_TOKEN
+build	Configurar JDK 21	2026-10-13T15:12:57.3712866Z   overwrite-settings: true
+build	Configurar JDK 21	2026-10-13T15:12:57.3713834Z   job-status: success
+build	Configurar JDK 21	2026-10-13T15:12:57.3722858Z   token: ***
+build	Configurar JDK 21	2026-10-13T15:12:57.3723698Z ##[endgroup]
+build	Configurar JDK 21	2026-10-13T15:12:57.5532545Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+build	Configurar JDK 21	2026-10-13T15:12:57.5542277Z ##[group]Installed distributions
+build	Configurar JDK 21	2026-10-13T15:12:57.5844471Z Resolved Java 21.0.12+1 from tool-cache
+build	Configurar JDK 21	2026-10-13T15:12:57.5845565Z Setting Java 21.0.12+1 as the default
+build	Configurar JDK 21	2026-10-13T15:12:57.5855756Z (node:2113) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Configurar JDK 21	2026-10-13T15:12:57.5858204Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Configurar JDK 21	2026-10-13T15:12:57.5859842Z Creating toolchains.xml for JDK version 21 from temurin
+build	Configurar JDK 21	2026-10-13T15:12:57.5930523Z Writing to /home/runner/.m2/toolchains.xml
+build	Configurar JDK 21	2026-10-13T15:12:57.5931450Z 
+build	Configurar JDK 21	2026-10-13T15:12:57.5931741Z Java configuration:
+build	Configurar JDK 21	2026-10-13T15:12:57.5932476Z   Distribution: temurin
+build	Configurar JDK 21	2026-10-13T15:12:57.5933217Z   Version: 21.0.12+1
+build	Configurar JDK 21	2026-10-13T15:12:57.5934126Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+build	Configurar JDK 21	2026-10-13T15:12:57.5935236Z 
+build	Configurar JDK 21	2026-10-13T15:12:57.5936082Z ##[endgroup]
+build	Configurar JDK 21	2026-10-13T15:12:57.5955705Z Creating settings.xml with server-id: github
+build	Configurar JDK 21	2026-10-13T15:12:57.5989282Z Writing to /home/runner/.m2/settings.xml
+build	Configurar JDK 21	2026-10-13T15:12:57.7207642Z Cache hit for: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+build	Configurar JDK 21	2026-10-13T15:12:57.7308923Z (node:2113) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build	Configurar JDK 21	2026-10-13T15:12:58.1749209Z Received 76301548 of 76301548 (100.0%), 180.6 MBs/sec
+build	Configurar JDK 21	2026-10-13T15:12:58.1751424Z Cache Size: ~73 MB (76301548 B)
+build	Configurar JDK 21	2026-10-13T15:12:58.1780771Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5202c1e0-5c0e-4ae2-a009-9680cc51cd20/cache.tzst -P -C /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu --use-compress-program unzstd
+build	Configurar JDK 21	2026-10-13T15:12:58.4037390Z Cache restored successfully
+build	Configurar JDK 21	2026-10-13T15:12:58.4081597Z Cache restored from key: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+build	Construir y testear	﻿2026-10-13T15:12:58.4380922Z ##[group]Run mvn --batch-mode verify
+build	Construir y testear	2026-10-13T15:12:58.4381484Z ^[[36;1mmvn --batch-mode verify^[[0m
+build	Construir y testear	2026-10-13T15:12:58.4631524Z shell: /usr/bin/bash -e {0}
+build	Construir y testear	2026-10-13T15:12:58.4631964Z env:
+build	Construir y testear	2026-10-13T15:12:58.4632689Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+build	Construir y testear	2026-10-13T15:12:58.4633293Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+build	Construir y testear	2026-10-13T15:12:58.4633757Z ##[endgroup]
+build	Construir y testear	2026-10-13T15:13:01.1050000Z [INFO] Scanning for projects...
+build	Construir y testear	2026-10-13T15:13:01.3010244Z [INFO] Loaded 24074 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+build	Construir y testear	2026-10-13T15:13:01.5776406Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:01.5788748Z [INFO] -------------------< es.practicascontinuas:todo-api >-------------------
+build	Construir y testear	2026-10-13T15:13:01.5790074Z [INFO] Building todo-api 0.0.1-SNAPSHOT
+build	Construir y testear	2026-10-13T15:13:01.5792474Z [INFO]   from pom.xml
+build	Construir y testear	2026-10-13T15:13:01.5793302Z [INFO] --------------------------------[ jar ]---------------------------------
+build	Construir y testear	2026-10-13T15:13:01.6466145Z [INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+build	Construir y testear	2026-10-13T15:13:02.9600664Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:02.9610673Z [INFO] --- resources:3.3.1:resources (default-resources) @ todo-api ---
+build	Construir y testear	2026-10-13T15:13:03.1064363Z [INFO] Copying 1 resource from src/main/resources to target/classes
+build	Construir y testear	2026-10-13T15:13:03.1218870Z [INFO] Copying 0 resource from src/main/resources to target/classes
+build	Construir y testear	2026-10-13T15:13:03.1239037Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:03.1240000Z [INFO] --- compiler:3.13.0:compile (default-compile) @ todo-api ---
+build	Construir y testear	2026-10-13T15:13:03.2909309Z [INFO] Recompiling the module because of changed source code.
+build	Construir y testear	2026-10-13T15:13:03.3009509Z [INFO] Compiling 12 source files with javac [debug parameters release 21] to target/classes
+build	Construir y testear	2026-10-13T15:13:04.6949848Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:04.6958528Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ todo-api ---
+build	Construir y testear	2026-10-13T15:13:04.7018948Z [INFO] skip non existing resourceDirectory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/src/test/resources
+build	Construir y testear	2026-10-13T15:13:04.7078109Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:04.7098549Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ todo-api ---
+build	Construir y testear	2026-10-13T15:13:04.7100254Z [INFO] Recompiling the module because of changed dependency.
+build	Construir y testear	2026-10-13T15:13:04.7118682Z [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+build	Construir y testear	2026-10-13T15:13:05.2465278Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:05.2488578Z [INFO] --- surefire:3.2.5:test (default-test) @ todo-api ---
+build	Construir y testear	2026-10-13T15:13:05.4958534Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+build	Construir y testear	2026-10-13T15:13:05.5549287Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:05.5550200Z [INFO] -------------------------------------------------------
+build	Construir y testear	2026-10-13T15:13:05.5578351Z [INFO]  T E S T S
+build	Construir y testear	2026-10-13T15:13:05.5579259Z [INFO] -------------------------------------------------------
+build	Construir y testear	2026-10-13T15:13:06.2403418Z [INFO] Running es.practicascontinuas.todo.task.TaskServiceTest
+build	Construir y testear	2026-10-13T15:13:06.6350041Z WARNING: A Java agent has been loaded dynamically (/home/runner/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+build	Construir y testear	2026-10-13T15:13:06.6381494Z WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+build	Construir y testear	2026-10-13T15:13:06.6389418Z WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+build	Construir y testear	2026-10-13T15:13:06.6411960Z WARNING: Dynamic loading of agents will be disallowed by default in a future release
+build	Construir y testear	2026-10-13T15:13:06.6642655Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+build	Construir y testear	2026-10-13T15:13:07.5886858Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.323 s -- in es.practicascontinuas.todo.task.TaskServiceTest
+build	Construir y testear	2026-10-13T15:13:07.6246394Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:07.6246796Z [INFO] Results:
+build	Construir y testear	2026-10-13T15:13:07.6247863Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:07.6248510Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+build	Construir y testear	2026-10-13T15:13:07.6254337Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:07.6281053Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:07.6282095Z [INFO] --- jar:3.4.2:jar (default-jar) @ todo-api ---
+build	Construir y testear	2026-10-13T15:13:07.8746003Z [INFO] Building jar: /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar
+build	Construir y testear	2026-10-13T15:13:07.9062892Z [INFO] 
+build	Construir y testear	2026-10-13T15:13:07.9069892Z [INFO] --- spring-boot:3.3.5:repackage (repackage) @ todo-api ---
+build	Construir y testear	2026-10-13T15:13:07.9815189Z [INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+build	Construir y testear	2026-10-13T15:13:08.3045494Z [INFO] Replacing main artifact /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+build	Construir y testear	2026-10-13T15:13:08.3051315Z [INFO] The original artifact has been renamed to /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar.original
+build	Construir y testear	2026-10-13T15:13:08.3053414Z [INFO] ------------------------------------------------------------------------
+build	Construir y testear	2026-10-13T15:13:08.3054387Z [INFO] BUILD SUCCESS
+build	Construir y testear	2026-10-13T15:13:08.3055140Z [INFO] ------------------------------------------------------------------------
+build	Construir y testear	2026-10-13T15:13:08.3056108Z [INFO] Total time:  7.284 s
+build	Construir y testear	2026-10-13T15:13:08.3056777Z [INFO] Finished at: 2026-10-13T15:13:08Z
+build	Construir y testear	2026-10-13T15:13:08.3057852Z [INFO] ------------------------------------------------------------------------
+build	Post Configurar JDK 21	﻿2026-10-13T15:13:08.3555319Z Post job cleanup.
+build	Post Configurar JDK 21	2026-10-13T15:13:08.4944853Z (node:2278) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Post Configurar JDK 21	2026-10-13T15:13:08.4945683Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Post Configurar JDK 21	2026-10-13T15:13:08.4950411Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f, not saving cache.
+build	Post Run actions/checkout@v4	﻿2026-10-13T15:13:08.5181757Z Post job cleanup.
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6113460Z [command]/usr/bin/git version
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6168368Z git version 2.55.0
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6204830Z Temporarily overriding HOME='/home/runner/work/_temp/268937d1-4809-421a-9934-cea4c9feda4b' before making global git config changes
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6205868Z Adding repository directory to the temporary git global config as a safe directory
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6213944Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6261377Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6297948Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6574199Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6607240Z http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6620565Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6661886Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.6952687Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post Run actions/checkout@v4	2026-10-13T15:13:08.7044874Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-10-13T15:13:08.7452398Z Cleaning up orphan processes
+build	Complete job	2026-10-13T15:13:08.7733502Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

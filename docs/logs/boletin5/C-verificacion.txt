@@ -1,0 +1,30 @@
++ docker network create tareas-net
+5e7b8f25bd871cd1b9c37255d16cb11696e3bcb75448d6109f378ddb9ee01d7e
++ docker run -d --name db --network tareas-net -e POSTGRES_DB=tareas -e POSTGRES_USER=app -e POSTGRES_PASSWORD=secret_local_dev postgres:16
+775a59b1b9a4a957b706c2a3e41716d4fc19c202df5ef823cc60d8556444bf1c
++ docker pull ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0
+1.0.0: Pulling from samuelavilesc/practicas-continuas-gloriasamu
+Digest: sha256:47d424f5627bc1beaa9a30610ee7f7f01465ef205c3d773df24914c54fa30256
+Status: Image is up to date for ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0
+ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0
++ docker run -d --name api --network tareas-net -p 8080:8080 -e SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/tareas -e SPRING_DATASOURCE_USERNAME=app -e SPRING_DATASOURCE_PASSWORD=secret_local_dev ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0
+8efadeccbc5d5f118505f47dca7c602d178dd01d7f8e9dc65a2ec3352d62fb76
++ set +x
+Esperando a que arranque la API...
++ docker ps --filter name=api --filter name=db
+CONTAINER ID   IMAGE                                                        COMMAND                  CREATED         STATUS                            PORTS                                         NAMES
+8efadeccbc5d   ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0   "java -jar app.jar"      6 seconds ago   Up 6 seconds (health: starting)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp   api
+775a59b1b9a4   postgres:16                                                  "docker-entrypoint.s…"   7 seconds ago   Up 7 seconds                      5432/tcp                                      db
++ curl -s http://localhost:8080/actuator/health
+{"status":"UP"}+ echo
+
++ curl -s http://localhost:8080/api/tasks
+[]+ echo
+
++ docker image inspect ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0 --format '{{index .Config.Labels "org.opencontainers.image.revision"}} {{index .Config.Labels "org.opencontainers.image.version"}}'
+1f5a8c7a6190320ddd7fb9112e44784b2e405cc6 1.0.0
++ docker rm -f db api
+db
+api
++ docker network rm tareas-net
+tareas-net

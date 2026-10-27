@@ -1,0 +1,58 @@
+$ ansible-playbook -i deploy/inventory.ini deploy/deploy.yml --vault-password-file ~/.vault_pass_tareas --extra-vars "version_app=1.0.0"
+Mon Oct 26 12:27:45 CET 2026
+
+PLAY [Preparar Docker en toda la flota] ****************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [db1]
+ok: [app2]
+ok: [app1]
+
+TASK [Instalar Docker y el SDK de Python] **************************************
+changed: [app2]
+changed: [db1]
+changed: [app1]
+
+TASK [Arrancar dockerd (los contenedores no tienen systemd)] *******************
+changed: [db1]
+changed: [app2]
+changed: [app1]
+
+PLAY [Desplegar la base de datos] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [db1]
+
+TASK [Base de datos PostgreSQL] ************************************************
+changed: [db1]
+
+PLAY [Desplegar la API de tareas] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [app1]
+ok: [app2]
+
+TASK [Login en GHCR] ***********************************************************
+changed: [app1]
+changed: [app2]
+
+TASK [Descargar la imagen de la aplicación] ************************************
+changed: [app2]
+changed: [app1]
+
+TASK [Arrancar el contenedor de la API] ****************************************
+changed: [app1]
+changed: [app2]
+
+TASK [Smoke test — esperar a que la API esté sana] *****************************
+FAILED - RETRYING: [app1]: Smoke test — esperar a que la API esté sana (20 retries left).
+FAILED - RETRYING: [app2]: Smoke test — esperar a que la API esté sana (20 retries left).
+ok: [app1]
+ok: [app2]
+
+PLAY RECAP *********************************************************************
+app1                       : ok=8    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+app2                       : ok=8    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+db1                        : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Mon Oct 26 12:30:05 CET 2026

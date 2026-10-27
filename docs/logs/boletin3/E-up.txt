@@ -1,0 +1,23 @@
+$ docker compose down -v
+ Container todo-api-api-1 Stopping 
+ Container todo-api-api-1 Stopped 
+ Container todo-api-api-1 Removing 
+ Container todo-api-api-1 Removed 
+ Container todo-api-db-1 Stopping 
+ Container todo-api-db-1 Stopped 
+ Container todo-api-db-1 Removing 
+ Container todo-api-db-1 Removed 
+ Volume todo-api_db-data Removing 
+ Network todo-api_default Removing 
+ Volume todo-api_db-data Removed 
+ Network todo-api_default Removed 
+$ docker compose up --build -d
+ Container todo-api-db-1 Healthy 
+ Container todo-api-api-1 Starting 
+ Container todo-api-api-1 Started 
+$ docker compose ps
+NAME             IMAGE          COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+todo-api-api-1   todo-api-api   "java -jar app.jar"      api       28 seconds ago   Up 21 seconds (healthy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+todo-api-db-1    postgres:16    "docker-entrypoint.s…"   db        28 seconds ago   Up 27 seconds (healthy)   127.0.0.1:5432->5432/tcp
+$ curl http://localhost:8080/actuator/health
+{"status":"UP"}

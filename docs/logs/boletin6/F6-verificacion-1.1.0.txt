@@ -1,0 +1,8 @@
+$ curl http://localhost:8081/actuator/info
+{"build":{"artifact":"todo-api","name":"todo-api","time":"2026-10-26T12:15:39.959Z","version":"1.1.0","group":"es.practicascontinuas"}}
+$ curl http://localhost:8081/api/tasks
+[{"id":1,"title":"Desplegada por Ansible","description":"creada en app1","status":"PENDING","priority":2,"dueDate":"2026-12-31"}]
+$ curl http://localhost:8082/actuator/info
+{"build":{"artifact":"todo-api","name":"todo-api","time":"2026-10-26T12:15:39.959Z","version":"1.1.0","group":"es.practicascontinuas"}}
+$ curl http://localhost:8082/api/tasks
+[{"id":1,"title":"Desplegada por Ansible","description":"creada en app1","status":"PENDING","priority":2,"dueDate":"2026-12-31"}]

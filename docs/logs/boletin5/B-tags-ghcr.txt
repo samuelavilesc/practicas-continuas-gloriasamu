@@ -1,0 +1,1 @@
+{"name":"samuelavilesc/practicas-continuas-gloriasamu","tags":["latest","sha-1f5a8c7","1.0.0","1.0","1"]}

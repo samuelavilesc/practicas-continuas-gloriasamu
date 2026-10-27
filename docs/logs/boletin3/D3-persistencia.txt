@@ -1,0 +1,48 @@
+$ docker compose ps
+NAME             IMAGE          COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+todo-api-api-1   todo-api-api   "java -jar app.jar"      api       22 seconds ago   Up 15 seconds (healthy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+todo-api-db-1    postgres:16    "docker-entrypoint.s…"   db        22 seconds ago   Up 21 seconds (healthy)   127.0.0.1:5432->5432/tcp
+
+$ curl -X POST http://localhost:8080/api/tasks -H "Content-Type: application/json" -d {...}
+{"id":1,"title":"Comprobar persistencia","description":"Boletin 3","status":"PENDING","priority":3,"dueDate":"2026-10-12"}
+$ curl http://localhost:8080/api/tasks
+[{"id":1,"title":"Comprobar persistencia","description":"Boletin 3","status":"PENDING","priority":3,"dueDate":"2026-10-12"}]
+
+$ docker compose down
+ Container todo-api-api-1 Stopping 
+ Container todo-api-api-1 Stopped 
+ Container todo-api-api-1 Removing 
+ Container todo-api-api-1 Removed 
+ Container todo-api-db-1 Stopping 
+ Container todo-api-db-1 Stopped 
+ Container todo-api-db-1 Removing 
+ Container todo-api-db-1 Removed 
+ Network todo-api_default Removing 
+ Network todo-api_default Removed 
+$ docker volume ls | grep todo-api_db-data
+local     todo-api_db-data
+$ docker compose up -d
+ Container todo-api-api-1 Starting 
+ Container todo-api-api-1 Started 
+$ curl http://localhost:8080/api/tasks   # el dato sigue ahí
+[{"id":1,"title":"Comprobar persistencia","description":"Boletin 3","status":"PENDING","priority":3,"dueDate":"2026-10-12"}]
+
+$ docker compose down -v
+ Container todo-api-api-1 Stopping 
+ Container todo-api-api-1 Stopped 
+ Container todo-api-api-1 Removing 
+ Container todo-api-api-1 Removed 
+ Container todo-api-db-1 Stopping 
+ Container todo-api-db-1 Stopped 
+ Container todo-api-db-1 Removing 
+ Container todo-api-db-1 Removed 
+ Volume todo-api_db-data Removing 
+ Network todo-api_default Removing 
+ Volume todo-api_db-data Removed 
+ Network todo-api_default Removed 
+$ docker volume ls | grep todo-api_db-data   # (sin salida: volumen borrado)
+$ docker compose up -d
+ Container todo-api-api-1 Starting 
+ Container todo-api-api-1 Started 
+$ curl http://localhost:8080/api/tasks   # lista vacía
+[]

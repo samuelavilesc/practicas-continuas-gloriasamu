@@ -1,0 +1,9 @@
+
+X feat/ci-github-actions CI samuelavilesc/practicas-continuas-gloriasamu#13 · 38421430270
+Triggered via pull_request less than a minute ago
+
+JOBS
+X lint in 17s (ID 115379466903)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Run actions/setup-java@v4

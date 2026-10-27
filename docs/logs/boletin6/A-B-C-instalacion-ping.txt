@@ -1,0 +1,34 @@
+$ ansible --version
+ansible [core 2.16.3]
+  config file = None
+$ ansible-galaxy collection install -r deploy/requirements.yml
+Starting galaxy collection install process
+Nothing to do. All requested collections are already installed. If you want to reinstall them, consider using `--force`.
+$ ansible-galaxy collection list community.docker
+
+# /usr/lib/python3/dist-packages/ansible_collections
+Collection       Version
+---------------- -------
+community.docker 3.7.0  
+$ ssh root@localhost -p 2223 hostname
+114074d48943
+NAME="Ubuntu"
+$ ssh root@localhost -p 2224 hostname
+56b27b1099f9
+NAME="Ubuntu"
+$ ssh root@localhost -p 2225 hostname
+62e7951c38d4
+NAME="Ubuntu"
+$ ansible -i deploy/inventory.ini servidores -m ping
+db1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+app1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+app2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}

@@ -1,0 +1,7 @@
+$ docker compose config   # sin .env
+time="2026-10-05T12:29:12+02:00" level=warning msg="The \"POSTGRES_DB\" variable is not set. Defaulting to a blank string."
+time="2026-10-05T12:29:12+02:00" level=warning msg="The \"POSTGRES_USER\" variable is not set. Defaulting to a blank string."
+time="2026-10-05T12:29:12+02:00" level=warning msg="The \"POSTGRES_DB\" variable is not set. Defaulting to a blank string."
+time="2026-10-05T12:29:12+02:00" level=warning msg="The \"POSTGRES_USER\" variable is not set. Defaulting to a blank string."
+time="2026-10-05T12:29:12+02:00" level=warning msg="The \"POSTGRES_PASSWORD\" variable is not set. Defaulting to a blank string."
+error while interpolating services.db.environment.POSTGRES_PASSWORD: required variable POSTGRES_PASSWORD is missing a value: Define POSTGRES_PASSWORD en el fichero .env

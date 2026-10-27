@@ -1,0 +1,146 @@
+$ docker login -u samuelavilesc   # (hecho desde Docker Desktop / terminal interactiva)
+Login Succeeded
+
+$ docker tag tareas-api:0.1 samuelavilesc/tareas-api:0.1
+$ docker tag tareas-api:0.1 samuelavilesc/tareas-api:latest
+$ docker images samuelavilesc/tareas-api
+IMAGE                             ID             DISK USAGE   CONTENT SIZE   EXTRA
+samuelavilesc/tareas-api:0.1      6d5d35e677a4        562MB          163MB        
+samuelavilesc/tareas-api:latest   6d5d35e677a4        562MB          163MB        
+
+$ docker push samuelavilesc/tareas-api:0.1
+The push refers to repository [docker.io/samuelavilesc/tareas-api]
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+06ad70e463aa: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+06ad70e463aa: Waiting
+06ad70e463aa: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+06ad70e463aa: Waiting
+06ad70e463aa: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+06ad70e463aa: Waiting
+c386ef1f2115: Waiting
+06ad70e463aa: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+06ad70e463aa: Waiting
+06ad70e463aa: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+06ad70e463aa: Waiting
+c386ef1f2115: Waiting
+44136fa355b3: Waiting
+44136fa355b3: Mounted from grafana/k6
+5d8dab7db274: Waiting
+5d8dab7db274: Waiting
+5d8dab7db274: Waiting
+06ad70e463aa: Pushed
+9d8d42fbc560: Waiting
+9d8d42fbc560: Waiting
+550bcd7b9380: Waiting
+3b4157e3a962: Waiting
+c386ef1f2115: Pushed
+9d8d42fbc560: Waiting
+550bcd7b9380: Waiting
+3b4157e3a962: Waiting
+9d8d42fbc560: Waiting
+3b4157e3a962: Waiting
+550bcd7b9380: Waiting
+3b4157e3a962: Pushed
+87152a7ad77b: Waiting
+4f4fb700ef54: Waiting
+87152a7ad77b: Waiting
+550bcd7b9380: Pushed
+4f4fb700ef54: Waiting
+87152a7ad77b: Waiting
+4f4fb700ef54: Waiting
+87152a7ad77b: Waiting
+4f4fb700ef54: Waiting
+4f4fb700ef54: Waiting
+4f4fb700ef54: Waiting
+8813f7da6b6a: Waiting
+4f4fb700ef54: Mounted from n8nio/n8n
+8813f7da6b6a: Waiting
+8813f7da6b6a: Waiting
+ab72468470a6: Waiting
+87152a7ad77b: Pushed
+5d8dab7db274: Pushed
+ab72468470a6: Waiting
+ab72468470a6: Waiting
+8813f7da6b6a: Pushed
+4e07a0f12b2c: Pushed
+ab72468470a6: Pushed
+9d8d42fbc560: Pushed
+0.1: digest: sha256:6d5d35e677a4c396440f9983af844e25a134e81ae7cf8794b251566b7ab43653 size: 856
+$ docker push samuelavilesc/tareas-api:latest
+The push refers to repository [docker.io/samuelavilesc/tareas-api]
+06ad70e463aa: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+06ad70e463aa: Waiting
+4e07a0f12b2c: Waiting
+06ad70e463aa: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+06ad70e463aa: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+06ad70e463aa: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+06ad70e463aa: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Waiting
+06ad70e463aa: Waiting
+44136fa355b3: Waiting
+c386ef1f2115: Waiting
+4e07a0f12b2c: Layer already exists
+5d8dab7db274: Waiting
+9d8d42fbc560: Waiting
+550bcd7b9380: Waiting
+06ad70e463aa: Layer already exists
+44136fa355b3: Already exists
+c386ef1f2115: Waiting
+3b4157e3a962: Waiting
+5d8dab7db274: Waiting
+9d8d42fbc560: Waiting
+87152a7ad77b: Waiting
+c386ef1f2115: Already exists
+3b4157e3a962: Layer already exists
+ab72468470a6: Waiting
+4f4fb700ef54: Waiting
+5d8dab7db274: Layer already exists
+9d8d42fbc560: Layer already exists
+550bcd7b9380: Layer already exists
+8813f7da6b6a: Waiting
+8813f7da6b6a: Layer already exists
+87152a7ad77b: Layer already exists
+ab72468470a6: Layer already exists
+4f4fb700ef54: Layer already exists
+latest: digest: sha256:6d5d35e677a4c396440f9983af844e25a134e81ae7cf8794b251566b7ab43653 size: 856
