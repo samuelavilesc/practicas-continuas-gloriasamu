@@ -1,0 +1,895 @@
+lint	Set up job	﻿2026-10-13T15:20:03.5178610Z Current runner version: '2.337.0'
+lint	Set up job	2026-10-13T15:20:03.5199600Z ##[group]Runner Image Provisioner
+lint	Set up job	2026-10-13T15:20:03.5200169Z Hosted Compute Agent
+lint	Set up job	2026-10-13T15:20:03.5200603Z Version: 20261002.596
+lint	Set up job	2026-10-13T15:20:03.5200973Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+lint	Set up job	2026-10-13T15:20:03.5201389Z Build Date: 2026-10-02T22:28:27Z
+lint	Set up job	2026-10-13T15:20:03.5201835Z Worker ID: {7dfeb98f-96bb-433e-8039-bf448433baab}
+lint	Set up job	2026-10-13T15:20:03.5202280Z Region: westus3
+lint	Set up job	2026-10-13T15:20:03.5202630Z Cloud: Azure
+lint	Set up job	2026-10-13T15:20:03.5202990Z ##[endgroup]
+lint	Set up job	2026-10-13T15:20:03.5203969Z ##[group]Operating System
+lint	Set up job	2026-10-13T15:20:03.5204421Z Ubuntu
+lint	Set up job	2026-10-13T15:20:03.5204732Z 24.04.5
+lint	Set up job	2026-10-13T15:20:03.5205061Z LTS
+lint	Set up job	2026-10-13T15:20:03.5205378Z ##[endgroup]
+lint	Set up job	2026-10-13T15:20:03.5205702Z ##[group]Runner Image
+lint	Set up job	2026-10-13T15:20:03.5206108Z Image: ubuntu-24.04
+lint	Set up job	2026-10-13T15:20:03.5206476Z Version: 20261004.327.1
+lint	Set up job	2026-10-13T15:20:03.5207072Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+lint	Set up job	2026-10-13T15:20:03.5208159Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+lint	Set up job	2026-10-13T15:20:03.5208834Z ##[endgroup]
+lint	Set up job	2026-10-13T15:20:03.5209522Z ##[group]GITHUB_TOKEN Permissions
+lint	Set up job	2026-10-13T15:20:03.5210837Z Contents: read
+lint	Set up job	2026-10-13T15:20:03.5211220Z Metadata: read
+lint	Set up job	2026-10-13T15:20:03.5211634Z ##[endgroup]
+lint	Set up job	2026-10-13T15:20:03.5213087Z Secret source: Actions
+lint	Set up job	2026-10-13T15:20:03.5213763Z Cache mode: write
+lint	Set up job	2026-10-13T15:20:03.5214291Z Prepare workflow directory
+lint	Set up job	2026-10-13T15:20:03.5431121Z Prepare all required actions
+lint	Set up job	2026-10-13T15:20:03.5463277Z Getting action download info
+lint	Set up job	2026-10-13T15:20:03.8565849Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+lint	Set up job	2026-10-13T15:20:03.9534792Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+lint	Set up job	2026-10-13T15:20:04.9575758Z Complete job name: lint
+lint	Run actions/checkout@v4	﻿2026-10-13T15:20:05.0051666Z ##[group]Run actions/checkout@v4
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0052202Z with:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0052540Z   repository: samuelavilesc/practicas-continuas-gloriasamu
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0055192Z   token: ***
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0055460Z   ssh-strict: true
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0055729Z   ssh-user: git
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0056009Z   persist-credentials: true
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0056305Z   clean: true
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0056580Z   sparse-checkout-cone-mode: true
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0056894Z   fetch-depth: 1
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0057159Z   fetch-tags: false
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0057429Z   show-progress: true
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0057699Z   lfs: false
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0057952Z   submodules: false
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0058261Z   set-safe-directory: true
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0058578Z   allow-unsafe-pr-checkout: false
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0058986Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0741149Z Syncing repository: samuelavilesc/practicas-continuas-gloriasamu
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0742786Z ##[group]Getting Git version info
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0743993Z Working directory is '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0745397Z [command]/usr/bin/git version
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0835140Z git version 2.55.0
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0855544Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0870438Z Temporarily overriding HOME='/home/runner/work/_temp/fed9e52c-2915-4789-b1eb-b84ad03df3fd' before making global git config changes
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0871959Z Adding repository directory to the temporary git global config as a safe directory
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0874790Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0919822Z Deleting the contents of '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0922961Z ##[group]Initializing the repository
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.0926522Z [command]/usr/bin/git init /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1090299Z hint: Using 'master' as the name for the initial branch. This default branch name
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1097195Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1098645Z hint: to use in all of your new repositories, which will suppress this warning,
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1099724Z hint: call:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1100452Z hint:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1101180Z hint: 	git config --global init.defaultBranch <name>
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1101986Z hint:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1102720Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1103948Z hint: 'development'. The just-created branch can be renamed via this command:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1104864Z hint:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1105433Z hint: 	git branch -m <name>
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1106137Z hint:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1107053Z hint: Disable this message with "git config set advice.defaultBranchName false"
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1108788Z Initialized empty Git repository in /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/.git/
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1112966Z [command]/usr/bin/git remote add origin https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1179282Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1180329Z ##[group]Disabling automatic garbage collection
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1181998Z [command]/usr/bin/git config --local gc.auto 0
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1218021Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1218804Z ##[group]Setting up auth
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1224265Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1257354Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1560037Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1590848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1772363Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1802778Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.1986416Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.2023796Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.2025256Z ##[group]Fetching the repository
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.2031587Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3c4c068c267f38f05251c53971d5fe14b4860a22:refs/remotes/pull/13/merge
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6263495Z From https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6264994Z  * [new ref]         3c4c068c267f38f05251c53971d5fe14b4860a22 -> pull/13/merge
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6267719Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6268457Z ##[group]Determining the checkout info
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6269960Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6274862Z [command]/usr/bin/git sparse-checkout disable
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6321342Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6355653Z ##[group]Checking out the ref
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6356480Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6415246Z Note: switching to 'refs/remotes/pull/13/merge'.
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6415577Z 
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6415870Z You are in 'detached HEAD' state. You can look around, make experimental
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6416518Z changes and commit them, and you can discard any commits you make in this
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6417113Z state without impacting any branches by switching back to a branch.
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6417517Z 
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6417997Z If you want to create a new branch to retain commits you create, you may
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6418574Z do so (now or later) by using -c with the switch command. Example:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6418897Z 
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6419049Z   git switch -c <new-branch-name>
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6419296Z 
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6419486Z Or undo this operation with:
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6419691Z 
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6419846Z   git switch -
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6420035Z 
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6420373Z Turn off this advice by setting config variable advice.detachedHead to false
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6420781Z 
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6421284Z HEAD is now at 3c4c068 Merge 24cd3b6cdd619abc6a78fc4418590c12c37022df into eee73f0d5e8a7ec44fa06f78f31a7ee0e5384fbf
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6425789Z ##[endgroup]
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6459488Z [command]/usr/bin/git log -1 --format=%H
+lint	Run actions/checkout@v4	2026-10-13T15:20:05.6482582Z 3c4c068c267f38f05251c53971d5fe14b4860a22
+lint	Run actions/setup-java@v4	﻿2026-10-13T15:20:05.6781365Z ##[group]Run actions/setup-java@v4
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6781740Z with:
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6781973Z   distribution: temurin
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6782227Z   java-version: 21
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6782461Z   cache: maven
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6782693Z   java-package: jdk
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6782936Z   check-latest: false
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6783182Z   server-id: github
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6783430Z   server-username: GITHUB_ACTOR
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6783931Z   server-password: GITHUB_TOKEN
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6784215Z   overwrite-settings: true
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6784477Z   job-status: success
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6786642Z   token: ***
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.6786877Z ##[endgroup]
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.7948708Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.7955352Z ##[group]Installed distributions
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8092283Z Resolved Java 21.0.12+1 from tool-cache
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8092844Z Setting Java 21.0.12+1 as the default
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8100008Z (node:2070) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8100805Z (Use `node --trace-deprecation ...` to show where the warning was created)
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8102089Z Creating toolchains.xml for JDK version 21 from temurin
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8148277Z Writing to /home/runner/.m2/toolchains.xml
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8148919Z 
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8149198Z Java configuration:
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8149721Z   Distribution: temurin
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8150242Z   Version: 21.0.12+1
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8150894Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8151492Z 
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8152122Z ##[endgroup]
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8168074Z Creating settings.xml with server-id: github
+lint	Run actions/setup-java@v4	2026-10-13T15:20:05.8187410Z Writing to /home/runner/.m2/settings.xml
+lint	Run actions/setup-java@v4	2026-10-13T15:20:06.0634267Z Cache hit for: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+lint	Run actions/setup-java@v4	2026-10-13T15:20:06.0701067Z (node:2070) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+lint	Run actions/setup-java@v4	2026-10-13T15:20:07.2934489Z Received 29360128 of 76301548 (38.5%), 28.0 MBs/sec
+lint	Run actions/setup-java@v4	2026-10-13T15:20:07.7269072Z Received 76301548 of 76301548 (100.0%), 50.7 MBs/sec
+lint	Run actions/setup-java@v4	2026-10-13T15:20:07.7269880Z Cache Size: ~73 MB (76301548 B)
+lint	Run actions/setup-java@v4	2026-10-13T15:20:07.7322441Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5c6fbc50-d1df-499b-973d-44944623cee6/cache.tzst -P -C /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu --use-compress-program unzstd
+lint	Run actions/setup-java@v4	2026-10-13T15:20:07.8851204Z Cache restored successfully
+lint	Run actions/setup-java@v4	2026-10-13T15:20:07.8888758Z Cache restored from key: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+lint	Comprobar formato	﻿2026-10-13T15:20:08.0229782Z ##[group]Run mvn -B spotless:check
+lint	Comprobar formato	2026-10-13T15:20:08.0230137Z ^[[36;1mmvn -B spotless:check^[[0m
+lint	Comprobar formato	2026-10-13T15:20:08.1441990Z shell: /usr/bin/bash -e {0}
+lint	Comprobar formato	2026-10-13T15:20:08.1442282Z env:
+lint	Comprobar formato	2026-10-13T15:20:08.1442532Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+lint	Comprobar formato	2026-10-13T15:20:08.1442866Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+lint	Comprobar formato	2026-10-13T15:20:08.1443157Z ##[endgroup]
+lint	Comprobar formato	2026-10-13T15:20:13.7698337Z [INFO] Scanning for projects...
+lint	Comprobar formato	2026-10-13T15:20:13.9364628Z [INFO] Loaded 24074 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+lint	Comprobar formato	2026-10-13T15:20:14.9458901Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.43.0/spotless-maven-plugin-2.43.0.pom
+lint	Comprobar formato	2026-10-13T15:20:15.7023281Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.43.0/spotless-maven-plugin-2.43.0.pom (3.3 kB at 4.4 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:15.7620449Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.43.0/spotless-maven-plugin-2.43.0.jar
+lint	Comprobar formato	2026-10-13T15:20:15.8662970Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.43.0/spotless-maven-plugin-2.43.0.jar (128 kB at 1.2 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:15.8768654Z [INFO] 
+lint	Comprobar formato	2026-10-13T15:20:15.8774251Z [INFO] -------------------< es.practicascontinuas:todo-api >-------------------
+lint	Comprobar formato	2026-10-13T15:20:15.8785621Z [INFO] Building todo-api 0.0.1-SNAPSHOT
+lint	Comprobar formato	2026-10-13T15:20:15.8786154Z [INFO]   from pom.xml
+lint	Comprobar formato	2026-10-13T15:20:15.8786485Z [INFO] --------------------------------[ jar ]---------------------------------
+lint	Comprobar formato	2026-10-13T15:20:15.8814812Z [INFO] 
+lint	Comprobar formato	2026-10-13T15:20:15.8815813Z [INFO] --- spotless:2.43.0:check (default-cli) @ todo-api ---
+lint	Comprobar formato	2026-10-13T15:20:15.8985299Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.pom
+lint	Comprobar formato	2026-10-13T15:20:15.9007689Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.pom
+lint	Comprobar formato	2026-10-13T15:20:15.9010104Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.pom
+lint	Comprobar formato	2026-10-13T15:20:15.9011096Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib/2.45.0/spotless-lib-2.45.0.pom
+lint	Comprobar formato	2026-10-13T15:20:15.9012073Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib-extra/2.45.0/spotless-lib-extra-2.45.0.pom
+lint	Comprobar formato	2026-10-13T15:20:15.9535596Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.pom (2.1 kB at 38 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:15.9623899Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.pom (2.3 kB at 36 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:15.9641556Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib-extra/2.45.0/spotless-lib-extra-2.45.0.pom (2.7 kB at 44 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:15.9658868Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-resources/1.2.0/plexus-resources-1.2.0.pom
+lint	Comprobar formato	2026-10-13T15:20:15.9676183Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/6.7.0.202309050840-r/org.eclipse.jgit-6.7.0.202309050840-r.pom
+lint	Comprobar formato	2026-10-13T15:20:15.9917417Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-resources/1.2.0/plexus-resources-1.2.0.pom (4.4 kB at 158 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:15.9971727Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/6.6/plexus-components-6.6.pom
+lint	Comprobar formato	2026-10-13T15:20:16.0024972Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/6.7.0.202309050840-r/org.eclipse.jgit-6.7.0.202309050840-r.pom (7.7 kB at 248 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.0056923Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit-parent/6.7.0.202309050840-r/org.eclipse.jgit-parent-6.7.0.202309050840-r.pom
+lint	Comprobar formato	2026-10-13T15:20:16.0235033Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/6.6/plexus-components-6.6.pom (2.7 kB at 96 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.0291171Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/8/plexus-8.pom
+lint	Comprobar formato	2026-10-13T15:20:16.0394960Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit-parent/6.7.0.202309050840-r/org.eclipse.jgit-parent-6.7.0.202309050840-r.pom (34 kB at 984 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.0430891Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib/2.45.0/spotless-lib-2.45.0.pom (1.5 kB at 11 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.0514965Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/dev/equo/ide/solstice/1.7.5/solstice-1.7.5.pom
+lint	Comprobar formato	2026-10-13T15:20:16.0525344Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/googlecode/concurrent-trees/concurrent-trees/2.6.1/concurrent-trees-2.6.1.pom
+lint	Comprobar formato	2026-10-13T15:20:16.0603686Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/8/plexus-8.pom (25 kB at 771 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.0831017Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/googlecode/concurrent-trees/concurrent-trees/2.6.1/concurrent-trees-2.6.1.pom (9.7 kB at 303 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.0834620Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.pom (2.0 kB at 11 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.0914689Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.pom
+lint	Comprobar formato	2026-10-13T15:20:16.1206849Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.pom (8.0 kB at 257 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.1254878Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom
+lint	Comprobar formato	2026-10-13T15:20:16.1332086Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/dev/equo/ide/solstice/1.7.5/solstice-1.7.5.pom (2.6 kB at 31 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.1384480Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-swt.os/4.2.2/durian-swt.os-4.2.2.pom
+lint	Comprobar formato	2026-10-13T15:20:16.1549960Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom (8.1 kB at 269 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.1574671Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom
+lint	Comprobar formato	2026-10-13T15:20:16.1994443Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom (12 kB at 276 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.2035445Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-swt.os/4.2.2/durian-swt.os-4.2.2.pom (1.6 kB at 24 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.2036601Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/3.18.300/org.eclipse.osgi-3.18.300.pom
+lint	Comprobar formato	2026-10-13T15:20:16.2081360Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.pom
+lint	Comprobar formato	2026-10-13T15:20:16.2397469Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.pom (1.8 kB at 57 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.2772845Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/3.18.300/org.eclipse.osgi-3.18.300.pom (1.3 kB at 18 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.8792572Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.pom
+lint	Comprobar formato	2026-10-13T15:20:16.8795018Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.pom
+lint	Comprobar formato	2026-10-13T15:20:16.9078221Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.pom (16 kB at 571 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.9194910Z [INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+lint	Comprobar formato	2026-10-13T15:20:16.9441728Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.pom (6.2 kB at 95 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:16.9470160Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/5/oss-parent-5.pom
+lint	Comprobar formato	2026-10-13T15:20:17.0082425Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/5/oss-parent-5.pom (4.1 kB at 66 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.4233876Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.6.0/okio-3.6.0.pom
+lint	Comprobar formato	2026-10-13T15:20:17.4235202Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.pom
+lint	Comprobar formato	2026-10-13T15:20:17.4507831Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.pom (1.6 kB at 56 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.5011786Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.6.0/okio-3.6.0.pom (1.7 kB at 21 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.5137327Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.21/kotlin-stdlib-jdk7-1.8.21.pom
+lint	Comprobar formato	2026-10-13T15:20:17.5153089Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.pom
+lint	Comprobar formato	2026-10-13T15:20:17.5154268Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.8.21/kotlin-stdlib-1.8.21.pom
+lint	Comprobar formato	2026-10-13T15:20:17.5462634Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.21/kotlin-stdlib-jdk7-1.8.21.pom (1.4 kB at 41 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.5874038Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.8.21/kotlin-stdlib-1.8.21.pom (1.6 kB at 21 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.6447484Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.pom (1.9 kB at 14 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.6488706Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.10/kotlin-stdlib-jdk8-1.9.10.pom
+lint	Comprobar formato	2026-10-13T15:20:17.6494848Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.pom
+lint	Comprobar formato	2026-10-13T15:20:17.6501763Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.10/kotlin-stdlib-common-1.9.10.pom
+lint	Comprobar formato	2026-10-13T15:20:17.6507465Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.21/kotlin-stdlib-common-1.8.21.pom
+lint	Comprobar formato	2026-10-13T15:20:17.6765312Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.10/kotlin-stdlib-common-1.9.10.pom (1.2 kB at 45 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.6823458Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.21/kotlin-stdlib-common-1.8.21.pom (1.2 kB at 34 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.7129203Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.10/kotlin-stdlib-jdk8-1.9.10.pom (1.6 kB at 25 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.7255430Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.pom (4.9 kB at 65 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.7440835Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib/2.45.0/spotless-lib-2.45.0.jar
+lint	Comprobar formato	2026-10-13T15:20:17.9890558Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib/2.45.0/spotless-lib-2.45.0.jar (485 kB at 2.0 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:17.9897581Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib-extra/2.45.0/spotless-lib-extra-2.45.0.jar
+lint	Comprobar formato	2026-10-13T15:20:17.9899252Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.jar
+lint	Comprobar formato	2026-10-13T15:20:17.9924468Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.jar
+lint	Comprobar formato	2026-10-13T15:20:17.9925341Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.jar
+lint	Comprobar formato	2026-10-13T15:20:17.9926192Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-resources/1.2.0/plexus-resources-1.2.0.jar
+lint	Comprobar formato	2026-10-13T15:20:18.0386432Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-io/1.2.0/durian-io-1.2.0.jar (187 kB at 3.8 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.0387158Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/6.7.0.202309050840-r/org.eclipse.jgit-6.7.0.202309050840-r.jar
+lint	Comprobar formato	2026-10-13T15:20:18.0502497Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-resources/1.2.0/plexus-resources-1.2.0.jar (23 kB at 382 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.0503796Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/googlecode/concurrent-trees/concurrent-trees/2.6.1/concurrent-trees-2.6.1.jar
+lint	Comprobar formato	2026-10-13T15:20:18.0767584Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-collect/1.2.0/durian-collect-1.2.0.jar (1.2 MB at 14 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.0768797Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/dev/equo/ide/solstice/1.7.5/solstice-1.7.5.jar
+lint	Comprobar formato	2026-10-13T15:20:18.0811493Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-lib-extra/2.45.0/spotless-lib-extra-2.45.0.jar (80 kB at 856 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.0812518Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.jar
+lint	Comprobar formato	2026-10-13T15:20:18.1162976Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-core/1.2.0/durian-core-1.2.0.jar (344 kB at 2.7 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.1164565Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar
+lint	Comprobar formato	2026-10-13T15:20:18.1178850Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/dev/equo/ide/solstice/1.7.5/solstice-1.7.5.jar (411 kB at 3.2 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.1179999Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.jar
+lint	Comprobar formato	2026-10-13T15:20:18.1296153Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/googlecode/concurrent-trees/concurrent-trees/2.6.1/concurrent-trees-2.6.1.jar (120 kB at 862 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.1297364Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar
+lint	Comprobar formato	2026-10-13T15:20:18.1321391Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/6.7.0.202309050840-r/org.eclipse.jgit-6.7.0.202309050840-r.jar (3.1 MB at 22 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.1322464Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-swt.os/4.2.2/durian-swt.os-4.2.2.jar
+lint	Comprobar formato	2026-10-13T15:20:18.1508257Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.jar (171 kB at 1.1 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.1509626Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/3.18.300/org.eclipse.osgi-3.18.300.jar
+lint	Comprobar formato	2026-10-13T15:20:18.1649455Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/durian/durian-swt.os/4.2.2/durian-swt.os-4.2.2.jar (13 kB at 77 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.1650377Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar
+lint	Comprobar formato	2026-10-13T15:20:18.1903867Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar (42 kB at 209 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.1904781Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar
+lint	Comprobar formato	2026-10-13T15:20:18.2054165Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.jar (264 kB at 1.2 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2055370Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.jar
+lint	Comprobar formato	2026-10-13T15:20:18.2074705Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/3.18.300/org.eclipse.osgi-3.18.300.jar (1.5 MB at 7.2 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2075846Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar
+lint	Comprobar formato	2026-10-13T15:20:18.2098616Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar (790 kB at 3.6 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2099222Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.8.21/kotlin-stdlib-1.8.21.jar
+lint	Comprobar formato	2026-10-13T15:20:18.2419153Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar (360 kB at 1.4 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2419831Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.21/kotlin-stdlib-jdk7-1.8.21.jar
+lint	Comprobar formato	2026-10-13T15:20:18.2503805Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar (361 kB at 1.4 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2505340Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.10/kotlin-stdlib-common-1.9.10.jar
+lint	Comprobar formato	2026-10-13T15:20:18.2521972Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.8.21/kotlin-stdlib-1.8.21.jar (1.7 MB at 6.4 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2522867Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.jar
+lint	Comprobar formato	2026-10-13T15:20:18.2627051Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.jar (968 B at 3.6 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2685964Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.21/kotlin-stdlib-jdk7-1.8.21.jar (963 B at 3.5 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2691204Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar (26 kB at 93 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.2776178Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.jar (18 kB at 61 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.3344830Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.10/kotlin-stdlib-common-1.9.10.jar (225 kB at 658 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.6617072Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/googlejavaformat/google-java-format/1.19.2/google-java-format-1.19.2.pom
+lint	Comprobar formato	2026-10-13T15:20:18.7158658Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/googlejavaformat/google-java-format/1.19.2/google-java-format-1.19.2.pom (11 kB at 207 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.7195039Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/googlejavaformat/google-java-format-parent/1.19.2/google-java-format-parent-1.19.2.pom
+lint	Comprobar formato	2026-10-13T15:20:18.7779436Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/googlejavaformat/google-java-format-parent/1.19.2/google-java-format-parent-1.19.2.pom (13 kB at 215 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.7820964Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.pom
+lint	Comprobar formato	2026-10-13T15:20:18.8365065Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.pom (13 kB at 242 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.8382488Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/32.1.3-jre/guava-parent-32.1.3-jre.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9030859Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/32.1.3-jre/guava-parent-32.1.3-jre.pom (20 kB at 314 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.9098416Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9114902Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9116456Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9118149Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9119319Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9374225Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.pom (2.1 kB at 72 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.9396595Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.pom (1.8 kB at 61 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.9409011Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.21.1/error_prone_parent-2.21.1.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9705239Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.21.1/error_prone_parent-2.21.1.pom (13 kB at 458 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.9706033Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom (2.4 kB at 39 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.9714460Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom
+lint	Comprobar formato	2026-10-13T15:20:18.9736307Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.pom (2.9 kB at 46 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:18.9775431Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom (2.3 kB at 33 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.0397971Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom (10 kB at 150 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.0847419Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/googlejavaformat/google-java-format/1.19.2/google-java-format-1.19.2.jar
+lint	Comprobar formato	2026-10-13T15:20:19.1577128Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/googlejavaformat/google-java-format/1.19.2/google-java-format-1.19.2.jar (278 kB at 3.8 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.1579305Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar
+lint	Comprobar formato	2026-10-13T15:20:19.1584509Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+lint	Comprobar formato	2026-10-13T15:20:19.1586758Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar
+lint	Comprobar formato	2026-10-13T15:20:19.1587581Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar
+lint	Comprobar formato	2026-10-13T15:20:19.1588410Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar
+lint	Comprobar formato	2026-10-13T15:20:19.1838234Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (2.2 kB at 85 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.1839867Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar
+lint	Comprobar formato	2026-10-13T15:20:19.1869700Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar (224 kB at 7.7 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.2119062Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar (4.6 kB at 86 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.2140078Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar (9.3 kB at 166 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.2160794Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar (17 kB at 290 kB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.3924910Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar (3.0 MB at 13 MB/s)
+lint	Comprobar formato	2026-10-13T15:20:19.4139446Z [INFO] Index file does not exist. Fallback to an empty index
+lint	Comprobar formato	2026-10-13T15:20:20.0155804Z [INFO] Spotless.Java is keeping 13 files clean - 0 needs changes to be clean, 13 were already clean, 0 were skipped because caching determined they were already clean
+lint	Comprobar formato	2026-10-13T15:20:20.0174375Z [INFO] ------------------------------------------------------------------------
+lint	Comprobar formato	2026-10-13T15:20:20.0174899Z [INFO] BUILD SUCCESS
+lint	Comprobar formato	2026-10-13T15:20:20.0175230Z [INFO] ------------------------------------------------------------------------
+lint	Comprobar formato	2026-10-13T15:20:20.0175570Z [INFO] Total time:  6.309 s
+lint	Comprobar formato	2026-10-13T15:20:20.0175910Z [INFO] Finished at: 2026-10-13T15:20:20Z
+lint	Comprobar formato	2026-10-13T15:20:20.0176249Z [INFO] ------------------------------------------------------------------------
+lint	Post Run actions/setup-java@v4	﻿2026-10-13T15:20:20.0445331Z Post job cleanup.
+lint	Post Run actions/setup-java@v4	2026-10-13T15:20:20.1352930Z (node:2192) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+lint	Post Run actions/setup-java@v4	2026-10-13T15:20:20.1353449Z (Use `node --trace-deprecation ...` to show where the warning was created)
+lint	Post Run actions/setup-java@v4	2026-10-13T15:20:20.1356563Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f, not saving cache.
+lint	Post Run actions/checkout@v4	﻿2026-10-13T15:20:20.1558648Z Post job cleanup.
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2117203Z [command]/usr/bin/git version
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2152790Z git version 2.55.0
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2176886Z Temporarily overriding HOME='/home/runner/work/_temp/e10b345d-79d1-4af7-82ac-ffc9f039e704' before making global git config changes
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2178017Z Adding repository directory to the temporary git global config as a safe directory
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2180722Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2213830Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2248206Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2455251Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2480658Z http.https://github.com/.extraheader
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2489107Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2544021Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2746146Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+lint	Post Run actions/checkout@v4	2026-10-13T15:20:20.2776902Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+lint	Complete job	﻿2026-10-13T15:20:20.3068386Z Cleaning up orphan processes
+lint	Complete job	2026-10-13T15:20:20.3261300Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+test	Set up job	﻿2026-10-13T15:20:27.3228003Z Current runner version: '2.337.0'
+test	Set up job	2026-10-13T15:20:27.3264246Z ##[group]Runner Image Provisioner
+test	Set up job	2026-10-13T15:20:27.3265523Z Hosted Compute Agent
+test	Set up job	2026-10-13T15:20:27.3266750Z Version: 20261002.596
+test	Set up job	2026-10-13T15:20:27.3267815Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+test	Set up job	2026-10-13T15:20:27.3269068Z Build Date: 2026-10-02T22:28:27Z
+test	Set up job	2026-10-13T15:20:27.3270298Z Worker ID: {c2f2308c-8e89-485c-aa23-31d2a189e282}
+test	Set up job	2026-10-13T15:20:27.3271477Z Region: eastus
+test	Set up job	2026-10-13T15:20:27.3272488Z Cloud: Azure
+test	Set up job	2026-10-13T15:20:27.3273702Z ##[endgroup]
+test	Set up job	2026-10-13T15:20:27.3276077Z ##[group]Operating System
+test	Set up job	2026-10-13T15:20:27.3277150Z Ubuntu
+test	Set up job	2026-10-13T15:20:27.3278150Z 24.04.5
+test	Set up job	2026-10-13T15:20:27.3279006Z LTS
+test	Set up job	2026-10-13T15:20:27.3279826Z ##[endgroup]
+test	Set up job	2026-10-13T15:20:27.3280880Z ##[group]Runner Image
+test	Set up job	2026-10-13T15:20:27.3281942Z Image: ubuntu-24.04
+test	Set up job	2026-10-13T15:20:27.3282859Z Version: 20261004.327.1
+test	Set up job	2026-10-13T15:20:27.3285171Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+test	Set up job	2026-10-13T15:20:27.3288133Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+test	Set up job	2026-10-13T15:20:27.3289805Z ##[endgroup]
+test	Set up job	2026-10-13T15:20:27.3292011Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2026-10-13T15:20:27.3294890Z Checks: write
+test	Set up job	2026-10-13T15:20:27.3296012Z Contents: read
+test	Set up job	2026-10-13T15:20:27.3296908Z Metadata: read
+test	Set up job	2026-10-13T15:20:27.3297884Z ##[endgroup]
+test	Set up job	2026-10-13T15:20:27.3301362Z Secret source: Actions
+test	Set up job	2026-10-13T15:20:27.3302836Z Cache mode: write
+test	Set up job	2026-10-13T15:20:27.3304709Z Prepare workflow directory
+test	Set up job	2026-10-13T15:20:27.3776441Z Prepare all required actions
+test	Set up job	2026-10-13T15:20:27.3847713Z Getting action download info
+test	Set up job	2026-10-13T15:20:27.6069999Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test	Set up job	2026-10-13T15:20:27.7181374Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+test	Set up job	2026-10-13T15:20:27.9410499Z Download action repository 'dorny/test-reporter@v1' (SHA:3eeb9fc888e82e8be2fb356bbeec2750231672bc)
+test	Set up job	2026-10-13T15:20:28.2266848Z Complete job name: test
+test	Run actions/checkout@v4	﻿2026-10-13T15:20:28.3118779Z ##[group]Run actions/checkout@v4
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3120616Z with:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3121916Z   repository: samuelavilesc/practicas-continuas-gloriasamu
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3129832Z   token: ***
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3130975Z   ssh-strict: true
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3132014Z   ssh-user: git
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3133164Z   persist-credentials: true
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3134524Z   clean: true
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3135482Z   sparse-checkout-cone-mode: true
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3136696Z   fetch-depth: 1
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3137621Z   fetch-tags: false
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3138584Z   show-progress: true
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3139621Z   lfs: false
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3140585Z   submodules: false
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3141708Z   set-safe-directory: true
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3142910Z   allow-unsafe-pr-checkout: false
+test	Run actions/checkout@v4	2026-10-13T15:20:28.3144841Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4341906Z Syncing repository: samuelavilesc/practicas-continuas-gloriasamu
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4345107Z ##[group]Getting Git version info
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4346448Z Working directory is '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4348188Z [command]/usr/bin/git version
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4462218Z git version 2.55.0
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4485724Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4504314Z Temporarily overriding HOME='/home/runner/work/_temp/80d20bc6-c0c6-4b5c-8d4b-7c19bb8ea451' before making global git config changes
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4507120Z Adding repository directory to the temporary git global config as a safe directory
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4512453Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4579032Z Deleting the contents of '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4585216Z ##[group]Initializing the repository
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4590996Z [command]/usr/bin/git init /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4745304Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4754758Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4756604Z hint: to use in all of your new repositories, which will suppress this warning,
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4757952Z hint: call:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4759341Z hint:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4760389Z hint: 	git config --global init.defaultBranch <name>
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4761493Z hint:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4762686Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4764640Z hint: 'development'. The just-created branch can be renamed via this command:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4766159Z hint:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4766966Z hint: 	git branch -m <name>
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4767845Z hint:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4769240Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4771595Z Initialized empty Git repository in /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/.git/
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4777709Z [command]/usr/bin/git remote add origin https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4845741Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4847833Z ##[group]Disabling automatic garbage collection
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4854858Z [command]/usr/bin/git config --local gc.auto 0
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4892640Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4894835Z ##[group]Setting up auth
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4900744Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Run actions/checkout@v4	2026-10-13T15:20:28.4945788Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Run actions/checkout@v4	2026-10-13T15:20:28.5412475Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Run actions/checkout@v4	2026-10-13T15:20:28.5452017Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Run actions/checkout@v4	2026-10-13T15:20:28.5687969Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.5725638Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Run actions/checkout@v4	2026-10-13T15:20:28.5958719Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	Run actions/checkout@v4	2026-10-13T15:20:28.6001695Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.6002908Z ##[group]Fetching the repository
+test	Run actions/checkout@v4	2026-10-13T15:20:28.6011954Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3c4c068c267f38f05251c53971d5fe14b4860a22:refs/remotes/pull/13/merge
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8456966Z From https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8459452Z  * [new ref]         3c4c068c267f38f05251c53971d5fe14b4860a22 -> pull/13/merge
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8464492Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8466494Z ##[group]Determining the checkout info
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8468371Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8469693Z [command]/usr/bin/git sparse-checkout disable
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8525427Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8641146Z ##[group]Checking out the ref
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8644097Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8650275Z Note: switching to 'refs/remotes/pull/13/merge'.
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8651830Z 
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8653004Z You are in 'detached HEAD' state. You can look around, make experimental
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8656084Z changes and commit them, and you can discard any commits you make in this
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8659334Z state without impacting any branches by switching back to a branch.
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8660508Z 
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8661289Z If you want to create a new branch to retain commits you create, you may
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8663003Z do so (now or later) by using -c with the switch command. Example:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8664513Z 
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8665010Z   git switch -c <new-branch-name>
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8665669Z 
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8666077Z Or undo this operation with:
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8666747Z 
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8667155Z   git switch -
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8667872Z 
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8668841Z Turn off this advice by setting config variable advice.detachedHead to false
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8670165Z 
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8671640Z HEAD is now at 3c4c068 Merge 24cd3b6cdd619abc6a78fc4418590c12c37022df into eee73f0d5e8a7ec44fa06f78f31a7ee0e5384fbf
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8676771Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8712837Z [command]/usr/bin/git log -1 --format=%H
+test	Run actions/checkout@v4	2026-10-13T15:20:28.8741810Z 3c4c068c267f38f05251c53971d5fe14b4860a22
+test	Run actions/setup-java@v4	﻿2026-10-13T15:20:28.9182981Z ##[group]Run actions/setup-java@v4
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9184392Z with:
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9185182Z   distribution: temurin
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9186093Z   java-version: 21
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9186927Z   cache: maven
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9187737Z   java-package: jdk
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9188605Z   check-latest: false
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9189520Z   server-id: github
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9190417Z   server-username: GITHUB_ACTOR
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9191472Z   server-password: GITHUB_TOKEN
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9192516Z   overwrite-settings: true
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9193598Z   job-status: success
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9202739Z   token: ***
+test	Run actions/setup-java@v4	2026-10-13T15:20:28.9203728Z ##[endgroup]
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1071585Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1079218Z ##[group]Installed distributions
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1292348Z Resolved Java 21.0.12+1 from tool-cache
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1293541Z Setting Java 21.0.12+1 as the default
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1303713Z (node:2333) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1305428Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1308390Z Creating toolchains.xml for JDK version 21 from temurin
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1384976Z Writing to /home/runner/.m2/toolchains.xml
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1385603Z 
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1385904Z Java configuration:
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1386581Z   Distribution: temurin
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1387293Z   Version: 21.0.12+1
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1388159Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1388861Z 
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1389817Z ##[endgroup]
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1407334Z Creating settings.xml with server-id: github
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.1440047Z Writing to /home/runner/.m2/settings.xml
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.2610549Z Cache hit for: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.2722421Z (node:2333) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.7227648Z Received 76301548 of 76301548 (100.0%), 170.4 MBs/sec
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.7228806Z Cache Size: ~73 MB (76301548 B)
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.7260563Z [command]/usr/bin/tar -xf /home/runner/work/_temp/020c5c35-3366-4773-b1cd-60da9a180da7/cache.tzst -P -C /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu --use-compress-program unzstd
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.9554572Z Cache restored successfully
+test	Run actions/setup-java@v4	2026-10-13T15:20:29.9593626Z Cache restored from key: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+test	Tests	﻿2026-10-13T15:20:29.9936844Z ##[group]Run mvn -B verify
+test	Tests	2026-10-13T15:20:29.9937495Z ^[[36;1mmvn -B verify^[[0m
+test	Tests	2026-10-13T15:20:30.0244565Z shell: /usr/bin/bash -e {0}
+test	Tests	2026-10-13T15:20:30.0244995Z env:
+test	Tests	2026-10-13T15:20:30.0245428Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+test	Tests	2026-10-13T15:20:30.0246121Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+test	Tests	2026-10-13T15:20:30.0246656Z ##[endgroup]
+test	Tests	2026-10-13T15:20:36.1028942Z [INFO] Scanning for projects...
+test	Tests	2026-10-13T15:20:36.3433008Z [INFO] Loaded 24074 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+test	Tests	2026-10-13T15:20:36.6168121Z [INFO] 
+test	Tests	2026-10-13T15:20:36.6174696Z [INFO] -------------------< es.practicascontinuas:todo-api >-------------------
+test	Tests	2026-10-13T15:20:36.6208221Z [INFO] Building todo-api 0.0.1-SNAPSHOT
+test	Tests	2026-10-13T15:20:36.6216420Z [INFO]   from pom.xml
+test	Tests	2026-10-13T15:20:36.6217201Z [INFO] --------------------------------[ jar ]---------------------------------
+test	Tests	2026-10-13T15:20:36.6921813Z [INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+test	Tests	2026-10-13T15:20:39.1704866Z [INFO] 
+test	Tests	2026-10-13T15:20:39.1705900Z [INFO] --- resources:3.3.1:resources (default-resources) @ todo-api ---
+test	Tests	2026-10-13T15:20:39.3593040Z [INFO] Copying 1 resource from src/main/resources to target/classes
+test	Tests	2026-10-13T15:20:39.3721594Z [INFO] Copying 0 resource from src/main/resources to target/classes
+test	Tests	2026-10-13T15:20:39.3773314Z [INFO] 
+test	Tests	2026-10-13T15:20:39.3804553Z [INFO] --- compiler:3.13.0:compile (default-compile) @ todo-api ---
+test	Tests	2026-10-13T15:20:39.5760524Z [INFO] Recompiling the module because of changed source code.
+test	Tests	2026-10-13T15:20:39.5821268Z [INFO] Compiling 12 source files with javac [debug parameters release 21] to target/classes
+test	Tests	2026-10-13T15:20:41.2629869Z [INFO] 
+test	Tests	2026-10-13T15:20:41.2654750Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ todo-api ---
+test	Tests	2026-10-13T15:20:41.2744491Z [INFO] skip non existing resourceDirectory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/src/test/resources
+test	Tests	2026-10-13T15:20:41.2774067Z [INFO] 
+test	Tests	2026-10-13T15:20:41.2774767Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ todo-api ---
+test	Tests	2026-10-13T15:20:41.2804179Z [INFO] Recompiling the module because of changed dependency.
+test	Tests	2026-10-13T15:20:41.2834686Z [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+test	Tests	2026-10-13T15:20:41.9050896Z [INFO] 
+test	Tests	2026-10-13T15:20:41.9051815Z [INFO] --- surefire:3.2.5:test (default-test) @ todo-api ---
+test	Tests	2026-10-13T15:20:42.1061914Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+test	Tests	2026-10-13T15:20:42.1734174Z [INFO] 
+test	Tests	2026-10-13T15:20:42.1735479Z [INFO] -------------------------------------------------------
+test	Tests	2026-10-13T15:20:42.1736630Z [INFO]  T E S T S
+test	Tests	2026-10-13T15:20:42.1737536Z [INFO] -------------------------------------------------------
+test	Tests	2026-10-13T15:20:43.0343801Z [INFO] Running es.practicascontinuas.todo.task.TaskServiceTest
+test	Tests	2026-10-13T15:20:43.5745607Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+test	Tests	2026-10-13T15:20:43.5935484Z WARNING: A Java agent has been loaded dynamically (/home/runner/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+test	Tests	2026-10-13T15:20:43.5937353Z WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+test	Tests	2026-10-13T15:20:43.5939079Z WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+test	Tests	2026-10-13T15:20:43.5940727Z WARNING: Dynamic loading of agents will be disallowed by default in a future release
+test	Tests	2026-10-13T15:20:44.5062578Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.440 s -- in es.practicascontinuas.todo.task.TaskServiceTest
+test	Tests	2026-10-13T15:20:44.5366703Z [INFO] 
+test	Tests	2026-10-13T15:20:44.5367576Z [INFO] Results:
+test	Tests	2026-10-13T15:20:44.5373929Z [INFO] 
+test	Tests	2026-10-13T15:20:44.5375104Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+test	Tests	2026-10-13T15:20:44.5375674Z [INFO] 
+test	Tests	2026-10-13T15:20:44.5402354Z [INFO] 
+test	Tests	2026-10-13T15:20:44.5403187Z [INFO] --- jar:3.4.2:jar (default-jar) @ todo-api ---
+test	Tests	2026-10-13T15:20:44.7607582Z [INFO] Building jar: /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar
+test	Tests	2026-10-13T15:20:44.7931014Z [INFO] 
+test	Tests	2026-10-13T15:20:44.7931922Z [INFO] --- spring-boot:3.3.5:repackage (repackage) @ todo-api ---
+test	Tests	2026-10-13T15:20:44.8654123Z [INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+test	Tests	2026-10-13T15:20:45.1621660Z [INFO] Replacing main artifact /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+test	Tests	2026-10-13T15:20:45.1625238Z [INFO] The original artifact has been renamed to /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar.original
+test	Tests	2026-10-13T15:20:45.1627194Z [INFO] ------------------------------------------------------------------------
+test	Tests	2026-10-13T15:20:45.1628159Z [INFO] BUILD SUCCESS
+test	Tests	2026-10-13T15:20:45.1628788Z [INFO] ------------------------------------------------------------------------
+test	Tests	2026-10-13T15:20:45.1629467Z [INFO] Total time:  9.153 s
+test	Tests	2026-10-13T15:20:45.1629909Z [INFO] Finished at: 2026-10-13T15:20:45Z
+test	Tests	2026-10-13T15:20:45.1630491Z [INFO] ------------------------------------------------------------------------
+test	Publicar informe de tests	﻿2026-10-13T15:20:45.1945643Z ##[group]Run dorny/test-reporter@v1
+test	Publicar informe de tests	2026-10-13T15:20:45.1945962Z with:
+test	Publicar informe de tests	2026-10-13T15:20:45.1946164Z   name: Resultados JUnit
+test	Publicar informe de tests	2026-10-13T15:20:45.1946427Z   path: target/surefire-reports/*.xml
+test	Publicar informe de tests	2026-10-13T15:20:45.1946701Z   reporter: java-junit
+test	Publicar informe de tests	2026-10-13T15:20:45.1946941Z   use-actions-summary: false
+test	Publicar informe de tests	2026-10-13T15:20:45.1947214Z   path-replace-backslashes: false
+test	Publicar informe de tests	2026-10-13T15:20:45.1947474Z   list-suites: all
+test	Publicar informe de tests	2026-10-13T15:20:45.1947696Z   list-tests: all
+test	Publicar informe de tests	2026-10-13T15:20:45.1947909Z   max-annotations: 10
+test	Publicar informe de tests	2026-10-13T15:20:45.1948124Z   fail-on-error: true
+test	Publicar informe de tests	2026-10-13T15:20:45.1948332Z   fail-on-empty: true
+test	Publicar informe de tests	2026-10-13T15:20:45.1948540Z   only-summary: false
+test	Publicar informe de tests	2026-10-13T15:20:45.1948745Z   badge-title: tests
+test	Publicar informe de tests	2026-10-13T15:20:45.1951089Z   token: ***
+test	Publicar informe de tests	2026-10-13T15:20:45.1951288Z env:
+test	Publicar informe de tests	2026-10-13T15:20:45.1951598Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+test	Publicar informe de tests	2026-10-13T15:20:45.1952102Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+test	Publicar informe de tests	2026-10-13T15:20:45.1952528Z ##[endgroup]
+test	Publicar informe de tests	2026-10-13T15:20:45.2970096Z Action was triggered by pull_request: using SHA from head of source branch
+test	Publicar informe de tests	2026-10-13T15:20:45.2980901Z Check runs will be created with SHA=24cd3b6cdd619abc6a78fc4418590c12c37022df
+test	Publicar informe de tests	2026-10-13T15:20:45.2984187Z ##[group]Listing all files tracked by git
+test	Publicar informe de tests	2026-10-13T15:20:45.3021250Z [command]/usr/bin/git ls-files -z
+test	Publicar informe de tests	2026-10-13T15:20:45.3102274Z .devcontainer/devcontainer.json^@.dockerignore^@.editorconfig^@.env.example^@.gitattributes^@.githooks/pre-commit^@.github/CODEOWNERS^@.github/ISSUE_TEMPLATE/bug.md^@.github/ISSUE_TEMPLATE/enhancement.md^@.github/PULL_REQUEST_TEMPLATE.md^@.github/workflows/ci.yml^@.gitignore^@CONTRIBUTING.md^@Dockerfile^@README.md^@docker-compose.yml^@pom.xml^@src/main/java/es/practicascontinuas/todo/TodoApiApplication.java^@src/main/java/es/practicascontinuas/todo/task/ApiExceptionHandler.java^@src/main/java/es/practicascontinuas/todo/task/DuplicateTaskException.java^@src/main/java/es/practicascontinuas/todo/task/InvalidTaskStateException.java^@src/main/java/es/practicascontinuas/todo/task/Task.java^@src/main/java/es/practicascontinuas/todo/task/TaskController.java^@src/main/java/es/practicascontinuas/todo/task/TaskNotFoundException.java^@src/main/java/es/practicascontinuas/todo/task/TaskRepository.java^@src/main/java/es/practicascontinuas/todo/task/TaskRequest.java^@src/main/java/es/practicascontinuas/todo/task/TaskResponse.java^@src/main/java/es/practicascontinuas/todo/task/TaskService.java^@src/main/java/es/practicascontinuas/todo/task/TaskStatus.java^@src/main/resources/application.yml^@src/test/java/es/practicascontinuas/todo/task/TaskServiceTest.java^@
+test	Publicar informe de tests	2026-10-13T15:20:45.3112943Z ##[endgroup]
+test	Publicar informe de tests	2026-10-13T15:20:45.3113938Z Found 31 files tracked by GitHub
+test	Publicar informe de tests	2026-10-13T15:20:45.3114495Z Using test report parser 'java-junit'
+test	Publicar informe de tests	2026-10-13T15:20:45.3167219Z ##[group]Creating test report Resultados JUnit
+test	Publicar informe de tests	2026-10-13T15:20:45.3168916Z Processing test results for check run Resultados JUnit
+test	Publicar informe de tests	2026-10-13T15:20:45.3311954Z Creating check run Resultados JUnit
+test	Publicar informe de tests	2026-10-13T15:20:45.7817092Z Creating report summary
+test	Publicar informe de tests	2026-10-13T15:20:45.7818058Z Generating check run summary
+test	Publicar informe de tests	2026-10-13T15:20:45.7829835Z Creating annotations
+test	Publicar informe de tests	2026-10-13T15:20:45.7832072Z Updating check run conclusion (success) and output
+test	Publicar informe de tests	2026-10-13T15:20:46.2116118Z Check run create response: 200
+test	Publicar informe de tests	2026-10-13T15:20:46.2117041Z Check run URL: https://api.github.com/repos/samuelavilesc/practicas-continuas-gloriasamu/check-runs/115378853746
+test	Publicar informe de tests	2026-10-13T15:20:46.2118085Z Check run HTML: https://github.com/samuelavilesc/practicas-continuas-gloriasamu/runs/115378853746
+test	Publicar informe de tests	2026-10-13T15:20:46.2124692Z ##[endgroup]
+test	Post Run actions/setup-java@v4	﻿2026-10-13T15:20:46.2326621Z Post job cleanup.
+test	Post Run actions/setup-java@v4	2026-10-13T15:20:46.3705603Z (node:2517) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Post Run actions/setup-java@v4	2026-10-13T15:20:46.3706606Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Post Run actions/setup-java@v4	2026-10-13T15:20:46.3712157Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f, not saving cache.
+test	Post Run actions/checkout@v4	﻿2026-10-13T15:20:46.3893188Z Post job cleanup.
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.4837297Z [command]/usr/bin/git version
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.4884442Z git version 2.55.0
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.4944479Z Temporarily overriding HOME='/home/runner/work/_temp/0d27183f-dd45-4c03-8a2e-5b7ff4c81974' before making global git config changes
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.4946378Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.4951312Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.4996325Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.5054684Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.5322100Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.5354395Z http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.5368233Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.5408473Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.5676861Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Post Run actions/checkout@v4	2026-10-13T15:20:46.5717409Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Complete job	﻿2026-10-13T15:20:46.6117193Z Cleaning up orphan processes
+test	Complete job	2026-10-13T15:20:46.6415216Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, dorny/test-reporter@v1. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+package	Set up job	﻿2026-10-13T15:20:53.9594645Z Current runner version: '2.337.0'
+package	Set up job	2026-10-13T15:20:53.9618548Z ##[group]Runner Image Provisioner
+package	Set up job	2026-10-13T15:20:53.9619560Z Hosted Compute Agent
+package	Set up job	2026-10-13T15:20:53.9620117Z Version: 20261002.596
+package	Set up job	2026-10-13T15:20:53.9620877Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+package	Set up job	2026-10-13T15:20:53.9621649Z Build Date: 2026-10-02T22:28:27Z
+package	Set up job	2026-10-13T15:20:53.9622313Z Worker ID: {97017e02-ae76-43be-a5ca-f6e542b4812a}
+package	Set up job	2026-10-13T15:20:53.9623066Z Region: centralus
+package	Set up job	2026-10-13T15:20:53.9623586Z Cloud: Azure
+package	Set up job	2026-10-13T15:20:53.9624083Z ##[endgroup]
+package	Set up job	2026-10-13T15:20:53.9625337Z ##[group]Operating System
+package	Set up job	2026-10-13T15:20:53.9625935Z Ubuntu
+package	Set up job	2026-10-13T15:20:53.9626461Z 24.04.5
+package	Set up job	2026-10-13T15:20:53.9626963Z LTS
+package	Set up job	2026-10-13T15:20:53.9627444Z ##[endgroup]
+package	Set up job	2026-10-13T15:20:53.9627970Z ##[group]Runner Image
+package	Set up job	2026-10-13T15:20:53.9628519Z Image: ubuntu-24.04
+package	Set up job	2026-10-13T15:20:53.9629122Z Version: 20261004.327.1
+package	Set up job	2026-10-13T15:20:53.9630128Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+package	Set up job	2026-10-13T15:20:53.9631875Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+package	Set up job	2026-10-13T15:20:53.9632857Z ##[endgroup]
+package	Set up job	2026-10-13T15:20:53.9633930Z ##[group]GITHUB_TOKEN Permissions
+package	Set up job	2026-10-13T15:20:53.9635937Z Contents: read
+package	Set up job	2026-10-13T15:20:53.9636596Z Metadata: read
+package	Set up job	2026-10-13T15:20:53.9637149Z ##[endgroup]
+package	Set up job	2026-10-13T15:20:53.9639134Z Secret source: Actions
+package	Set up job	2026-10-13T15:20:53.9640040Z Cache mode: write
+package	Set up job	2026-10-13T15:20:53.9640831Z Prepare workflow directory
+package	Set up job	2026-10-13T15:20:54.0004285Z Prepare all required actions
+package	Set up job	2026-10-13T15:20:54.0054567Z Getting action download info
+package	Set up job	2026-10-13T15:20:54.2723279Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+package	Set up job	2026-10-13T15:20:54.3951517Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+package	Set up job	2026-10-13T15:20:55.1602084Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+package	Set up job	2026-10-13T15:20:55.4498225Z Complete job name: package
+package	Run actions/checkout@v4	﻿2026-10-13T15:20:55.5339298Z ##[group]Run actions/checkout@v4
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5341019Z with:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5342344Z   repository: samuelavilesc/practicas-continuas-gloriasamu
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5351584Z   token: ***
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5352594Z   ssh-strict: true
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5353652Z   ssh-user: git
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5354669Z   persist-credentials: true
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5355776Z   clean: true
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5356837Z   sparse-checkout-cone-mode: true
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5358060Z   fetch-depth: 1
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5359091Z   fetch-tags: false
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5360133Z   show-progress: true
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5361792Z   lfs: false
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5362885Z   submodules: false
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5363950Z   set-safe-directory: true
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5365165Z   allow-unsafe-pr-checkout: false
+package	Run actions/checkout@v4	2026-10-13T15:20:55.5366679Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6387157Z Syncing repository: samuelavilesc/practicas-continuas-gloriasamu
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6391302Z ##[group]Getting Git version info
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6394027Z Working directory is '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6397151Z [command]/usr/bin/git version
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6472184Z git version 2.55.0
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6495643Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6511208Z Temporarily overriding HOME='/home/runner/work/_temp/8d316eec-102e-49d7-b2b9-22bf76ca06cf' before making global git config changes
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6516918Z Adding repository directory to the temporary git global config as a safe directory
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6524329Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6585792Z Deleting the contents of '/home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu'
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6590200Z ##[group]Initializing the repository
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6595391Z [command]/usr/bin/git init /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6799040Z hint: Using 'master' as the name for the initial branch. This default branch name
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6802373Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6804993Z hint: to use in all of your new repositories, which will suppress this warning,
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6806995Z hint: call:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6808736Z hint:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6810749Z hint: 	git config --global init.defaultBranch <name>
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6812659Z hint:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6814138Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6816543Z hint: 'development'. The just-created branch can be renamed via this command:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6818971Z hint:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6820470Z hint: 	git branch -m <name>
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6822251Z hint:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6824369Z hint: Disable this message with "git config set advice.defaultBranchName false"
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6828922Z Initialized empty Git repository in /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/.git/
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6836348Z [command]/usr/bin/git remote add origin https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6872658Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6874596Z ##[group]Disabling automatic garbage collection
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6876465Z [command]/usr/bin/git config --local gc.auto 0
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6915452Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6917425Z ##[group]Setting up auth
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6923478Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+package	Run actions/checkout@v4	2026-10-13T15:20:55.6961773Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7312853Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7345459Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7531475Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7562120Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7750334Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7791927Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7794762Z ##[group]Fetching the repository
+package	Run actions/checkout@v4	2026-10-13T15:20:55.7804245Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3c4c068c267f38f05251c53971d5fe14b4860a22:refs/remotes/pull/13/merge
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1169513Z From https://github.com/samuelavilesc/practicas-continuas-gloriasamu
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1171652Z  * [new ref]         3c4c068c267f38f05251c53971d5fe14b4860a22 -> pull/13/merge
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1175449Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1177463Z ##[group]Determining the checkout info
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1179454Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1184130Z [command]/usr/bin/git sparse-checkout disable
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1248395Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1281429Z ##[group]Checking out the ref
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1284731Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1341960Z Note: switching to 'refs/remotes/pull/13/merge'.
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1342681Z 
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1343584Z You are in 'detached HEAD' state. You can look around, make experimental
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1345221Z changes and commit them, and you can discard any commits you make in this
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1347322Z state without impacting any branches by switching back to a branch.
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1348325Z 
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1348820Z If you want to create a new branch to retain commits you create, you may
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1349945Z do so (now or later) by using -c with the switch command. Example:
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1350511Z 
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1351115Z   git switch -c <new-branch-name>
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1351750Z 
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1352386Z Or undo this operation with:
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1352853Z 
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1353272Z   git switch -
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1353733Z 
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1354298Z Turn off this advice by setting config variable advice.detachedHead to false
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1354943Z 
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1355589Z HEAD is now at 3c4c068 Merge 24cd3b6cdd619abc6a78fc4418590c12c37022df into eee73f0d5e8a7ec44fa06f78f31a7ee0e5384fbf
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1358672Z ##[endgroup]
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1395897Z [command]/usr/bin/git log -1 --format=%H
+package	Run actions/checkout@v4	2026-10-13T15:20:56.1579349Z 3c4c068c267f38f05251c53971d5fe14b4860a22
+package	Run actions/setup-java@v4	﻿2026-10-13T15:20:56.1839811Z ##[group]Run actions/setup-java@v4
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1840615Z with:
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1841530Z   distribution: temurin
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1842233Z   java-version: 21
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1842890Z   cache: maven
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1843548Z   java-package: jdk
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1844209Z   check-latest: false
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1844886Z   server-id: github
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1845564Z   server-username: GITHUB_ACTOR
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1846297Z   server-password: GITHUB_TOKEN
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1847015Z   overwrite-settings: true
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1847704Z   job-status: success
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1851058Z   token: ***
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.1851764Z ##[endgroup]
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3518056Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3528643Z ##[group]Installed distributions
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3695833Z Resolved Java 21.0.12+1 from tool-cache
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3697094Z Setting Java 21.0.12+1 as the default
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3706266Z (node:2298) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3707466Z (Use `node --trace-deprecation ...` to show where the warning was created)
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3709475Z Creating toolchains.xml for JDK version 21 from temurin
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3779161Z Writing to /home/runner/.m2/toolchains.xml
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3780060Z 
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3780494Z Java configuration:
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3781525Z   Distribution: temurin
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3782242Z   Version: 21.0.12+1
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3783284Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3784013Z 
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3784939Z ##[endgroup]
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3806723Z Creating settings.xml with server-id: github
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.3832771Z Writing to /home/runner/.m2/settings.xml
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.5969102Z Cache hit for: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+package	Run actions/setup-java@v4	2026-10-13T15:20:56.6063207Z (node:2298) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+package	Run actions/setup-java@v4	2026-10-13T15:20:57.6634687Z Received 76301548 of 76301548 (100.0%), 81.6 MBs/sec
+package	Run actions/setup-java@v4	2026-10-13T15:20:57.6635300Z Cache Size: ~73 MB (76301548 B)
+package	Run actions/setup-java@v4	2026-10-13T15:20:57.6661173Z [command]/usr/bin/tar -xf /home/runner/work/_temp/8bd483c2-b417-41ab-93a6-92e47d8d5c54/cache.tzst -P -C /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu --use-compress-program unzstd
+package	Run actions/setup-java@v4	2026-10-13T15:20:57.7948022Z Cache restored successfully
+package	Run actions/setup-java@v4	2026-10-13T15:20:57.7979430Z Cache restored from key: setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f
+package	Run mvn -B package -DskipTests	﻿2026-10-13T15:20:57.8196498Z ##[group]Run mvn -B package -DskipTests
+package	Run mvn -B package -DskipTests	2026-10-13T15:20:57.8197141Z ^[[36;1mmvn -B package -DskipTests^[[0m
+package	Run mvn -B package -DskipTests	2026-10-13T15:20:57.8395533Z shell: /usr/bin/bash -e {0}
+package	Run mvn -B package -DskipTests	2026-10-13T15:20:57.8395962Z env:
+package	Run mvn -B package -DskipTests	2026-10-13T15:20:57.8396334Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+package	Run mvn -B package -DskipTests	2026-10-13T15:20:57.8396843Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+package	Run mvn -B package -DskipTests	2026-10-13T15:20:57.8397233Z ##[endgroup]
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:02.6747149Z [INFO] Scanning for projects...
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:02.8668698Z [INFO] Loaded 24074 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:03.1081690Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:03.1082757Z [INFO] -------------------< es.practicascontinuas:todo-api >-------------------
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:03.1083474Z [INFO] Building todo-api 0.0.1-SNAPSHOT
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:03.1092241Z [INFO]   from pom.xml
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:03.1093126Z [INFO] --------------------------------[ jar ]---------------------------------
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:03.1733135Z [INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.2280005Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.2306149Z [INFO] --- resources:3.3.1:resources (default-resources) @ todo-api ---
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.3932077Z [INFO] Copying 1 resource from src/main/resources to target/classes
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.4028148Z [INFO] Copying 0 resource from src/main/resources to target/classes
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.4035988Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.4036826Z [INFO] --- compiler:3.13.0:compile (default-compile) @ todo-api ---
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.5832347Z [INFO] Recompiling the module because of changed source code.
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:05.5874193Z [INFO] Compiling 12 source files with javac [debug parameters release 21] to target/classes
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:06.9789066Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:06.9790385Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ todo-api ---
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:06.9882250Z [INFO] skip non existing resourceDirectory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/src/test/resources
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:06.9895502Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:06.9911967Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ todo-api ---
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:07.0009392Z [INFO] Recompiling the module because of changed dependency.
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:07.0014024Z [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:07.4818339Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:07.4856473Z [INFO] --- surefire:3.2.5:test (default-test) @ todo-api ---
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:07.7222200Z [INFO] Tests are skipped.
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:07.7232029Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:07.7261637Z [INFO] --- jar:3.4.2:jar (default-jar) @ todo-api ---
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.0243122Z [INFO] Building jar: /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.0551933Z [INFO] 
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.0583717Z [INFO] --- spring-boot:3.3.5:repackage (repackage) @ todo-api ---
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.1112573Z [INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3758544Z [INFO] Replacing main artifact /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3761132Z [INFO] The original artifact has been renamed to /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/todo-api-0.0.1-SNAPSHOT.jar.original
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3762467Z [INFO] ------------------------------------------------------------------------
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3763018Z [INFO] BUILD SUCCESS
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3763496Z [INFO] ------------------------------------------------------------------------
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3764066Z [INFO] Total time:  5.767 s
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3764462Z [INFO] Finished at: 2026-10-13T15:21:08Z
+package	Run mvn -B package -DskipTests	2026-10-13T15:21:08.3765427Z [INFO] ------------------------------------------------------------------------
+package	Subir JAR	﻿2026-10-13T15:21:08.4127016Z ##[group]Run actions/upload-artifact@v4
+package	Subir JAR	2026-10-13T15:21:08.4127343Z with:
+package	Subir JAR	2026-10-13T15:21:08.4127558Z   name: app-jar
+package	Subir JAR	2026-10-13T15:21:08.4127785Z   path: target/*.jar
+package	Subir JAR	2026-10-13T15:21:08.4128012Z   retention-days: 7
+package	Subir JAR	2026-10-13T15:21:08.4128238Z   if-no-files-found: warn
+package	Subir JAR	2026-10-13T15:21:08.4128477Z   compression-level: 6
+package	Subir JAR	2026-10-13T15:21:08.4128699Z   overwrite: false
+package	Subir JAR	2026-10-13T15:21:08.4128929Z   include-hidden-files: false
+package	Subir JAR	2026-10-13T15:21:08.4129168Z env:
+package	Subir JAR	2026-10-13T15:21:08.4129478Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+package	Subir JAR	2026-10-13T15:21:08.4129947Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+package	Subir JAR	2026-10-13T15:21:08.4130329Z ##[endgroup]
+package	Subir JAR	2026-10-13T15:21:08.5728247Z (node:2406) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+package	Subir JAR	2026-10-13T15:21:08.5729361Z (Use `node --trace-deprecation ...` to show where the warning was created)
+package	Subir JAR	2026-10-13T15:21:08.5811324Z With the provided path, there will be 1 file uploaded
+package	Subir JAR	2026-10-13T15:21:08.5822126Z Artifact name is valid!
+package	Subir JAR	2026-10-13T15:21:08.5822547Z Root directory input is valid!
+package	Subir JAR	2026-10-13T15:21:08.9152920Z Beginning upload of artifact content to blob storage
+package	Subir JAR	2026-10-13T15:21:09.2203932Z (node:2406) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+package	Subir JAR	2026-10-13T15:21:09.7159188Z Uploaded bytes 8388608
+package	Subir JAR	2026-10-13T15:21:10.0887695Z Uploaded bytes 16777216
+package	Subir JAR	2026-10-13T15:21:10.1339985Z Uploaded bytes 25165824
+package	Subir JAR	2026-10-13T15:21:10.3293660Z Uploaded bytes 33554432
+package	Subir JAR	2026-10-13T15:21:10.6965634Z Uploaded bytes 41943040
+package	Subir JAR	2026-10-13T15:21:10.8010025Z Uploaded bytes 44898252
+package	Subir JAR	2026-10-13T15:21:10.8533156Z Finished uploading artifact content to blob storage!
+package	Subir JAR	2026-10-13T15:21:10.8535956Z SHA256 digest of uploaded artifact zip is 65b1df02196f98a471e546238d7da9f6bd4ecfcb54de43bb0f2e9c8d61464b39
+package	Subir JAR	2026-10-13T15:21:10.8538272Z Finalizing artifact upload
+package	Subir JAR	2026-10-13T15:21:11.1208259Z Artifact app-jar.zip successfully finalized. Artifact ID 11826508042
+package	Subir JAR	2026-10-13T15:21:11.1222810Z Artifact app-jar has been successfully uploaded! Final size is 44898252 bytes. Artifact ID is 11826508042
+package	Subir JAR	2026-10-13T15:21:11.1224267Z Artifact download URL: https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/38421139666/artifacts/11826508042
+package	Post Run actions/setup-java@v4	﻿2026-10-13T15:21:11.1396970Z Post job cleanup.
+package	Post Run actions/setup-java@v4	2026-10-13T15:21:11.2733806Z (node:2419) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+package	Post Run actions/setup-java@v4	2026-10-13T15:21:11.2734509Z (Use `node --trace-deprecation ...` to show where the warning was created)
+package	Post Run actions/setup-java@v4	2026-10-13T15:21:11.2738791Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-1b18e476ebf96132da84ce67e72b5c0bbeb614fbf91098988ad4021f089ef06f, not saving cache.
+package	Post Run actions/checkout@v4	﻿2026-10-13T15:21:11.2940504Z Post job cleanup.
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.3826513Z [command]/usr/bin/git version
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.3871518Z git version 2.55.0
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.3914196Z Temporarily overriding HOME='/home/runner/work/_temp/87a71819-028e-427d-ab87-dbca69fd1abe' before making global git config changes
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.3915581Z Adding repository directory to the temporary git global config as a safe directory
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.3918871Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.3960756Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.3995970Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.4204139Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.4229790Z http.https://github.com/.extraheader
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.4241680Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.4294246Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.4531112Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+package	Post Run actions/checkout@v4	2026-10-13T15:21:11.4573326Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+package	Complete job	﻿2026-10-13T15:21:11.4935627Z Cleaning up orphan processes
+package	Complete job	2026-10-13T15:21:11.5163678Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

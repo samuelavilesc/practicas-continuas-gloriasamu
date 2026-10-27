@@ -1,0 +1,19 @@
+completed	success	CI	CI	feat/ci-github-actions	workflow_dispatch	38419745745	46s	2026-10-13T15:10:25Z
+completed	cancelled	CI	CI	feat/ci-github-actions	workflow_dispatch	38419717945	26s	2026-10-13T15:10:14Z
+completed	success	ci: integración continua con GitHub Actions	CI	feat/ci-github-actions	pull_request	38419516255	37s	2026-10-13T15:08:51Z
+completed	success	ci: añade workflow de integración continua con GitHub Actions	CI	feat/ci-github-actions	push	38419493098	41s	2026-10-13T15:08:41Z
+
+X feat/ci-github-actions CI samuelavilesc/practicas-continuas-gloriasamu#13 · 38419717945
+Triggered via workflow_dispatch about 17 minutes ago
+
+JOBS
+X build in 20s (ID 115373539988)
+
+ANNOTATIONS
+X Canceling since a higher priority waiting request for ci-refs/heads/feat/ci-github-actions exists
+build: .github#1
+
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build: .github#2
+
+! setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.

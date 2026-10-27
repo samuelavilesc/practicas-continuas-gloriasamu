@@ -1,0 +1,8 @@
+$ curl http://localhost:8081/actuator/info
+{}
+$ docker exec app1 docker ps
+ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0  Up 6 seconds (health: starting)
+$ curl http://localhost:8082/actuator/info
+{}
+$ docker exec app2 docker ps
+ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0  Up 6 seconds (health: starting)

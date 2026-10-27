@@ -1,0 +1,84 @@
+build	Construir y testear	﻿2026-10-13T15:12:00.6363591Z ##[group]Run mvn --batch-mode verify
+build	Construir y testear	2026-10-13T15:12:00.6363931Z ^[[36;1mmvn --batch-mode verify^[[0m
+build	Construir y testear	2026-10-13T15:12:00.7087698Z shell: /usr/bin/bash -e {0}
+build	Construir y testear	2026-10-13T15:12:00.7088113Z env:
+build	Construir y testear	2026-10-13T15:12:00.7088348Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+build	Construir y testear	2026-10-13T15:12:00.7088667Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+build	Construir y testear	2026-10-13T15:12:00.7088915Z ##[endgroup]
+build	Construir y testear	2026-10-13T15:12:06.6599265Z [INFO] Scanning for projects...
+build	Construir y testear	2026-10-13T15:12:06.9909169Z [INFO] Loaded 24074 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+build	Construir y testear	2026-10-13T15:12:07.1829021Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:07.1830024Z [INFO] -------------------< es.practicascontinuas:todo-api >-------------------
+build	Construir y testear	2026-10-13T15:12:07.1838923Z [INFO] Building todo-api 0.0.1-SNAPSHOT
+build	Construir y testear	2026-10-13T15:12:07.1840012Z [INFO]   from pom.xml
+build	Construir y testear	2026-10-13T15:12:07.1840506Z [INFO] --------------------------------[ jar ]---------------------------------
+build	Construir y testear	2026-10-13T15:12:07.2329581Z [INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+build	Construir y testear	2026-10-13T15:12:09.8739362Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:09.8747390Z [INFO] --- resources:3.3.1:resources (default-resources) @ todo-api ---
+build	Construir y testear	2026-10-13T15:12:10.0335378Z [INFO] Copying 1 resource from src/main/resources to target/classes
+build	Construir y testear	2026-10-13T15:12:10.0408924Z [INFO] Copying 0 resource from src/main/resources to target/classes
+build	Construir y testear	2026-10-13T15:12:10.0445481Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:10.0463928Z [INFO] --- compiler:3.13.0:compile (default-compile) @ todo-api ---
+build	Construir y testear	2026-10-13T15:12:10.1689745Z [INFO] Recompiling the module because of changed source code.
+build	Construir y testear	2026-10-13T15:12:10.1733184Z [INFO] Compiling 12 source files with javac [debug parameters release 21] to target/classes
+build	Construir y testear	2026-10-13T15:12:11.3593379Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:11.3594131Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ todo-api ---
+build	Construir y testear	2026-10-13T15:12:11.3671626Z [INFO] skip non existing resourceDirectory /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/src/test/resources
+build	Construir y testear	2026-10-13T15:12:11.3688443Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:11.3718535Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ todo-api ---
+build	Construir y testear	2026-10-13T15:12:11.3747401Z [INFO] Recompiling the module because of changed dependency.
+build	Construir y testear	2026-10-13T15:12:11.3778359Z [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+build	Construir y testear	2026-10-13T15:12:11.7292530Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:11.7308723Z [INFO] --- surefire:3.2.5:test (default-test) @ todo-api ---
+build	Construir y testear	2026-10-13T15:12:11.8878839Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+build	Construir y testear	2026-10-13T15:12:11.9286805Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:11.9298533Z [INFO] -------------------------------------------------------
+build	Construir y testear	2026-10-13T15:12:11.9315874Z [INFO]  T E S T S
+build	Construir y testear	2026-10-13T15:12:11.9317619Z [INFO] -------------------------------------------------------
+build	Construir y testear	2026-10-13T15:12:12.5659214Z [INFO] Running es.practicascontinuas.todo.task.TaskServiceTest
+build	Construir y testear	2026-10-13T15:12:12.9823345Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+build	Construir y testear	2026-10-13T15:12:13.0259924Z WARNING: A Java agent has been loaded dynamically (/home/runner/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+build	Construir y testear	2026-10-13T15:12:13.0260957Z WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+build	Construir y testear	2026-10-13T15:12:13.0261488Z WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+build	Construir y testear	2026-10-13T15:12:13.0261936Z WARNING: Dynamic loading of agents will be disallowed by default in a future release
+build	Construir y testear	2026-10-13T15:12:13.8059583Z [ERROR] Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.222 s <<< FAILURE! -- in es.practicascontinuas.todo.task.TaskServiceTest
+build	Construir y testear	2026-10-13T15:12:13.8079363Z [ERROR] es.practicascontinuas.todo.task.TaskServiceTest.creaUnaTareaCuandoElTituloEsUnico -- Time elapsed: 0.019 s <<< FAILURE!
+build	Construir y testear	2026-10-13T15:12:13.8104710Z org.opentest4j.AssertionFailedError: 
+build	Construir y testear	2026-10-13T15:12:13.8128866Z 
+build	Construir y testear	2026-10-13T15:12:13.8148671Z expected: COMPLETED
+build	Construir y testear	2026-10-13T15:12:13.8150560Z  but was: PENDING
+build	Construir y testear	2026-10-13T15:12:13.8151366Z 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+build	Construir y testear	2026-10-13T15:12:13.8164917Z 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+build	Construir y testear	2026-10-13T15:12:13.8165875Z 	at es.practicascontinuas.todo.task.TaskServiceTest.creaUnaTareaCuandoElTituloEsUnico(TaskServiceTest.java:62)
+build	Construir y testear	2026-10-13T15:12:13.8166673Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+build	Construir y testear	2026-10-13T15:12:13.8167204Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+build	Construir y testear	2026-10-13T15:12:13.8167724Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+build	Construir y testear	2026-10-13T15:12:13.8168250Z 
+build	Construir y testear	2026-10-13T15:12:13.8350697Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:13.8351265Z [INFO] Results:
+build	Construir y testear	2026-10-13T15:12:13.8351458Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:13.8353963Z [ERROR] Failures: 
+build	Construir y testear	2026-10-13T15:12:13.8354372Z [ERROR]   TaskServiceTest.creaUnaTareaCuandoElTituloEsUnico:62 
+build	Construir y testear	2026-10-13T15:12:13.8354718Z expected: COMPLETED
+build	Construir y testear	2026-10-13T15:12:13.8354875Z  but was: PENDING
+build	Construir y testear	2026-10-13T15:12:13.8354994Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:13.8355147Z [ERROR] Tests run: 13, Failures: 1, Errors: 0, Skipped: 0
+build	Construir y testear	2026-10-13T15:12:13.8355323Z [INFO] 
+build	Construir y testear	2026-10-13T15:12:13.8381823Z [INFO] ------------------------------------------------------------------------
+build	Construir y testear	2026-10-13T15:12:13.8382171Z [ERROR] BUILD FAILURE
+build	Construir y testear	2026-10-13T15:12:13.8382445Z [INFO] ------------------------------------------------------------------------
+build	Construir y testear	2026-10-13T15:12:13.8384447Z [INFO] Total time:  7.233 s
+build	Construir y testear	2026-10-13T15:12:13.8386271Z [INFO] Finished at: 2026-10-13T15:12:13Z
+build	Construir y testear	2026-10-13T15:12:13.8386747Z [INFO] ------------------------------------------------------------------------
+build	Construir y testear	2026-10-13T15:12:13.8393870Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project todo-api: There are test failures.
+build	Construir y testear	2026-10-13T15:12:13.8394495Z [ERROR] 
+build	Construir y testear	2026-10-13T15:12:13.8398304Z [ERROR] Please refer to /home/runner/work/practicas-continuas-gloriasamu/practicas-continuas-gloriasamu/target/surefire-reports for the individual test results.
+build	Construir y testear	2026-10-13T15:12:13.8400813Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+build	Construir y testear	2026-10-13T15:12:13.8401178Z [ERROR] -> [Help 1]
+build	Construir y testear	2026-10-13T15:12:13.8401338Z [ERROR] 
+build	Construir y testear	2026-10-13T15:12:13.8401552Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+build	Construir y testear	2026-10-13T15:12:13.8401825Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+build	Construir y testear	2026-10-13T15:12:13.8402022Z [ERROR] 
+build	Construir y testear	2026-10-13T15:12:13.8402252Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+build	Construir y testear	2026-10-13T15:12:13.8402635Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+build	Construir y testear	2026-10-13T15:12:13.8579805Z ##[error]Process completed with exit code 1.

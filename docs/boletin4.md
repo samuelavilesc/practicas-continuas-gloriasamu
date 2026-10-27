@@ -8,7 +8,7 @@
 
 Este boletín añade Integración Continua a la API de tareas del Boletín 3. Cada push y cada Pull Request lanzan en GitHub Actions un pipeline que comprueba el formato con Spotless, compila, ejecuta los tests, publica el informe JUnit y genera el JAR. Después, el CI se convierte en una barrera: `main` no acepta un PR cuyos checks no estén en verde. Como ampliación, un segundo workflow pide a una IA de Ollama Cloud un resumen de cada PR y lo publica como comentario. El token de la IA se guarda en un secreto del repositorio.
 
-Casi todos los cambios del repositorio se han hecho en la rama `feat/ci-github-actions` y han entrado en `main` mediante el PR #13, siguiendo el flujo del `CONTRIBUTING.md`: Issue → rama → PR → revisión cruzada → *squash and merge*. Las Partes B y C incluyen commits que rompen el CI a propósito y otros que lo arreglan, para ver el pipeline en rojo y en verde en el propio PR. La Parte D se verifica con un PR aparte (#14) que no se llega a fusionar. El badge del README entró después en el PR #15, que además corrigió un problema del `paths-ignore` que apareció precisamente al activar la Parte D. Las salidas completas de los comandos y de las ejecuciones están en `logs/` y las capturas de pantalla, en `capturas/`.
+Casi todos los cambios del repositorio se han hecho en la rama `feat/ci-github-actions` y han entrado en `main` mediante el PR #13, siguiendo el flujo del `CONTRIBUTING.md`: Issue → rama → PR → revisión cruzada → *squash and merge*. Las Partes B y C incluyen commits que rompen el CI a propósito y otros que lo arreglan, para ver el pipeline en rojo y en verde en el propio PR. La Parte D se verifica con un PR aparte (#14) que no se llega a fusionar. El badge del README entró después en el PR #15, que además corrigió un problema del `paths-ignore` que apareció precisamente al activar la Parte D. Las salidas completas de los comandos y de las ejecuciones están en `logs/boletin4/` y las capturas de pantalla, en `capturas/`.
 
 En este boletín se invierten los papeles respecto al Boletín 3: los commits los ha firmado Gloria y la revisión de los PR la ha hecho Samuel.
 
@@ -95,7 +95,7 @@ Al fusionar con *squash and merge*, todos los commits de un PR entran en `main` 
 
 ### Parte A — Primer pipeline de CI
 
-Tras crear el [Issue #12](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/issues/12) con la plantilla `enhancement`, se crea la rama `feat/ci-github-actions`, se añade `ci.yml` (commit 1) y se abre el [PR #13](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/13). El push y la apertura del PR lanzan dos ejecuciones, y las dos terminan en verde (`logs/A-ci-pr.txt`, `logs/A-ci-push.txt`):
+Tras crear el [Issue #12](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/issues/12) con la plantilla `enhancement`, se crea la rama `feat/ci-github-actions`, se añade `ci.yml` (commit 1) y se abre el [PR #13](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/13). El push y la apertura del PR lanzan dos ejecuciones, y las dos terminan en verde ([`logs/boletin4/A-ci-pr.txt`](logs/boletin4/A-ci-pr.txt), [`logs/boletin4/A-ci-push.txt`](logs/boletin4/A-ci-push.txt)):
 
 ```text
 $ gh run list
@@ -109,7 +109,7 @@ build  Construir y testear  [INFO] Total time:  18.719 s
 
 **¿Para qué sirve `concurrency`?** Agrupa las ejecuciones por la clave `ci-${{ github.ref }}`, es decir, por rama (`refs/heads/<rama>`) o por PR (`refs/pull/<n>/merge`). En un mismo grupo solo puede haber una ejecución en marcha, y con `cancel-in-progress: true`, cuando llega una nueva se cancela la anterior. Si se hacen varios push seguidos a la misma rama, solo importa el resultado del último commit: no tiene sentido gastar minutos de runner en validar uno que ya está obsoleto, y además el feedback del bueno llega antes. Como las ramas tienen grupos distintos, el trabajo de una no cancela el de otra.
 
-Para comprobarlo se lanzó el workflow a mano dos veces seguidas sobre la misma rama (`logs/A-concurrency.txt`):
+Para comprobarlo se lanzó el workflow a mano dos veces seguidas sobre la misma rama ([`logs/boletin4/A-concurrency.txt`](logs/boletin4/A-concurrency.txt)):
 
 ```text
 $ gh workflow run CI --ref feat/ci-github-actions   # dos veces, con 8 s de diferencia
@@ -141,7 +141,7 @@ on:
 
 ### Parte B — Demostrar que el CI atrapa errores
 
-En la rama del PR se rompe un test a propósito (commit 2): la creación de una tarea `PENDING` se comprueba contra `COMPLETED`. El check del PR se pone en rojo (`logs/B-ci-rojo.txt`):
+En la rama del PR se rompe un test a propósito (commit 2): la creación de una tarea `PENDING` se comprueba contra `COMPLETED`. El check del PR se pone en rojo ([`logs/boletin4/B-ci-rojo.txt`](logs/boletin4/B-ci-rojo.txt)):
 
 ```text
 [ERROR] Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.222 s <<< FAILURE! -- in es.practicascontinuas.todo.task.TaskServiceTest
@@ -157,7 +157,7 @@ build   fail  23s   .../actions/runs/38419957702/job/115374350507
 
 ![Parte B: el check del PR en rojo por el test roto](capturas/boletin4/2.png)
 
-Se arregla el test y se hace push a la misma rama (commit 3). El PR se actualiza solo (`synchronize`), el CI vuelve a ejecutarse y pasa a verde (`logs/B-ci-verde.txt`):
+Se arregla el test y se hace push a la misma rama (commit 3). El PR se actualiza solo (`synchronize`), el CI vuelve a ejecutarse y pasa a verde ([`logs/boletin4/B-ci-verde.txt`](logs/boletin4/B-ci-verde.txt)):
 
 ```text
 [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
@@ -178,7 +178,7 @@ ARTIFACTS
 app-jar
 ```
 
-**Problema encontrado: el informe no aparecía.** La primera ejecución fue verde y el paso "Publicar informe de tests" también, pero entre los checks del commit no había ningún "Resultados JUnit", solo `lint`, `test` y `package` (`logs/C-checks.txt`). El log del paso terminaba en `Summary content:` y no decía nada de crear un check run. Revisando el código de la action (`src/main.ts`), el tag `v1` actual incluye la opción `use-actions-summary`, que por defecto vale `true`. Con ella, el informe se escribe en el **resumen del job** (la página de la ejecución) y **no se crea ningún check run**. Con `use-actions-summary: "false"` (commit 5), la action crea el check (`logs/C-ci-tres-jobs.txt`):
+**Problema encontrado: el informe no aparecía.** La primera ejecución fue verde y el paso "Publicar informe de tests" también, pero entre los checks del commit no había ningún "Resultados JUnit", solo `lint`, `test` y `package` ([`logs/boletin4/C-checks.txt`](logs/boletin4/C-checks.txt)). El log del paso terminaba en `Summary content:` y no decía nada de crear un check run. Revisando el código de la action (`src/main.ts`), el tag `v1` actual incluye la opción `use-actions-summary`, que por defecto vale `true`. Con ella, el informe se escribe en el **resumen del job** (la página de la ejecución) y **no se crea ningún check run**. Con `use-actions-summary: "false"` (commit 5), la action crea el check ([`logs/boletin4/C-ci-tres-jobs.txt`](logs/boletin4/C-ci-tres-jobs.txt)):
 
 ```text
 Creating check run Resultados JUnit
@@ -193,7 +193,7 @@ Ahí es donde hace falta `checks: write`: crear un check run es escribir en la A
 
 ![Parte C: informe "Resultados JUnit" con los 13 tests](capturas/boletin4/6.png)
 
-**El JAR.** El job `package` sube `target/*.jar` como artefacto `app-jar`, que se puede descargar desde la página de la ejecución durante 7 días (`logs/C-artefacto.txt`):
+**El JAR.** El job `package` sube `target/*.jar` como artefacto `app-jar`, que se puede descargar desde la página de la ejecución durante 7 días ([`logs/boletin4/C-artefacto.txt`](logs/boletin4/C-artefacto.txt)):
 
 ```text
 [INFO] Building jar: /home/runner/work/.../target/todo-api-0.0.1-SNAPSHOT.jar
@@ -204,7 +204,7 @@ app-jar 44898252 bytes, expira 2026-10-20T15:14:43Z
 
 ![Parte C: el artefacto app-jar de la ejecución](capturas/boletin4/5b.png)
 
-**Fallo de formato.** Se desordena `TaskNotFoundException` y se hace el commit con `--no-verify` (commit 6). El job `lint` falla y los otros dos no llegan a ejecutarse (`logs/C-lint-rojo.txt`):
+**Fallo de formato.** Se desordena `TaskNotFoundException` y se hace el commit con `--no-verify` (commit 6). El job `lint` falla y los otros dos no llegan a ejecutarse ([`logs/boletin4/C-lint-rojo.txt`](logs/boletin4/C-lint-rojo.txt)):
 
 ```text
 $ gh api repos/.../actions/runs/38421430270/jobs
@@ -255,7 +255,7 @@ $ gh api repos/.../branches/main --jq .protection
 
 ![Parte D: protección de main con los checks lint, test y package](capturas/boletin4/10.png)
 
-**Verificación.** Se abre el [PR #14](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/14) desde la rama `test/barrera-ci` con el mismo test roto de la Parte B (`logs/D-pr-test-roto.txt`):
+**Verificación.** Se abre el [PR #14](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/14) desde la rama `test/barrera-ci` con el mismo test roto de la Parte B ([`logs/boletin4/D-pr-test-roto.txt`](logs/boletin4/D-pr-test-roto.txt)):
 
 ```text
 lint: success
@@ -264,7 +264,7 @@ package: skipped
 Resultados JUnit  failure  12 passed, 1 failed and 0 skipped
 ```
 
-Al principio GitHub mostraba como motivo del bloqueo la revisión pendiente. Para comprobar que lo que bloquea son los checks, Samuel aprobó el PR #14: aun con la aprobación, el estado sigue siendo `BLOCKED` y el botón *Squash and merge* sale desactivado (`logs/D-estado-pr.txt`):
+Al principio GitHub mostraba como motivo del bloqueo la revisión pendiente. Para comprobar que lo que bloquea son los checks, Samuel aprobó el PR #14: aun con la aprobación, el estado sigue siendo `BLOCKED` y el botón *Squash and merge* sale desactivado ([`logs/boletin4/D-estado-pr.txt`](logs/boletin4/D-estado-pr.txt)):
 
 ```text
 $ gh pr view 14 --json mergeStateStatus,reviewDecision
@@ -273,7 +273,7 @@ BLOCKED APPROVED samuelavilesc 2026-10-15T12:13:47Z
 
 ![Parte D: PR #14 aprobado pero con la fusión bloqueada por los checks](capturas/boletin4/11.png)
 
-El PR #14 también sirve de prueba del `if: always()` de la Parte C: el job `test` falla y, aun así, el paso del informe se ejecuta y publica "Resultados JUnit" con el test fallido y su mensaje (`logs/D-informe-junit.txt`):
+El PR #14 también sirve de prueba del `if: always()` de la Parte C: el job `test` falla y, aun así, el paso del informe se ejecuta y publica "Resultados JUnit" con el test fallido y su mensaje ([`logs/boletin4/D-informe-junit.txt`](logs/boletin4/D-informe-junit.txt)):
 
 ![Parte D: informe JUnit con 12 tests superados y 1 fallido](capturas/boletin4/12.png)
 
@@ -283,7 +283,7 @@ Comprobado el bloqueo, el PR #14 se cerró sin fusionar y se borró su rama.
 
 **Ignorar los cambios del README** (commit 8). Con `paths-ignore: [ "README.md" ]`, un push que solo cambia el README no lanza el CI. En un PR, el filtro se aplica a **todos los ficheros cambiados del PR** respecto a `main`, no solo a los del último commit.
 
-**Problema encontrado al juntarlo con la Parte D.** El badge se subió en el PR #15, que solo cambia el README. Como se esperaba, el push no lanzó el CI. Pero el `pull_request` tampoco, y como `lint`, `test` y `package` son ahora checks obligatorios, el PR se quedó esperando unos checks que nunca iban a llegar (`logs/E-pr-badge.txt`):
+**Problema encontrado al juntarlo con la Parte D.** El badge se subió en el PR #15, que solo cambia el README. Como se esperaba, el push no lanzó el CI. Pero el `pull_request` tampoco, y como `lint`, `test` y `package` son ahora checks obligatorios, el PR se quedó esperando unos checks que nunca iban a llegar ([`logs/boletin4/E-pr-badge.txt`](logs/boletin4/E-pr-badge.txt)):
 
 ```text
 BLOCKED
@@ -301,7 +301,7 @@ Es decir, con la protección de la Parte D, **un PR que solo toca el README no s
 - Cualquier error (falta el secreto, la API devuelve un error o la respuesta está vacía) deja como comentario exactamente **"La IA ha fallado"**. El paso que comenta lleva `if: always()`, así que el aviso llega aunque el paso anterior rompa de forma inesperada.
 - Para no llenar el PR de comentarios en cada push, el bot edita su comentario anterior (`gh pr comment --edit-last --create-if-none`).
 
-**Prueba sin secreto.** Antes de crear el secreto, el workflow publicó el comentario de error (`logs/E-ia-sin-secreto.txt`):
+**Prueba sin secreto.** Antes de crear el secreto, el workflow publicó el comentario de error ([`logs/boletin4/E-ia-sin-secreto.txt`](logs/boletin4/E-ia-sin-secreto.txt)):
 
 ```text
 ##[warning]No está definido el secreto OLLAMA_API_KEY
@@ -311,7 +311,7 @@ github-actions[bot] 2026-10-13T16:15:09Z: La IA ha fallado
 
 ![Parte E: comentario "La IA ha fallado" sin el secreto](capturas/boletin4/7.png)
 
-**Prueba con secreto.** Con el secreto creado se relanzó el workflow (`logs/E-ia-con-secreto.txt`). El bot sustituyó el comentario de error por el resumen (extracto):
+**Prueba con secreto.** Con el secreto creado se relanzó el workflow ([`logs/boletin4/E-ia-con-secreto.txt`](logs/boletin4/E-ia-con-secreto.txt)). El bot sustituyó el comentario de error por el resumen (extracto):
 
 ```text
 ### Resumen de cambios generado por IA (gpt-oss:120b)
@@ -355,7 +355,7 @@ Se siguió el flujo de `CONTRIBUTING.md`:
 Hemos usado **Claude** para:
 - leer el boletín y planificar el trabajo y la estructura de esta memoria;
 - escribir los workflows `ci.yml` y `ai-summary.yml`, los commits que rompen y arreglan el CI y el badge;
-- seguir las ejecuciones con `gh` y guardar su salida en `logs/`;
+- seguir las ejecuciones con `gh` y guardar su salida en `logs/boletin4/`;
 - encontrar por qué no aparecía el check "Resultados JUnit" (`use-actions-summary`).
 
 Todo se ha revisado antes de incorporarlo.

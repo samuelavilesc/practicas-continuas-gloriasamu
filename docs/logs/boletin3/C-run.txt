@@ -1,0 +1,7 @@
+$ curl http://localhost:8080/api/tasks
+[]
+$ docker ps
+CONTAINER ID   IMAGE            COMMAND               CREATED         STATUS                   PORTS                                         NAMES
+77d8849e3364   tareas-api:0.1   "java -jar app.jar"   8 seconds ago   Up 7 seconds (healthy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp   tareas-test
+$ docker exec tareas-test whoami
+app

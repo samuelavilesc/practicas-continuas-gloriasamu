@@ -1,0 +1,56 @@
+$ ansible-playbook -i deploy/inventory.ini deploy/deploy.yml --vault-password-file ~/.vault_pass_tareas --extra-vars "version_app=1.0.0"
+Mon Oct 26 12:30:18 CET 2026
+
+PLAY [Preparar Docker en toda la flota] ****************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [app2]
+ok: [app1]
+ok: [db1]
+
+TASK [Instalar Docker y el SDK de Python] **************************************
+ok: [app1]
+ok: [app2]
+ok: [db1]
+
+TASK [Arrancar dockerd (los contenedores no tienen systemd)] *******************
+ok: [app1]
+ok: [db1]
+ok: [app2]
+
+PLAY [Desplegar la base de datos] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [db1]
+
+TASK [Base de datos PostgreSQL] ************************************************
+ok: [db1]
+
+PLAY [Desplegar la API de tareas] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [app1]
+ok: [app2]
+
+TASK [Login en GHCR] ***********************************************************
+ok: [app2]
+ok: [app1]
+
+TASK [Descargar la imagen de la aplicación] ************************************
+ok: [app2]
+ok: [app1]
+
+TASK [Arrancar el contenedor de la API] ****************************************
+ok: [app1]
+ok: [app2]
+
+TASK [Smoke test — esperar a que la API esté sana] *****************************
+ok: [app2]
+ok: [app1]
+
+PLAY RECAP *********************************************************************
+app1                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+app2                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+db1                        : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Mon Oct 26 12:30:26 CET 2026

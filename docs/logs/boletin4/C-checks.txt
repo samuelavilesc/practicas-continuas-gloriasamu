@@ -1,0 +1,7 @@
+package | success | null | https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/38420230166/job/115375667189
+package | success | null | https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/38420223996/job/115375663751
+test | success | null | https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/38420230166/job/115375489139
+test | success | null | https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/38420223996/job/115375440561
+GitGuardian Security Checks | success | No secrets detected ✅ | https://github.com/samuelavilesc/practicas-continuas-gloriasamu/runs/115375347174
+lint | success | null | https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/38420230166/job/115375336087
+lint | success | null | https://github.com/samuelavilesc/practicas-continuas-gloriasamu/actions/runs/38420223996/job/115375280639

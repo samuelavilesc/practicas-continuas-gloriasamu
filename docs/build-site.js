@@ -84,8 +84,10 @@ ${list}
   )
 );
 
-// capturas de pantalla
-const caps = path.join(DOCS, "capturas");
-if (fs.existsSync(caps)) copyDir(caps, path.join(OUT, "capturas"));
+// capturas de pantalla y logs que citan las memorias
+for (const dir of ["capturas", "logs"]) {
+  const src = path.join(DOCS, dir);
+  if (fs.existsSync(src)) copyDir(src, path.join(OUT, dir));
+}
 
 console.log(`Web generada en ${OUT} (${entries.length} documentos)`);

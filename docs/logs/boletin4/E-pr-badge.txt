@@ -1,0 +1,13 @@
+BLOCKED
+resumen SUCCESS
+GitGuardian Security Checks SUCCESS
+BLOCKED REVIEW_REQUIRED
+lint SUCCESS
+lint SUCCESS
+resumen SUCCESS
+test SUCCESS
+test SUCCESS
+package 
+package SUCCESS
+Resultados JUnit SUCCESS
+GitGuardian Security Checks SUCCESS

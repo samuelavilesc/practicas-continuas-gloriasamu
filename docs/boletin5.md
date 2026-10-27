@@ -9,7 +9,7 @@
 
 Este boletín añade Entrega Continua al proyecto. Un nuevo workflow, `Release`, construye la imagen Docker de la API y la publica en GitHub Container Registry (`ghcr.io`) cada vez que se fusiona algo en `main` y cada vez que se publica una etiqueta de versión. Cada imagen lleva tags trazables: el SHA del commit que la produjo, la versión SemVer y `latest`. Después se publica la primera versión, `v1.0.0`, con su Release en GitHub, y se comprueba que la imagen descargada del registro arranca contra una PostgreSQL real. Por último, las memorias de los boletines pasan a la carpeta `docs/` del repositorio y un segundo workflow, `Pages`, las convierte en una web que se publica en GitHub Pages.
 
-Los cambios del repositorio han entrado en `main` mediante dos PR, siguiendo el flujo del `CONTRIBUTING.md`: Issue → rama → PR → revisión cruzada → *squash and merge*. El PR #17 trae el workflow de publicación (Partes A y C) y el PR #18, la documentación y GitHub Pages (Parte D). La Parte B no modifica el repositorio: es la etiqueta `v1.0.0` y su Release. Las salidas completas de los comandos y de las ejecuciones están en `logs/` y las capturas de pantalla, en `capturas/`.
+Los cambios del repositorio han entrado en `main` mediante dos PR, siguiendo el flujo del `CONTRIBUTING.md`: Issue → rama → PR → revisión cruzada → *squash and merge*. El PR #17 trae el workflow de publicación (Partes A y C) y el PR #18, la documentación y GitHub Pages (Parte D). La Parte B no modifica el repositorio: es la etiqueta `v1.0.0` y su Release. Las salidas completas de los comandos y de las ejecuciones están en `logs/boletin5/` y las capturas de pantalla, en `capturas/`.
 
 Como en el Boletín 4, los commits los ha firmado Gloria y la revisión de los PR la ha hecho Samuel.
 
@@ -92,7 +92,7 @@ HTTP 404: workflow release.yml not found on the default branch
 
 GitHub solo permite lanzar a mano un workflow que ya existe en la rama por defecto. Mientras `release.yml` solo está en la rama del PR, no se puede lanzar. Una vez fusionado, `workflow_dispatch` sí sirve para relanzar la publicación desde Actions.
 
-Samuel aprobó el PR #17 y se fusionó el 19 de octubre a las 14:13. La fusión es un push a `main`, así que se dispararon `CI` y `Release` a la vez (`logs/A-release-main.txt`):
+Samuel aprobó el PR #17 y se fusionó el 19 de octubre a las 14:13. La fusión es un push a `main`, así que se dispararon `CI` y `Release` a la vez ([`logs/boletin5/A-release-main.txt`](logs/boletin5/A-release-main.txt)):
 
 ```text
 DOCKER_METADATA_OUTPUT_JSON: {"tags":["ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:latest",
@@ -148,7 +148,7 @@ $ git push origin v1.0.0
 
 Una etiqueta anotada, a diferencia de una ligera, es un objeto propio en Git: guarda quién la creó, cuándo y un mensaje.
 
-El push de la etiqueta vuelve a disparar `Release` (`logs/B-release-tag.txt`), que publica la misma imagen con los nuevos tags (`logs/B-tags-ghcr.txt`):
+El push de la etiqueta vuelve a disparar `Release` ([`logs/boletin5/B-release-tag.txt`](logs/boletin5/B-release-tag.txt)), que publica la misma imagen con los nuevos tags ([`logs/boletin5/B-tags-ghcr.txt`](logs/boletin5/B-tags-ghcr.txt)):
 
 ```text
 "tag-names":["1.0.0","1.0","1","sha-1f5a8c7","latest"]
@@ -163,7 +163,7 @@ $ curl .../v2/samuelavilesc/practicas-continuas-gloriasamu/tags/list
 
 En Packages se ve un detalle de la trazabilidad. La versión con `1.0.0`, `1.0`, `1` y `sha-1f5a8c7` **no es la misma imagen** que publicó el merge del PR #17, aunque se construyó desde el mismo commit. Al publicar la etiqueta se volvió a construir, y la imagen nueva tiene otro digest, porque lleva otra fecha de creación y otras etiquetas OCI (`version: 1.0.0`). Los tags `sha-1f5a8c7` y `latest` pasaron a la imagen nueva, y la del 19 de octubre se quedó *untagged*, accesible solo por su digest (`sha256:094cd23a…`). Más tarde, la fusión del PR #18 movió `latest` a `sha-60978ac` (ver Parte D).
 
-Después se crea la [Release v1.0.0](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/releases/tag/v1.0.0) a partir de la etiqueta, con las notas generadas automáticamente por GitHub (`logs/B-release-notas.txt`). Como es la primera Release, las notas recogen todos los PR fusionados desde el principio del proyecto, del #2 al #17, con su autor:
+Después se crea la [Release v1.0.0](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/releases/tag/v1.0.0) a partir de la etiqueta, con las notas generadas automáticamente por GitHub ([`logs/boletin5/B-release-notas.txt`](logs/boletin5/B-release-notas.txt)). Como es la primera Release, las notas recogen todos los PR fusionados desde el principio del proyecto, del #2 al #17, con su autor:
 
 ```text
 ## What's Changed
@@ -177,7 +177,7 @@ Después se crea la [Release v1.0.0](https://github.com/samuelavilesc/practicas-
 
 ### Parte C — Verificar la imagen publicada
 
-Se descarga la imagen `1.0.0` del registro y se arranca junto a una PostgreSQL en la misma red, con los comandos del boletín, que también están en el README desde el commit 3. El usuario de este equipo no está en el grupo `docker`, así que los comandos se lanzaron con `sudo` (`logs/C-verificacion.txt`):
+Se descarga la imagen `1.0.0` del registro y se arranca junto a una PostgreSQL en la misma red, con los comandos del boletín, que también están en el README desde el commit 3. El usuario de este equipo no está en el grupo `docker`, así que los comandos se lanzaron con `sudo` ([`logs/boletin5/C-verificacion.txt`](logs/boletin5/C-verificacion.txt)):
 
 ```text
 + docker network create tareas-net
@@ -210,7 +210,7 @@ Las etiquetas OCI que añade `metadata-action` a la imagen dan la trazabilidad c
 
 En la rama `docs/github-pages` se añaden las memorias, el generador y el workflow (commits 5 a 12), y se abre el [PR #18](https://github.com/samuelavilesc/practicas-continuas-gloriasamu/pull/18) con `Closes #16`.
 
-**Memorias.** Cada `boletinN.md` va a `docs/` y sus capturas, a `docs/capturas/boletinN/`. Así las imágenes de distintos boletines con el mismo nombre (`1.png`, `2.png`…) no se pisan. Las memorias citan ficheros de `logs/` que no se han subido al repositorio: se entregan con cada boletín.
+**Memorias.** Cada `boletinN.md` va a `docs/` y sus capturas, a `docs/capturas/boletinN/`. Así las imágenes de distintos boletines con el mismo nombre (`1.png`, `2.png`…) no se pisan. Las memorias citan ficheros de `logs/` que en este PR no se subieron al repositorio. Se añadieron después, junto con la memoria del Boletín 6, en `docs/logs/boletinN/`.
 
 **Generador.** Antes del commit se probó en local:
 
@@ -238,7 +238,7 @@ Web generada en .../docs/site (5 documentos)
 
 El diff de este PR, con las memorias de cuatro boletines, es mucho más grande que los anteriores. El workflow lo recortaba con `git diff … | head -c 60000`: cuando `head` tiene sus 60 000 caracteres, deja de leer y `git diff` recibe la señal SIGPIPE (código 141). Con `set -o pipefail`, ese código hace fallar el paso antes de llamar a la IA. El aviso "La IA ha fallado" funcionó como se diseñó, pero la causa era el recorte, no la IA. En el commit 13 el diff se guarda primero en un fichero y después se recorta con `head`, que ya no corta ninguna tubería. Tras el commit, el workflow salió en verde y el comentario pasó a mostrar el resumen del PR.
 
-**Publicación.** Samuel aprobó el PR #18 y se fusionó el 21 de octubre a las 12:57. El push a `main` lanzó tres workflows: `CI`, `Release` y `Pages` (`logs/D-pages.txt`):
+**Publicación.** Samuel aprobó el PR #18 y se fusionó el 21 de octubre a las 12:57. El push a `main` lanzó tres workflows: `CI`, `Release` y `Pages` ([`logs/boletin5/D-pages.txt`](logs/boletin5/D-pages.txt)):
 
 ```text
 Run node build-site.js
@@ -261,7 +261,7 @@ https://samuelavilesc.github.io/practicas-continuas-gloriasamu/   200
 
 ![Parte D: memoria del Boletín 4 publicada, con sus capturas](capturas/boletin5/9.png)
 
-La misma fusión también lanzó `Release`, que publicó la imagen `sha-60978ac` y movió `latest` a ese commit (`logs/A-release-merge-pr18.txt`: `"tag-names":["latest","sha-60978ac"]`). Es justo lo esperado en Entrega Continua: cada cambio que llega a `main` deja una imagen nueva lista para desplegar, aunque solo cambie la documentación, mientras que `1.0.0` sigue apuntando a la versión publicada.
+La misma fusión también lanzó `Release`, que publicó la imagen `sha-60978ac` y movió `latest` a ese commit ([`logs/boletin5/A-release-merge-pr18.txt`](logs/boletin5/A-release-merge-pr18.txt): `"tag-names":["latest","sha-60978ac"]`). Es justo lo esperado en Entrega Continua: cada cambio que llega a `main` deja una imagen nueva lista para desplegar, aunque solo cambie la documentación, mientras que `1.0.0` sigue apuntando a la versión publicada.
 
 ### Versionar los cambios
 
@@ -276,7 +276,7 @@ La misma fusión también lanzó `Release`, que publicó la imagen `sha-60978ac`
 Hemos usado **Claude** para:
 - leer el boletín y la guía de trabajo y planificar los PR y la estructura de esta memoria;
 - revisar el workflow `release.yml` y el generador de la web antes de subirlos, y probar el generador en local;
-- seguir las ejecuciones con `gh`, guardar su salida en `logs/` y preparar el script de la Parte C;
+- seguir las ejecuciones con `gh`, guardar su salida en `logs/boletin5/` y preparar el script de la Parte C;
 - encontrar por qué fallaba el resumen con IA en el PR #18 (SIGPIPE con `pipefail`) y corregirlo;
 - explicar por qué la etiqueta `v1.0.0` también genera `latest`.
 

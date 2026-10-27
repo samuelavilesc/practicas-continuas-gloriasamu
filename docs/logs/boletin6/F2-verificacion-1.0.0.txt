@@ -1,0 +1,21 @@
+$ curl http://localhost:8081/api/tasks
+[]
+$ curl http://localhost:8081/actuator/health
+{"status":"UP"}
+$ curl http://localhost:8082/api/tasks
+[]
+$ curl http://localhost:8082/actuator/health
+{"status":"UP"}
+$ docker exec app1 docker ps
+IMAGE                                                        STATUS                    NAMES
+ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0   Up 17 seconds (healthy)   tareas-api
+$ docker exec app2 docker ps
+IMAGE                                                        STATUS                    NAMES
+ghcr.io/samuelavilesc/practicas-continuas-gloriasamu:1.0.0   Up 18 seconds (healthy)   tareas-api
+$ docker exec db1 docker ps
+IMAGE         STATUS                    NAMES
+postgres:16   Up 47 seconds (healthy)   tareas-db
+$ curl -X POST http://localhost:8081/api/tasks ...   # crear en app1
+{"id":1,"title":"Desplegada por Ansible","description":"creada en app1","status":"PENDING","priority":2,"dueDate":"2026-12-31"}
+$ curl http://localhost:8082/api/tasks   # leer en app2
+[{"id":1,"title":"Desplegada por Ansible","description":"creada en app1","status":"PENDING","priority":2,"dueDate":"2026-12-31"}]
